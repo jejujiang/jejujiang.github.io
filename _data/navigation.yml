@@ -1,0 +1,8 @@
+- name: hello world
+  link: /
+- name: C
+  link: /c.html
+- name: Ruby
+  link: /ruby.html
+- name: Operating System
+  link: /os.html

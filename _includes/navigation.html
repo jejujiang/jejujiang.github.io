@@ -1,0 +1,7 @@
+  <nav class="navbar is-transparent is-fixed-top">
+  <div class="navbar-brand">
+    {% for item in site.data.navigation %}
+    <a class="navbar-item" href="{{ item.link }}">{{ item.name }}</a>
+    {% endfor %}
+  </div>
+  </nav>
