@@ -1,8 +1,4 @@
 - name: hello world
   link: /
-- name: C
-  link: /assets/pdfs/The C Programming Language by Kernighan & Ritchie PDF.pdf
-- name: Ruby
-  link: /assets/pdfs/David_Flanagan_Yukihiro_Matsumoto-The_Ruby_Programming_Language-EN.pdf
 - name: Operating System
   link: /os.html
