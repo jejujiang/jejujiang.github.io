@@ -1,7 +1,17 @@
-  <nav class="navbar is-transparent is-fixed-top">
-  <div class="navbar-brand">
-    {% for item in site.data.navigation %}
-    <a class="navbar-item" href="{{ item.link }}">{{ item.name }}</a>
-    {% endfor %}
-  </div>
-  </nav>
+<nav class="navbar is-transparent is-fixed-top">
+	<div class="navbar-brand">
+		{% for item in site.data.navigation %}
+		<a class="navbar-item" href="{{ item.link }}">{{ item.name }}</a>
+		{% endfor %}
+	</div>
+</nav>
+<div class="container">
+	<div class="notification is-primary">
+		<h1 class="title">
+			{{ page.title }}
+		</h1>
+		<h2 class="subtitle">
+			{{ page.subtitle }}
+		</h2>
+	</div>
+</div>
