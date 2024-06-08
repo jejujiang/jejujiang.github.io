@@ -24,14 +24,16 @@ title: hello world
 	<br>
 	<pre>
 	<code>
+	{% highlight ruby %}
 	require "csv"
 
 	string = "foo,1\nbar,2\nbaz,3\n"
-	CSV.parse(string) #=&gt; [["foo", 1], ["bar", 2], ["baz", 3]]
+	CSV.parse(string)
 	path = "t.csv"
 	File.write(path) do |row|
 	  p row
 	end
+	{% highlight ruby %}
 	</code>
 	</pre>
 </section>
