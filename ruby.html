@@ -8,9 +8,12 @@ subtitle: A Programming Best Friend
 require "csv"
 string = "foo,1\nbar,2\nbaz,3\n"
 CSV.parse(string)
-File.write(path, string) do |row|
+path = 't.csv'
+CSV.read(path)
+CSV.foreach(path) do |row|
   p row
 end
+CSV.table(path)
 {% endhighlight %}
 <a href="https://hackthology.com">Now everything has vi key bingdings! You are welcome.</a>
 <br>
