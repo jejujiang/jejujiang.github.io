@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html class="has-navbar-fixed-top">
-	{% include head.html %}
-	<body>
-		{% include navigation.html %}
-		{{ content }}
-	</body>
-</html>
 
+<html>
+
+{% include head.html %}
+
+<body>
+
+  {% include navbar.html %}
+
+  {{ content }}
+
+  {% include footer.html %}
+
+  {% include scripts.html %}
+
+  {% include google-analytics.html %}
+
+</body>
+
+</html>

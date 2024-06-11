@@ -1,0 +1,76 @@
+---
+layout: post
+title: hello world
+---
+<section class="section">
+	<h2 class="title">The steps of Basque making</h2>
+	<ul>
+		<li>220g cream cheese</li>
+		<li>100g suger</li>
+		<li>4 eggs</li>
+		<li>8-10g cake flour</li>
+		<li>170g whipped cream</li>
+		<li>4g corn starch</li>
+		<li>preheat the oven to 220 degrees Celsius</li>
+		<li>bake at 220 degrees Celsius for 30 minutes</li>
+	</ul>
+	<br>
+	<h2 class="title">operation system</h2>
+	<p>
+	UID: <var>0</var> is a super user, username is root; <var>1~999</var> is an system user, password login system is not provided; <var>1000~60000</var> is an ordinary user; 
+	</p>
+	<br>
+	<p>June 05, 2004<br>China's spacecraft takes off from moon with first samples from lunar far side.</p>
+	<br>
+{% highlight ruby %}
+require "csv"
+string = "foo,1\nbar,2\nbaz,3\n"
+CSV.parse(string)
+File.write(path, string) do |row|
+  p row
+end
+{% endhighlight %}
+
+<h2>一句话</h2>
+很多书籍都说，乐观是幸福、健康和长寿的关键。但是，英国巴斯大学的一项研究表明，乐观实际上与较低的认知有关，
+认知能力高的人对未来往往更加现实和悲观。
+这也许表明，认知能力低的人更可能幸福、健康和长寿？
+当然，过度乐观可能会导致糟糕的财务决策，比如过度消费和负债，使得生活状况很糟糕。
+-- [<a href="https://www.bath.ac.uk/announcements/optimistic-thinking-linked-with-lower-cognitive-abilities-new-research/">巴斯大学</a>]
+
+痛苦能滋养勇气。如果只有美好的事情发生在你身上，你就不可能变得勇敢。
+-- 玛丽·泰勒·摩尔（Mary Tyler Moore），美国电影女演员
+
+<h2>古诗文</h2>
+登鹳鹊楼 -王焕之 唐
+
+白日依山尽，黄河入海流。  
+欲穷千里目，更上一层楼。
+<br>
+相思 -王维 唐
+
+红豆生南国，春来发几枝。  
+愿君多采撷，此物最相思。
+
+<h2>系统配置</h2>
+{% highlight shell %}
+# Enable vi mode in irb:
+
+cat <<END >> ~/.inputrc
+> set editing-mode vi
+> END
+
+# Enable vi mode in bash:
+
+cat <<END >> ~/.bashrc
+> set -o vi
+> END
+{% endhighlight %}
+<a href="https://hackthology.com">Now everything has vi key bingdings! You are welcome.</a>
+<br>
+<a href="https://bootrails.com/blog/rails-7-bootstrap-5-tutorial">rails 7 bootstrap 5 tutorial</a>
+
+<p><code>git clone https://jejujiang.github.com/blog.git</code>突然按下<kbd>ctrl+x</kbd>终止时，目录中会留有blog，
+其中有blog/.git/hook，使用<code>rm -rf</code>时，提示blog/.git/hook is not empty directory，此时，
+执行<kbd>git init</kbd>后，可以将blog目录删除。</p>
+</section>
