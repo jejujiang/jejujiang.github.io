@@ -6,6 +6,7 @@ layout: page
 Curious, simple, happy and brave to meet tomorrow!
 
 - [Hello, Algo](https://www.hello-algo.com/en/)
+- [FreeBSD](https://www.freebsd.org/)
 - [Ruby Programming Language](https://www.ruby-lang.org/en/)
 - [Ruby China](https://ruby-china.org/)
 - [Jekyll](https://jekyllrb.com/)
