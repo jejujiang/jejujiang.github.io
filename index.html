@@ -8,12 +8,16 @@ title: "Hello Colored Gemstones!"
 		<h1 class="title">Hello Colored Gemstones</h1>
 		<p class="subtitle">每个人都值得拥有彩色宝石</p>
 	</div>
-
-	<ul>
-	{% for post in site.posts %}
-	  <li>
-		  <a href="{{ post.url }}">{{ post.title }}</a>
-	  </li>
-	{% endfor %}
-	</ul>
 </section>
+
+<article>
+<div class="container">
+	<ul>
+		{% for post in site.posts %}
+		<li>
+			<a href="{{ post.url }}">{{ post.title }}</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+</article>
