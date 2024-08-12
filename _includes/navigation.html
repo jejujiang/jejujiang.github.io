@@ -1,0 +1,13 @@
+<setction class="section">
+<div class="container">
+<nav class="navbar" role="navigation" aria-label="main navigation">
+	<div class="navbar-start">
+	{% for item in site.data.navigation %}
+		<a  href="{{ item.link }}" class="navbar-item">
+			{{ item.name }}
+		</a>
+	{% endfor %}
+	</div>
+</nav>
+</div>
+</section>
