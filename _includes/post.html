@@ -1,13 +1,14 @@
 <article>
-<section class="section">
-<div class="container">
-	<ul>
+	<section class="section">
+	<div class="content">
+		<ul>
 		{% for post in site.posts %}
 		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a>
+			<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+			<a  href="{{ post.url }}">{{ post.title }}</a>
 		</li>
 		{% endfor %}
-	</ul>
-</div>
-</secttion>
+		</ul>
+	</div>
+	</setction
 </article>
