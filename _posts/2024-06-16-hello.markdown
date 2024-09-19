@@ -1,0 +1,55 @@
+---
+layout: post 
+title: hello world
+---
+
+hello world  
+
+
+## The steps of Basque making  
+*   220g cream cheese
+*   100g suger
+*   4 eggs
+*   8-10g cake flour
+*   170g whipped cream
+*   4g corn starch
+*   preheat the oven to 220 degrees Celsius
+*   bake at 220 degrees Celsius for 30 minutes
+
+## How to make cookies
+*   500g flour
+*   375g butter
+*   200g suger
+*   two egg yolks
+*   refrigerate for 2-3 hours
+
+## operation system
+UID: 0 is a super user, username is root; 1~999 is an system user, password login system is not provided; 1000~60000 is an ordinary user;
+
+June 05, 2004  
+China's spacecraft takes off from moon with first samples from lunar far side.
+
+## 一句话
+
+很多书籍都说，乐观是幸福、健康和长寿的关键。但是，英国巴斯大学的一项研究表明，乐观实际上与较低的认知有关 认知能力高的人对未来往往更加现实和悲观。 这也许表明，认知能力低的人更可能幸福、健康和长寿？ 当然，过度乐观可能会导致糟糕的财务决策，比如过度消费和负债，使得生活状况很糟糕。 -- [巴斯大学](https://www.bath.ac.uk/announcements/optimistic-thinking-linked-with-lower-cognitive-abilities-new-research/)
+
+痛苦能滋养勇气。如果只有美好的事情发生在你身上，你就不可能变得勇敢。 -- 玛丽·泰勒·摩尔（Mary Tyler Moore），美国电影女演员
+
+## 古诗文
+
+登鹳鹊楼 -王焕之 唐 白日依山尽，黄河入海流。 欲穷千里目，更上一层楼。  
+相思 -王维 唐 红豆生南国，春来发几枝。 愿君多采撷，此物最相思。
+
+## 系统配置
+
+{% highlight shell %}
+# Enable vi mode in irb:
+echo "set editing-mode vi" >> ~/.inputrc
+# Enable vi mode in bash:
+echo "set -o vi" >> ~/.bashrc
+{% endhighlight %} 
+
+[Now everything has vi key bingdings! You are welcome.](https://hackthology.com)  
+[rails 7 bootstrap 5 tutorial](https://bootrails.com/blog/rails-7-bootstrap-5-tutorial)
+
+git clone https://jejujiang.github.com/blog.git突然按下ctrl+x终止时，目录中会留blog， 其中有blog/.git/hook，使用rm -rf时，提示blog/.git/hook is not empty directory，此时， 执行git init后，可以将blog目录删除。
