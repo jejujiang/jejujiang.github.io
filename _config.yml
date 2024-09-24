@@ -3,6 +3,7 @@ title:          Tale
 description:    "Minimal Jekyll theme for storytellers"
 baseurl:        "/"
 url:            "https://jejujiang.github.io"
+show_drafts:    true
 
 # Google Analytics
 # google_analytics: UA—XXXXXXXX-X
