@@ -1,15 +1,41 @@
-# Example Site settings
+# Site settings
+title:          Tale
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
+url:            "https://chesterhow.github.io"
 
-#google_analytics: UA-NNNNNNNN-N
+# Google Analytics
+google_analytics: UA—XXXXXXXX-X
 
-header_pages:
-  - index.md
-#  - about.md
+# Author
+author:
+  name:         Chester How
+  url:          https://chester.how
+  email:        chesterhow@gmail.com
 
-footer: 'follow us on <a href="https://x.com/jejujiang">X</a>'
+# Build settings
+markdown:       kramdown
+include:
+  - _pages
 
-#style: light # dark (default) or light
-#listen_for_clients_preferred_style: true # true or false (default)
+# Assets
+sass:
+  sass_dir:     _sass
+  style:        compressed
 
+# Gems
 plugins:
+  - jekyll-feed
+  - jekyll-paginate
   - jekyll-seo-tag
+  # - jemoji #Uncomment this to allow emoji in your post
+
+# Permalinks
+permalink:      /:year-:month-:day/:title
+paginate:       5
+
+# Excludes
+exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
+
+# Disqus (Set to your disqus id)
+disqus:         jekyll-tale
