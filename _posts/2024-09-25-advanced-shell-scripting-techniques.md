@@ -9,7 +9,7 @@ tags:
   - Automating
   - Scripting
 ---
-这是[Omid Farhang]({% link https://omid.dev/ %})一篇好文章。
+这是<a href="https://omid.dev/">Omid Farhang</a>一篇好文章。
 Bash scripting, a cornerstone of Unix and Linux system administration, offers powerful tools to automate repetitive tasks, streamline workflows, and handle complex operations. For those already comfortable with basic scripting, diving into advanced techniques can unlock new levels of efficiency and capability. This post will explore advanced shell scripting techniques in Bash, focusing on script optimization, robust error handling, and automating complex system administration tasks.
 
 ## Script Optimization
