@@ -1,6 +1,6 @@
 ---
 title: 'Advanced Shell Scripting Techniques: Automating Complex Tasks with Bash'
-author: <a href="https://omid.dev">Omid Farhang</a>
+author: <a href=\"https://omid.dev\">Omid Farhang</a>
 layout: post
 tags:
   - Bash
