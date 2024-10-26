@@ -22,7 +22,9 @@ hello world
 *   375g butter
 *   200g suger
 *   two egg yolks
+*   香草两根 和糖
 *   refrigerate for 2-3 hours
+*   预热200度，10-12分钟
 
 ## operation system
 UID: 0 is a super user, username is root; 1~999 is an system user, password login system is not provided; 1000~60000 is an ordinary user;
