@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: hello algorithm
-tags: 读书笔记 computer
+tags: computer
 ---
 
 [Hello 算法](https://www.hello-algo.com)  

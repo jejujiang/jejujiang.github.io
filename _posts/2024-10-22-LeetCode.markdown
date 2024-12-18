@@ -1,7 +1,7 @@
 ---
 layout: post 
 title: hello LeetCode
-tags: LeetCode
+tags: computer
 ---
 
 ## 1. 两数之和
