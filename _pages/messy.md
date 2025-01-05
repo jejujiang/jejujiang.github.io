@@ -5,4 +5,4 @@ author: "Jeju"
 permalink: /messy/
 ---
 
-Do you know what to say when you want persuade someone to do something.
+Do you know what to say when you want to persuade someone to do something.
