@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "The Little Prince"
+author: Antoine de Saint-Exupéry
 permalink: /theLittlePrince/
 ---
 
