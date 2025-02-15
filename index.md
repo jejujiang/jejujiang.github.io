@@ -23,7 +23,7 @@
 																			    <section id="home" class="hero">
 																				            <h1>欢迎来到我的主页</h1>
 																					            <p>Ruby 每日一码</p>
-																						            <a href="https://https://www.ruby-lang.org/zh_cn/" class="btn">了解更多</a>
+																						            <a href="https://www.ruby-lang.org/zh_cn/" class="btn">了解更多</a>
 																							        </section>
 
 																								    <section id="about" class="about">
