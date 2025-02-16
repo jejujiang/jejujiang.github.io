@@ -3,33 +3,99 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>我的主页</title>
-		<link rel="stylesheet" href="/assets/css/styles.css">
+		<title>Ruby 代码展示</title>
+		<!-- 引入 Highlight.js 的 CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+		<style>
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f9f9f9;
+	color: #333;
+	margin: 0;
+	padding: 20px;
+}
+	h1 {
+		text-align: center;
+		color: #444;
+	}
+	header h1 {
+		  animation: fadeIn 2s ease-in-out;
+	}
+
+	@keyframes fadeIn {
+		  from { opacity: 0; }
+		    to { opacity: 1; }
+	}
+	pre {
+		background-color: #f4f4f4;
+		padding: 15px;
+		border-radius: 5px;
+		overflow-x: auto;
+		max-width: 800px;
+		margin: 20px auto;
+	}
+	code {
+		font-family: 'Courier New', Courier, monospace;
+	}
+		</style>
 	</head>
 	<body>
-		<div class="container">
-			<header>
-				<h1>欢迎来到我的主页</h1>
-				<p>每日一码，学习Ruby。</p>
-			</header>
-			<main>
-				<section>
-					<h2>关于我</h2>
-					<p>我是一个热爱编程和设计的开发者，喜欢创造简洁而实用的东西。</p>
-				</section>
-				<section>
-					<h2>2025年月16日 星期日</h2>
-					<pre>
-					<code>
-def fibonacci(n)
-end
-					</code>
-					</pre>
-				</section>
-			</main>
-			<footer>
-				<p>&copy; 2025 我的主页. 保留所有权利.</p>
-			</footer>
-		</div>
+		<h1>Ruby 代码示例</h1>
+
+		<!-- 示例 1：计算斐波那契数列 -->
+		<h2>1. 计算斐波那契数列</h2>
+		<pre><code class="language-ruby">
+			# 计算斐波那契数列
+			def fibonacci(n)
+			  if n <= 1
+			   n
+			   else
+			   fibonacci(n - 1) + fibonacci(n - 2)
+			   end
+			   end
+
+			   # 输出前 10 个斐波那契数
+			   (0..9).each do |i|
+			   puts "fibonacci(#{i}) = #{fibonacci(i)}"
+			   end
+		</code></pre>
+
+		<!-- 示例 2：猜数字游戏 -->
+		<h2>2. 猜数字游戏</h2>
+		<pre><code class="language-ruby">
+						def guess_number_game
+						  target = rand(1..100)
+						    attempts = 0
+
+						      puts "欢迎来到猜数字游戏！"
+							puts "我已经想好了一个 1 到 100 之间的数字，你能猜出来吗？"
+
+							  loop do
+							      print "请输入你的猜测："
+								  guess = gets.chomp.to_i
+								      attempts += 1
+
+									  if guess < target
+			   puts "猜小了，再试试！"
+			   elsif guess > target
+											  puts "猜大了，再试试！"
+											      else
+												    puts "恭喜你，猜对了！"
+													  puts "你一共猜了 #{attempts} 次。"
+														break
+														    end
+														      end
+														      end
+
+														      # 启动游戏
+														      guess_number_game
+		</code></pre>
+
+		<!-- 引入 Highlight.js 的 JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+		<script>
+			// 初始化语法高亮
+			hljs.highlightAll();
+		</script>
 	</body>
 </html>
