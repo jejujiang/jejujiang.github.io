@@ -1,0 +1,159 @@
+/* 全局样式 */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+    color: #fff;
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* 使用百分比 padding 替代固定值 */
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-sizing: border-box; /* 确保 padding 不会增加总宽度 */
+}
+
+.navbar-logo span {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff8c42; /* 橙色 */
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0; /* 移除默认 margin */
+    padding: 0; /* 移除默认 padding */
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+    white-space: nowrap; /* 防止链接换行 */
+}
+
+.navbar-links a:hover {
+    color: #ff8c42; /* 橙色 */
+}
+
+/* 英雄部分 */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ff8c42; /* 橙色 */
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+.hero-button {
+    padding: 15px 30px;
+    background: #ff8c42; /* 橙色 */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    transition: background 0.3s;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.hero-button:hover {
+    background: #e67e22; /* 深橙色 */
+}
+
+/* 卡片部分 */
+.cards-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(255, 140, 66, 0.3); /* 橙色阴影 */
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #ff8c42; /* 橙色 */
+}
+
+.card p {
+    font-size: 16px;
+    color: #ddd;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 50px;
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.animate-fade-in {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.animate-slide-up {
+    animation: slideUp 1.5s ease-in-out;
+}
