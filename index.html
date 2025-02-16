@@ -48,15 +48,15 @@ body {
 # 计算斐波那契数列
 def fibonacci(n)
   if n <= 1
-   n
-   else
-   fibonacci(n - 1) + fibonacci(n - 2)
-   end
+    n
+  else
+    fibonacci(n - 1) + fibonacci(n - 2)
+  end
 end
 
 # 输出前 10 个斐波那契数
 (0..9).each do |i|
-pets "fibonacci(#{i}) = #{fibonacci(i)}"
+  puts "fibonacci(#{i}) = #{fibonacci(i)}"
 end
 		</code></pre>
 
@@ -70,22 +70,22 @@ def guess_number_game
     puts "欢迎来到猜数字游戏！"
     puts "我已经想好了一个 1 到 100 之间的数字，你能猜出来吗？"
 
-  loop do
-    print "请输入你的猜测："
-    guess = gets.chomp.to_i
-    attempts += 1
+ loop do
+  print "请输入你的猜测："
+  guess = gets.chomp.to_i
+  attempts += 1
 
-    if guess < target
-      puts "猜小了，再试试！"
-    elsif guess > target
-      puts "猜大了，再试试！"
-    else
-      puts "恭喜你，猜对了！"
-      puts "你一共猜了 #{attempts} 次。"
-      break
-    end
-						      end
-						      end
+  if guess < target
+    puts "猜小了，再试试！"
+  elsif guess > target
+    puts "猜大了，再试试！"
+  else
+    puts "恭喜你，猜对了！"
+    puts "你一共猜了 #{attempts} 次。"
+    break
+  end
+ end
+end
 
 						      # 启动游戏
 						      guess_number_game
