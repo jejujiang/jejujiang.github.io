@@ -67,28 +67,28 @@ def guess_number_game
   target = rand(1..100)
     attempts = 0
 
-      puts "欢迎来到猜数字游戏！"
-	puts "我已经想好了一个 1 到 100 之间的数字，你能猜出来吗？"
+    puts "欢迎来到猜数字游戏！"
+    puts "我已经想好了一个 1 到 100 之间的数字，你能猜出来吗？"
 
   loop do
-      print "请输入你的猜测："
-	  guess = gets.chomp.to_i
-	      attempts += 1
+    print "请输入你的猜测："
+    guess = gets.chomp.to_i
+    attempts += 1
 
-		  if guess < target
-		   puts "猜小了，再试试！"
-		   elsif guess > target
-										  puts "猜大了，再试试！"
-										      else
-											    puts "恭喜你，猜对了！"
-												  puts "你一共猜了 #{attempts} 次。"
-													break
-													    end
-													      end
-													      end
+    if guess < target
+      puts "猜小了，再试试！"
+    elsif guess > target
+      puts "猜大了，再试试！"
+    else
+      puts "恭喜你，猜对了！"
+      puts "你一共猜了 #{attempts} 次。"
+      break
+    end
+						      end
+						      end
 
-													      # 启动游戏
-													      guess_number_game
+						      # 启动游戏
+						      guess_number_game
 		</code></pre>
 
 		<!-- 引入 Highlight.js 的 JS -->
