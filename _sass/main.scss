@@ -1,85 +1,80 @@
-/* 重置样式 */
+/* 重置默认样式 */
 * {
-	    margin: 0;
-	        padding: 0;
-		    box-sizing: border-box;
-	    }
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
-	    body {
-		        font-family: Arial, sans-serif;
-			    line-height: 1.6;
-			        color: #333;
-			}
+/* 设置页面字体和背景 */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f4f4f9;
+	color: #333;
+	line-height: 1.6;
+}
 
-			/* 导航栏样式 */
-			header {
-				    background: #333;
-				        color: #fff;
-					    padding: 1rem 0;
-				    }
+/* 容器居中 */
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
 
-				    nav ul {
-					        list-style: none;
-						    display: flex;
-						        justify-content: center;
-						}
+/* 头部样式 */
+header {
+	text-align: center;
+	margin-bottom: 40px;
+}
 
-						nav ul li {
-							    margin: 0 15px;
-						    }
+header h1 {
+	font-size: 2.5rem;
+	margin-bottom: 10px;
+}
 
-						    nav ul li a {
-							        color: #fff;
-								    text-decoration: none;
-								        font-weight: bold;
-								}
+header p {
+	font-size: 1.2rem;
+	color: #666;
+}
 
-								nav ul li a:hover {
-									    color: #f4f4f4;
-								    }
+/* 主体内容样式 */
+main section {
+	margin-bottom: 30px;
+}
 
-								    /* 欢迎部分样式 */
-								    .hero {
-									        background: #f4f4f4;
-										    padding: 2rem;
-										        text-align: center;
-										}
+main h2 {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	color: #444;
+}
 
-										.hero h1 {
-											    margin-bottom: 1rem;
-										    }
+main p {
+	font-size: 1.1rem;
+	color: #555;
+}
 
-										    .hero p {
-											        margin-bottom: 1.5rem;
-											}
+main ul {
+	list-style-type: none;
+}
 
-											.hero .btn {
-												    background: #333;
-												        color: #fff;
-													    padding: 0.5rem 1rem;
-													        text-decoration: none;
-														    border-radius: 5px;
-													    }
+main ul li {
+	margin-bottom: 10px;
+}
 
-													    .hero .btn:hover {
-														        background: #555;
-														}
+main ul li a {
+	text-decoration: none;
+	color: #0077cc;
+	font-size: 1.1rem;
+}
 
-														/* 关于部分样式 */
-														.about {
-															    padding: 2rem;
-															        text-align: center;
-															}
+main ul li a:hover {
+	text-decoration: underline;
+}
 
-															.about h2 {
-																    margin-bottom: 1rem;
-															    }
-
-															    /* 页脚样式 */
-															    footer {
-																        background: #333;
-																	    color: #fff;
-																	        text-align: center;
-																		    padding: 1rem 0;
-																		        margin-top: 2rem;
-																		}
+/* 页脚样式 */
+footer {
+	text-align: center;
+	margin-top: 40px;
+	padding-top: 20px;
+	border-top: 1px solid #ddd;
+	color: #777;
+}
