@@ -80,6 +80,18 @@ main ul li a:hover {
 	text-decoration: underline;
 }
 
+/* 代码样式 */
+
+pre {
+	background-color: #f4f4f4;
+	padding: 15px;
+	border-radius: 5px;
+	overflow-x: auto;
+}
+code {
+	font-family: 'Courier New', Courier, monospace;
+}
+
 /* 页脚样式 */
 footer {
 	text-align: center;
