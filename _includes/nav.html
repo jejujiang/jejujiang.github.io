@@ -1,0 +1,10 @@
+<nav class="navbar">
+	<div class="navbar-logo">
+		<span>{{ site.title | page.title }}</span>
+	</div>
+	<ul class="navbar-links">
+		{% for item in site.data.navigation %}
+		<li><a href="{{ item.link }}">{{ item.name }}</a></li>
+		{% endfor %}
+	</ul>
+</nav>
