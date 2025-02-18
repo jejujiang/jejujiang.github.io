@@ -1,5 +1,5 @@
-- name: Home
+- name: 唐诗三百首
   link: /
 
-- name: About
-  link: /about.html
+- name: Three Hundred Tang Poems
+  link: /tang.html

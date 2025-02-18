@@ -1,0 +1,8 @@
+<section class="cards-section">
+    {% for item in site.data.tangPoetry %}
+    <div class="card animate-slide-up">
+        <h2>{{ item.name }} - {{ item.author }}</h2>
+        <p>{{ item.content }}</p>
+    </div>
+    {% endfor %}
+</section>

@@ -7,8 +7,10 @@
 
 - name: 《登鹳雀楼》
   author: 王之涣
-  content: 白日依山尽，黄河入海流。
-           欲穷千里目，更上一层楼。
+  content: The sun sets behind the mountains, far and wide,
+           The Yellow River flows to the sea with pride.
+           To extend your view a thousand miles, you must,
+           Climb yet another floor, as the ancients trust.
 
 - name: 《静夜思》
   author: 李白
@@ -22,7 +24,9 @@
            烽火连三月，家书抵万金。
            白头搔更短，浑欲不胜簪。
 
-- name: 《相思》
-  author: 王维
-  content: 红豆生南国，春来发几枝。
-           愿君多采撷，此物最相思。
+- name: Love Seeds《相思》
+  author: 王维 (许渊冲译)
+  content: Red beans grow in southern land,
+           In spring they sprout with tender care.
+           Gather them, I pray, with your hand,
+           For they symbolize love rare.
