@@ -90,17 +90,18 @@ body {
 
 /* 卡片部分 */
 .cards-section {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  /* 自动适应列数 */
     justify-content: space-around;
     padding: 50px 20px;
     background: rgba(0, 0, 0, 0.1);
+    gap: 16px; /* 卡片之间的间距 */
 }
 
 .card {
     background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
