@@ -1,16 +1,18 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web3.0 Homepage</title>
+    <title>Life is like dust.</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="navbar-logo">
-            <span>Web3.0</span>
+            <span>Life is like dust.</span>
         </div>
         <ul class="navbar-links">
             <li><a href="/">Home</a></li>
@@ -23,35 +25,27 @@
         <div class="hero-content">
             <h1 class="hero-title animate-fade-in">Welcome to the Future</h1>
             <p class="hero-subtitle animate-fade-in">Experience the power of Web3.0</p>
-            <a href="#" class="hero-button animate-fade-in">Get Started</a>
+            <a href="#tangshi" class="hero-button animate-fade-in">Get Started</a>
         </div>
     </section>
 
     <!-- 卡片部分 -->
-    <section class="cards-section">
+    <section class="cards-section" id="tangshi">
+	{% for item in site.data.tangshi %}
         <div class="card animate-slide-up">
-            <h2>唐代诗人王维的《山居秋暝》</h2>
-	    <p>
-	    空山新雨后，天气晚来秋。</br>
-	    明月松间照，清泉石上流。</br>
-	    竹喧归浣女，莲动下渔舟。</br>
-	    随意春芳歇，王孙自可留。</br>
-	    </br>
-	    这首诗描绘了秋日山中的宁静与生机，意境清新自然，展现了诗人对隐逸生活的向往。希望您喜欢！</p>
+  	    <h2>{{ item.name }} - {{ item.author }}</h2>
+	    <p>{{ item.content }}</p>
         </div>
-        <div class="card animate-slide-up">
-            <h2>Secure</h2>
-            <p>Built on blockchain for ultimate security.</p>
-        </div>
-        <div class="card animate-slide-up">
-            <h2>Transparent</h2>
-            <p>Open and verifiable systems for trust.</p>
-        </div>
+        {% endfor %}
     </section>
+
+    <div class="top">
+    <a href="#" class="hero-button animate-fade-in">Top</a>
+    </div>
 
     <!-- 页脚 -->
     <footer class="footer">
-        <p>&copy; 2023 Web3.0. All rights reserved.</p>
+	    <p>&copy; 2025 <a href="https://www.deepseek.com/">DeepSeek</a> All rights reserved.</p>
     </footer>
 </body>
 </html>
