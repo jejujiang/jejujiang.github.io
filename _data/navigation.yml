@@ -2,4 +2,7 @@
   link: /
 
 - name: Three Hundred Tang Poems
-  link: /tang.html
+  link: /about.html
+
+- name: Linux
+  link: /linux
