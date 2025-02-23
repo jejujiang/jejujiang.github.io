@@ -159,8 +159,3 @@ body {
 .animate-slide-up {
     animation: slideUp 1.5s ease-in-out;
 }
-
-@media (max-width: 768px) {
-  .nav {
-    flex-direction: column; /* 改为垂直布局 */
-}
