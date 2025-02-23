@@ -13,7 +13,7 @@ body {
     align-items: center;
     padding: 20px 5%; /* 使用百分比 padding 替代固定值 */
     background: rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
@@ -158,4 +158,11 @@ body {
 
 .animate-slide-up {
     animation: slideUp 1.5s ease-in-out;
+}
+
+@media (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		overflow-x: auto;
+	}
 }
