@@ -160,6 +160,7 @@ body {
     animation: slideUp 1.5s ease-in-out;
 }
 
+/* 确保导航栏在小屏幕上能够自适应 */
 @media (max-width: 768px) {
 	.navbar {
 		flex-direction: column;
