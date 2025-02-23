@@ -13,7 +13,7 @@ body {
     align-items: center;
     padding: 20px 5%; /* 使用百分比 padding 替代固定值 */
     background: rgba(0, 0, 0, 0.5);
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 1000;
