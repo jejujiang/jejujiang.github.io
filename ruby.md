@@ -569,3 +569,146 @@ sudo chown -R $USER /usr/local/lib/ruby/gems/3.4.0
 											- 如果需要自定义，可以通过设置 `GEM_HOME` 和 `GEM_PATH` 环境变量来实现。
 
 											如果你希望将 gem 安装到用户目录（避免权限问题），建议设置 `GEM_HOME` 为 `~/.gem/ruby/X.Y.Z`，并将 `~/.gem/ruby/X.Y.Z/bin` 添加到 `PATH` 中。
+
+
+---
+---
+源代码安装的Ruby，如何卸载
+
+通过源代码安装的 Ruby 可以通过以下步骤完全卸载。卸载过程包括删除 Ruby 的安装目录、相关的可执行文件以及 gem 安装的库。
+
+---
+
+### 1. **确定 Ruby 的安装路径**
+在卸载之前，首先需要确定 Ruby 的安装路径。可以通过以下命令查看：
+
+```bash
+which ruby
+```
+
+输出示例：
+```
+/usr/local/bin/ruby
+```
+
+然后查看 Ruby 的安装前缀（prefix）：
+
+```bash
+ruby -e 'puts RbConfig::CONFIG["prefix"]'
+```
+
+输出示例：
+```
+/usr/local
+```
+
+这意味着 Ruby 安装在 `/usr/local` 目录下。
+
+---
+
+### 2. **删除 Ruby 的安装目录**
+根据上一步的输出，删除 Ruby 的安装目录。例如，如果 Ruby 安装在 `/usr/local`，可以运行以下命令：
+
+```bash
+sudo rm -rf /usr/local/bin/ruby
+sudo rm -rf /usr/local/bin/gem
+sudo rm -rf /usr/local/bin/irb
+sudo rm -rf /usr/local/bin/rake
+sudo rm -rf /usr/local/bin/bundle
+sudo rm -rf /usr/local/lib/ruby
+sudo rm -rf /usr/local/include/ruby
+sudo rm -rf /usr/local/share/ri
+```
+
+如果你将 Ruby 安装到自定义目录（例如 `./configure --prefix=$HOME/ruby`），则删除该目录：
+
+```bash
+rm -rf ~/ruby
+```
+
+---
+
+### 3. **删除用户安装的 gem**
+RubyGems 会将用户安装的 gem 存储在 `~/.gem` 目录中。如果你希望删除这些 gem，可以运行：
+
+```bash
+rm -rf ~/.gem
+```
+
+---
+
+### 4. **清理环境变量**
+如果你在 `~/.bashrc`、`~/.zshrc` 或其他配置文件中设置了与 Ruby 相关的环境变量（如 `PATH`、`GEM_HOME`、`GEM_PATH` 等），需要手动清理。
+
+打开配置文件：
+
+```bash
+nano ~/.bashrc  # 或者 ~/.zshrc
+```
+
+删除或注释掉与 Ruby 相关的行，例如：
+
+```bash
+# export PATH=$HOME/ruby/bin:$PATH
+# export GEM_HOME=$HOME/.gem/ruby/X.Y.Z
+# export GEM_PATH=$HOME/.gem/ruby/X.Y.Z
+```
+
+保存文件后，运行以下命令使更改生效：
+
+```bash
+source ~/.bashrc  # 或者 source ~/.zshrc
+```
+
+---
+
+### 5. **验证卸载**
+运行以下命令验证 Ruby 是否已完全卸载：
+
+```bash
+which ruby
+ruby -v
+gem -v
+```
+
+如果输出为空或提示命令未找到，说明 Ruby 已成功卸载。
+
+---
+
+### 6. **（可选）使用 RVM 或 rbenv 重新安装 Ruby**
+如果你希望重新安装 Ruby，推荐使用版本管理工具（如 RVM 或 rbenv），它们可以更方便地管理 Ruby 的安装和卸载。
+
+#### 使用 RVM 安装 Ruby：
+```bash
+# 安装 RVM
+\curl -sSL https://get.rvm.io | bash -s stable
+
+# 加载 RVM
+source ~/.rvm/scripts/rvm
+
+# 安装 Ruby
+rvm install 3.2.2
+
+# 设置默认 Ruby 版本
+rvm use 3.2.2 --default
+```
+
+#### 使用 rbenv 安装 Ruby：
+```bash
+# 安装 rbenv
+sudo apt install rbenv
+
+# 初始化 rbenv
+rbenv init
+
+# 安装 Ruby
+rbenv install 3.2.2
+
+# 设置全局 Ruby 版本
+rbenv global 3.2.2
+```
+
+---
+
+### 总结
+通过以上步骤，你可以完全卸载通过源代码安装的 Ruby。如果你需要重新安装 Ruby，建议使用 RVM 或 rbenv 来管理 Ruby 版本，以避免手动管理带来的复杂性。
