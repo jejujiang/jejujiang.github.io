@@ -310,3 +310,141 @@ sudo apt install libffi-dev
 
 				       ### 总结
 				       如果以上方法仍然无法解决问题，请提供完整的错误日志，以便进一步分析。通常情况下，安装 `libffi-dev` 并正确配置 `pkg-config` 应该可以解决问题。如果问题复杂，建议使用 RVM 或 rbenv 来简化 Ruby 的安装过程。
+
+---
+---
+使用 gem install 时，提示”Default to user installation because default installation directory (/usr/local/lib/ruby/gems/3.4.0) is not writable.”。
+
+这个提示表明你尝试使用 `gem install` 安装 gem 包时，默认的系统级安装目录 (`/usr/local/lib/ruby/gems/3.4.0`) 不可写（通常是因为没有 `sudo` 权限）。因此，RubyGems 默认将 gem 安装到用户目录中（`~/.gem`）。
+
+这是正常行为，尤其是当你没有系统管理员权限时。以下是几种解决方法：
+
+---
+
+### 1. **使用用户目录安装（推荐）**
+这是最简单的解决方案。RubyGems 会将 gem 安装到你的用户目录中（例如 `~/.gem`），不会影响系统全局环境。
+
+只需按照提示继续安装即可：
+
+```bash
+gem install <gem-name>
+```
+
+安装后，gem 会被安装到 `~/.gem` 目录中，Ruby 也可以正常加载这些 gem。
+
+---
+
+### 2. **配置 GEM_HOME 和 GEM_PATH**
+如果你希望将用户安装的 gem 放到特定目录，可以设置 `GEM_HOME` 和 `GEM_PATH` 环境变量。
+
+例如，将 gem 安装到 `~/.ruby/gems`：
+
+```bash
+# 创建目录
+mkdir -p ~/.ruby/gems
+
+# 设置环境变量
+export GEM_HOME=~/.ruby/gems
+export GEM_PATH=~/.ruby/gems
+
+# 将 GEM_HOME 的 bin 目录添加到 PATH
+export PATH=~/.ruby/gems/bin:$PATH
+
+# 安装 gem
+gem install <gem-name>
+```
+
+为了让这些设置永久生效，可以将以下内容添加到 `~/.bashrc` 或 `~/.zshrc` 文件中：
+
+```bash
+export GEM_HOME=~/.ruby/gems
+export GEM_PATH=~/.ruby/gems
+export PATH=~/.ruby/gems/bin:$PATH
+```
+
+然后运行 `source ~/.bashrc` 或 `source ~/.zshrc` 使配置生效。
+
+---
+
+### 3. **使用 `--user-install` 选项**
+如果你不想设置环境变量，可以直接使用 `--user-install` 选项将 gem 安装到用户目录：
+
+```bash
+gem install <gem-name> --user-install
+```
+
+安装后，gem 会被安装到 `~/.gem/ruby/X.Y.Z` 目录中（`X.Y.Z` 是 Ruby 版本号）。
+
+---
+
+### 4. **使用 `sudo` 安装到系统目录（不推荐）**
+如果你有管理员权限，并且希望将 gem 安装到系统目录，可以使用 `sudo`：
+
+```bash
+sudo gem install <gem-name>
+```
+
+**注意：** 这种方法不推荐，因为它可能会干扰系统的 Ruby 环境，尤其是在使用系统自带的 Ruby 时。
+
+---
+
+### 5. **使用 RVM 或 rbenv 管理 Ruby 环境**
+如果你经常需要安装 gem，建议使用 RVM 或 rbenv 来管理 Ruby 环境。这些工具会将 Ruby 和 gem 安装到用户目录中，避免权限问题。
+
+#### 使用 RVM：
+```bash
+# 安装 RVM
+\curl -sSL https://get.rvm.io | bash -s stable
+
+# 加载 RVM
+source ~/.rvm/scripts/rvm
+
+# 安装 Ruby
+rvm install 3.2.2
+
+# 设置默认 Ruby 版本
+rvm use 3.2.2 --default
+
+# 安装 gem
+gem install <gem-name>
+```
+
+#### 使用 rbenv：
+```bash
+# 安装 rbenv
+sudo apt install rbenv
+
+# 初始化 rbenv
+rbenv init
+
+# 安装 Ruby
+rbenv install 3.2.2
+
+# 设置全局 Ruby 版本
+rbenv global 3.2.2
+
+# 安装 gem
+gem install <gem-name>
+```
+
+---
+
+### 6. **检查 Ruby 安装目录的权限**
+如果你确实需要将 gem 安装到系统目录，可以检查并修改 Ruby 安装目录的权限：
+
+```bash
+# 检查目录权限
+ls -ld /usr/local/lib/ruby/gems/3.4.0
+
+# 修改权限（谨慎操作）
+sudo chown -R $USER /usr/local/lib/ruby/gems/3.4.0
+```
+
+**注意：** 修改系统目录的权限可能会导致安全问题，因此不推荐。
+
+---
+
+### 总结
+- 如果你没有管理员权限，推荐使用用户目录安装（方法 1 或方法 2）。
+- 如果你有管理员权限且需要全局安装，可以使用 `sudo`（方法 4），但需谨慎。
+- 对于长期开发，建议使用 RVM 或 rbenv 管理 Ruby 环境（方法 5）。
