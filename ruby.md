@@ -448,3 +448,124 @@ sudo chown -R $USER /usr/local/lib/ruby/gems/3.4.0
 - 如果你没有管理员权限，推荐使用用户目录安装（方法 1 或方法 2）。
 - 如果你有管理员权限且需要全局安装，可以使用 `sudo`（方法 4），但需谨慎。
 - 对于长期开发，建议使用 RVM 或 rbenv 管理 Ruby 环境（方法 5）。
+
+---
+---
+源代码安装Ruby的GEM_HOME和GEM_PATH的值是什么？
+
+通过源代码安装 Ruby 时，`GEM_HOME` 和 `GEM_PATH` 的值取决于你的安装配置和环境变量设置。以下是详细说明：
+
+---
+
+### 1. **默认的 `GEM_HOME` 和 `GEM_PATH`**
+如果你通过源代码安装 Ruby 并且没有显式设置 `GEM_HOME` 和 `GEM_PATH`，它们的默认值如下：
+
+#### **`GEM_HOME`**
+- 如果你使用 `sudo make install` 安装 Ruby，`GEM_HOME` 通常是：
+  ```
+    /usr/local/lib/ruby/gems/X.Y.Z
+      ```
+        其中 `X.Y.Z` 是 Ruby 的版本号（例如 `3.2.2`）。
+
+	- 如果你在用户目录下安装 Ruby（例如 `./configure --prefix=$HOME/ruby`），`GEM_HOME` 通常是：
+	  ```
+	    ~/ruby/lib/ruby/gems/X.Y.Z
+	      ```
+
+	      #### **`GEM_PATH`**
+	      - 如果没有设置 `GEM_PATH`，它的值通常与 `GEM_HOME` 相同。
+	      - 如果系统中存在多个 Ruby 版本或 gem 目录，`GEM_PATH` 可能包含多个路径，例如：
+	        ```
+		  /usr/local/lib/ruby/gems/X.Y.Z:/usr/lib/ruby/gems/X.Y.Z
+		    ```
+
+		    ---
+
+		    ### 2. **查看当前的 `GEM_HOME` 和 `GEM_PATH`**
+		    你可以通过以下命令查看当前的 `GEM_HOME` 和 `GEM_PATH`：
+
+		    ```bash
+		    ruby -e 'puts Gem.path'
+		    ```
+
+		    输出示例：
+		    ```
+		    /home/username/.gem/ruby/3.2.0
+		    /usr/local/lib/ruby/gems/3.2.0
+		    ```
+
+		    - 第一个路径通常是用户目录下的 gem 路径（`~/.gem/ruby/X.Y.Z`）。
+		    - 第二个路径是系统级的 gem 路径（`/usr/local/lib/ruby/gems/X.Y.Z`）。
+
+		    ---
+
+		    ### 3. **设置 `GEM_HOME` 和 `GEM_PATH`**
+		    如果你希望自定义 `GEM_HOME` 和 `GEM_PATH`，可以通过以下方式设置：
+
+		    #### **临时设置**
+		    在终端中运行以下命令：
+
+		    ```bash
+		    export GEM_HOME=~/.gem/ruby/3.2.0
+		    export GEM_PATH=~/.gem/ruby/3.2.0:/usr/local/lib/ruby/gems/3.2.0
+		    ```
+
+		    #### **永久设置**
+		    将以下内容添加到 `~/.bashrc` 或 `~/.zshrc` 文件中：
+
+		    ```bash
+		    export GEM_HOME=~/.gem/ruby/3.2.0
+		    export GEM_PATH=~/.gem/ruby/3.2.0:/usr/local/lib/ruby/gems/3.2.0
+		    export PATH=$GEM_HOME/bin:$PATH
+		    ```
+
+		    然后运行以下命令使配置生效：
+
+		    ```bash
+		    source ~/.bashrc  # 或者 source ~/.zshrc
+		    ```
+
+		    ---
+
+		    ### 4. **使用 `gem env` 查看 RubyGems 环境**
+		    运行以下命令可以查看完整的 RubyGems 环境信息：
+
+		    ```bash
+		    gem env
+		    ```
+
+		    输出示例：
+		    ```
+		    RubyGems Environment:
+		      - RUBYGEMS VERSION: 3.4.10
+		        - RUBY VERSION: 3.2.2 (2023-03-30 patchlevel 0) [x86_64-linux]
+			  - INSTALLATION DIRECTORY: /usr/local/lib/ruby/gems/3.2.0
+			    - USER INSTALLATION DIRECTORY: /home/username/.gem/ruby/3.2.0
+			      - RUBY EXECUTABLE: /usr/local/bin/ruby
+			        - GEM PATHS:
+				     - /usr/local/lib/ruby/gems/3.2.0
+				          - /home/username/.gem/ruby/3.2.0
+					    - GEM CONFIGURATION:
+					         - :update_sources => true
+						      - :verbose => true
+						           - :backtrace => false
+							        - :bulk_threshold => 1000
+								  - REMOTE SOURCES:
+								       - https://rubygems.org/
+								         - SHELL PATH:
+									      - /usr/local/bin
+									           - /usr/bin
+										        - /bin
+											```
+
+											- **`INSTALLATION DIRECTORY`**：系统级的 gem 安装目录（`GEM_HOME` 的一部分）。
+											- **`USER INSTALLATION DIRECTORY`**：用户级的 gem 安装目录（`~/.gem/ruby/X.Y.Z`）。
+
+											---
+
+											### 5. **总结**
+											- 默认情况下，`GEM_HOME` 和 `GEM_PATH` 的值取决于 Ruby 的安装方式和环境配置。
+											- 你可以通过 `gem env` 或 `ruby -e 'puts Gem.path'` 查看当前的值。
+											- 如果需要自定义，可以通过设置 `GEM_HOME` 和 `GEM_PATH` 环境变量来实现。
+
+											如果你希望将 gem 安装到用户目录（避免权限问题），建议设置 `GEM_HOME` 为 `~/.gem/ruby/X.Y.Z`，并将 `~/.gem/ruby/X.Y.Z/bin` 添加到 `PATH` 中。
