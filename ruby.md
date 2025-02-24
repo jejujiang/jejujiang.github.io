@@ -104,3 +104,52 @@ autoreconf --install
 
 然后再继续执行 `./configure` 和后续步骤。
 
+---
+
+make时提示，install libffi
+
+如果在执行 `make` 时提示需要安装 `libffi`，这意味着 Ruby 的编译过程中依赖 `libffi` 库。`libffi` 是一个用于调用外部函数接口（FFI）的库，Ruby 的某些扩展（如 `ffi` gem）需要它。
+
+### 解决方法
+
+#### 1. 安装 `libffi` 开发包
+在 Ubuntu 中，运行以下命令安装 `libffi` 的开发包：
+
+```bash
+sudo apt update
+sudo apt install -y libffi-dev
+```
+
+#### 2. 重新配置和编译
+安装完 `libffi-dev` 后，重新运行配置和编译命令：
+
+```bash
+./configure
+make
+```
+
+#### 3. 继续安装
+如果 `make` 成功完成，继续安装 Ruby：
+
+```bash
+sudo make install
+```
+
+#### 4. 验证安装
+安装完成后，检查 Ruby 是否安装成功：
+
+```bash
+ruby -v
+```
+
+### 为什么需要 `libffi`？
+`libffi` 是 Ruby 中某些扩展（如 `ffi` gem）的依赖库。它允许 Ruby 调用 C 函数，尤其是在需要与本地库交互时。如果不需要这些功能，可以在配置时禁用相关扩展，但通常建议安装 `libffi` 以确保完整的功能支持。
+
+### 其他可能缺失的依赖
+如果在编译过程中遇到其他类似的错误，提示缺少某些库（如 `libyaml`、`libgmp` 等），可以通过以下方式安装它们：
+
+```bash
+sudo apt install -y libyaml-dev libgmp-dev
+```
+
+安装完所有依赖后，重新运行 `./configure` 和 `make` 即可。
