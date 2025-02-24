@@ -6,3 +6,6 @@
 
 - name: Linux
   link: /linux
+
+- name: Ruby
+  link: /ruby
