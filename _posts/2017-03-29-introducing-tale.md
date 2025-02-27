@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Introducing Tale"
+title:  "Longing"
 author: "Chester"
 comments: true
-tags: Tale
+tags: Wang Wei
 excerpt_separator: <!--more-->
 sticky: true
 hidden: true
