@@ -3,7 +3,7 @@ layout: post
 title:  "Tale"
 author: "Chester"
 comments: true
-tags: tale
+tags: Tale
 excerpt_separator: <!--more-->
 sticky: true
 hidden: true
