@@ -1,7 +1,7 @@
 # Site settings
-title:          TangPoems
+title:          "Hey, TangPoems & Algorithms"
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/TangPoems"
+baseurl:        "/"
 url:            "https://jejujiang.github.io"
 
 # Google Analytics
