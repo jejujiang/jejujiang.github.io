@@ -100,6 +100,12 @@ s = "Python syntax highlighting"
 print s
 {% endhighlight %}
 
+{% highlight ruby %}
+# Sample ruby code
+s = "Ruby syntax highlight"
+puts s
+{% endhighlight %}
+
 Adding `linenos` to the highlight tag enables line numbers.
 
 {% highlight js  linenos %}
