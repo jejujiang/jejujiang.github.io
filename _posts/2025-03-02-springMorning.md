@@ -3,7 +3,7 @@ layout: post
 title: "《春晓》- 孟浩然"
 author: "Meng Haoran"
 tags: "TangPoems"
-excerpt_separetor: <!--more-->
+excerpt_separator: <!--more-->
 ---
 
 这首诗描绘了春天早晨的景象，表达了诗人对自然美景的欣赏和对生命无常的感慨。<!--more-->
