@@ -3,11 +3,14 @@ layout: post
 title: "《春晓》- 孟浩然"
 author: "Meng Haoran"
 tags: "TangPoems"
-excerpt_separator: <!--more-->
-
 ---
 
+这首诗描绘了春天早晨的景象，表达了诗人对自然美景的欣赏和对生命无常的感慨。
+
+
 **春晓**  
+
+孟浩然
 
 春眠不觉晓，  
 处处闻啼鸟。  
@@ -17,6 +20,8 @@ excerpt_separator: <!--more-->
 ---
 
 **Spring Morning**  
+
+Meng Haoran
 
 This spring morning in bed I'm lying,  
 Not to awake till birds are crying.  
@@ -31,5 +36,3 @@ How many are the fallen flowers!
 4. **花落知多少**：这句诗表达了诗人对昨夜风雨后花朵凋零的感慨。诗人不知道有多少花朵在风雨中凋落，这象征着生命的无常和美好事物的短暂。
 
 总的来说，《春晓》通过描绘春天早晨的景象，表达了诗人对自然美景的欣赏，同时也透露出对生命无常和美好事物短暂的感慨。这首诗语言简练，意境深远，是唐代山水田园诗的代表作之一。
-
-这首诗描绘了春天早晨的景象，表达了诗人对自然美景的欣赏和对生命无常的感慨。
