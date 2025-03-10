@@ -5,11 +5,7 @@ author: "Chester"
 permalink: /about/
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
-
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
-
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
-
-Thanks for reading!
+## 人类群星闪耀时 ---斯蒂芬·茨威格
+### 在漫长的岁月中，孤独始终伴随着他！
+#### 五 拿破仑：决定命运的一分钟
+寻常生活中，很少降临这样不可替代的一瞬间。当它随便选个普通人，降临到其身上时，通常，他不知道怎样利用它。在命运降临的那个伟大的瞬间，平凡人的所有美德———顺从、小心、勤劳、谨慎，都没有一点作用。它从来只眷顾天才人物，并且成就其不朽的形象。那些犹豫不决、唯唯诺诺的人，只会被命运鄙视并拒之门外。命运———这掌管世间事物的另一个神，他强壮有力的双臂只愿意高高举起勇敢者，将他们送上英雄的殿堂。
