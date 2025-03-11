@@ -1,7 +1,6 @@
-require 'date'
-
 desc 'create a new draft post'
 task :post do
+  require 'date'
   title = ENV['TITLE']
   slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
 
@@ -25,4 +24,9 @@ task :post do
   end
 
   system ("#{ENV['EDITOR']} #{file}")
+end
+
+desc 'List all draft posts'
+task :drafts do
+  puts `find ./_posts -type f -exec grep -H 'published: false' {} \\;`
 end
