@@ -1,0 +1,28 @@
+require 'date'
+
+desc 'create a new draft post'
+task :post do
+  title = ENV['TITLE']
+  slug = "#{Date.today}-#{title.downcase.gsub(/[^\w]+/, '-')}"
+
+  file = File.join(
+    File.dirname(__FILE__),
+    '_posts',
+    slug + '.markdown'
+  )
+
+  File.open(file, "w") do |f|
+    f << <<-EOS.gsub(/^    /, '')
+    ---
+    layout: pst
+    title: #{title}
+    published: false
+    tags:
+    excerpt_separator: <!--more-->
+    ---
+
+    EOS
+  end
+
+  system ("#{ENV['EDITOR']} #{file}")
+end
