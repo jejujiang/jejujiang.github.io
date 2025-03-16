@@ -15,7 +15,8 @@ task :post do
     ---
     layout: post
     title: #{title}
-    published: false
+    published: true
+    author:
     tags:
     excerpt_separator: <!--more-->
     ---
