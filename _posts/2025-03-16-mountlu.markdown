@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MountLu
-published: false
+author: Li Bai
 tags: TangPoems
 excerpt_separator: <!--more-->
 ---
