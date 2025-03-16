@@ -13,7 +13,7 @@ task :post do
   File.open(file, "w") do |f|
     f << <<-EOS.gsub(/^    /, '')
     ---
-    layout: pst
+    layout: post
     title: #{title}
     published: false
     tags:
