@@ -3,6 +3,7 @@ layout: post
 title: "The Ruby Programming Language"
 author: "DeepSeek"
 tags: Ruby
+excerpt_separator: <!--more-->
 ---
 
 Ruby 是……
