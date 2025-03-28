@@ -14,10 +14,10 @@ task :post do
     f << <<-EOS.gsub(/^    /, '')
     ---
     layout: post
-    title: #{title}
+    title: "#{title}"
     published: true
-    author:
-    tags:
+    author: ""
+    tags: ""
     excerpt_separator: <!--more-->
     ---
 
