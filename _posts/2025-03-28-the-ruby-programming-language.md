@@ -5,6 +5,9 @@ author: "DeepSeek"
 tags: Ruby
 ---
 
+Ruby 是……
+一门开源的动态编程语言，注重简洁和效率。Ruby 的句法优雅，读起来自然，写起来舒适。<!--more-->
+
 {% highlight ruby %}
 # RUBY基础教程（第5版）（18.1.2）
 def copy(from, to)
