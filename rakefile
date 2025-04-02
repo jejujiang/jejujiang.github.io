@@ -24,7 +24,9 @@ task :post do
     EOS
   end
 
-  system ("#{ENV['EDITOR']} #{file}")
+ # system ("#{ENV['EDITOR']} #{file}")
+ system ("vi #{file}")
+
 end
 
 desc 'List all draft posts'
