@@ -54,53 +54,26 @@ body {
 	<body>
 		<h1>经典唐诗选</h1>
 
-		<!-- 春晓 -->
+		{% for tangpoem in site.data.tamgpoems %}
 		<div class="poem">
-			<h2>春晓 (Spring Morning)</h2>
-			<div class="author">孟浩然 (Meng Haoran)</div>
+			<h2>{{ tangpoem.title }}</h2>
+			<div class="author">{{ tangpoem.author }}</div>
 			<div class="analysis">
-				以春眠、鸟鸣、风雨、落花构建春日慵懒与生机并存的意境，暗含对美好易逝的淡淡惆怅，体现山水田园诗的自然之美。
+				{{ tangpoem.analyze }}
 			</div>
 			<div class="zh-en">
 				<div class="zh">
-					<pre>春眠不觉晓，
-																	    处处闻啼鸟。
-																	    夜来风雨声，
-																	    花落知多少。</pre>
+					<pre>
+					{{ tangpoem.zh }}
+					</pre>
 				</div>
 				<div class="en">
-					<pre>This spring morning in bed I'm lying,
-																							    Not to awake till birds are crying.
-																							    After one night of wind and showers,
-																							    How many are the fallen flowers!</pre>
+					<pre>
+					{{ tangpoem.en }}
+					</pre>
 				</div>
 			</div>
 		</div>
-
-		<!-- 登鹳雀楼 -->
-		<div class="poem">
-			<h2>登鹳雀楼 (On the Stork Tower)</h2>
-			<div class="author">王之涣 (Wang Zhihuan)</div>
-			<div class="analysis">
-				通过登高望远的空间延展（白日依山尽/黄河入海流），展现盛唐气象与人生境界，末二句"更上一层楼"成为千古励志箴言。
-			</div>
-			<div class="zh-en">
-				<div class="zh">
-					<pre>白日依山尽，
-																																									    黄河入海流。
-																																									    欲穷千里目，
-																																									    更上一层楼。</pre>
-				</div>
-				<div class="en">
-					<pre>The sun along the mountain bows,
-																																															    The Yellow River seawards flows.
-																																															    To command a thousand-mile view,
-																																															    To a higher level you must go.</pre>
-				</div>
-			</div>
-		</div>
-
-		<!-- 其他诗歌按相同结构添加 -->
 
 	</body>
 </html>
