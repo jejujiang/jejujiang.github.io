@@ -6,33 +6,15 @@ image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
-<div class="container">
-	<div class="poem-grid">
-		{% for tangpoem in site.data.tangpoems %}	
-		<div class="poem-card">
-			<div class="poem-header">
-				<h3 class="poem-title">{{ tangpoem.title }}</h3>
-				<p class="poem-author">{{ tangpoem.author }}</p>
-			</div>
-			<div class="poem-content">
-				<div class="analysis">
-					{{ tangpoem.analyze }}
-				</div>
-				<div class="poem-text">
-					<div class="zh">
-						<pre>
+{% for tangpoem in site.data.tangpoems %}	
+<h3 class="poem-title">{{ tangpoem.title }}</h3>
+<p class="poem-author">{{ tangpoem.author }}</p>
+<p>{{ tangpoem.analyze }}</p>
+<pre>
 {{ tangpoem.zh }}
-						</pre>
-					</div>
-					<div class="en">
-						<pre>
+</pre>
+<pre>
 {{ tangpoem.en }}
-						</pre>
-					</div>
-				</div>
-			</div>
-		</div>
-		<hr>
-		{% endfor %}
-	</div>
-</div>
+</pre>
+<hr>
+{% endfor %}
