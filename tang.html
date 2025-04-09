@@ -7,14 +7,10 @@ nav-menu: true
 ---
 
 {% for tangpoem in site.data.tangpoems %}	
-<h3 class="poem-title">{{ tangpoem.title }}</h3>
-<p class="poem-author">{{ tangpoem.author }}</p>
-<p>{{ tangpoem.analyze }}</p>
-<pre>
-{{ tangpoem.zh }}
-</pre>
-<pre>
-{{ tangpoem.en }}
-</pre>
+<h3>{{ tangpoem.title }}</h3>
+<p>{{ tangpoem.author }}</p>
+<p>{{ tangpoem.analyze | markdownify }}</p>
+<p>{{ tangpoem.zh | markdownify }}</p>
+<p>{{ tangpoem.en | markdownify }}</p>
 <hr>
 {% endfor %}
