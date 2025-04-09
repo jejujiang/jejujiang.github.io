@@ -1,297 +1,37 @@
 ---
+layout: post
 title: Tang Poems
 description: Traditional Chinese Poetry Collection
 image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
-<!--
-		<div class="container">
-			<div class="poem-grid">
-				{% for tangpoem in site.data.tangpoems %}	
-				<div class="poem-card">
-					<div class="poem-header">
-						<h3 class="poem-title">{{ tangpoem.title }}</h3>
-						<p class="poem-author">{{ tangpoem.author }}</p>
-					</div>
-					<div class="poem-content">
-						<div class="analysis">
-							{{ tangpoem.analyze }}
-						</div>
-						<div class="poem-text">
-							<div class="zh">
-								<pre>
-{{ tangpoem.zh }}
-								</pre>
-							</div>
-							<div class="en">
-								<pre>
-{{ tangpoem.en }}
-          </pre>
-							</div>
-						</div>
-					</div>
-				</div>
-				{% endfor %}   
--->
-
-
-<!DOCTYPE html>
-<html lang="zh">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>唐诗精选 | Forty主题风格</title>
-		<style>
-/* Forty主题核心变量 */
-:root {
-	--primary: #2c3e50;
-	--secondary: #3498db;
-	--accent: #e74c3c;
-	--light: #ecf0f1;
-	--dark: #2c3e50;
-	--overlay: rgba(44, 62, 80, 0.9);
-	--gradient: linear-gradient(135deg, var(--secondary), var(--primary));
-}
-
-	/* 基础样式 */
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-
-	body {
-		font-family: 'Source Sans Pro', Helvetica, sans-serif;
-		line-height: 1.6;
-		color: var(--dark);
-	}
-
-	h1, h2, h3 {
-		font-weight: 700;
-		line-height: 1.2;
-	}
-
-	a {
-		text-decoration: none;
-		color: var(--secondary);
-		transition: all 0.3s ease;
-	}
-
-	/* 分屏布局 */
-	.split-layout {
-		display: flex;
-		min-height: 100vh;
-	}
-
-	.left-panel {
-		flex: 1;
-		background: var(--gradient);
-		color: white;
-		padding: 4rem;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		position: relative;
-		overflow: hidden;
-	}
-
-	.left-panel::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background: var(--overlay);
-		z-index: 1;
-	}
-
-	.left-content {
-		position: relative;
-		z-index: 2;
-		max-width: 600px;
-	}
-
-	.right-panel {
-		flex: 1;
-		background: var(--light);
-		padding: 4rem;
-		overflow-y: auto;
-	}
-
-	/* 标题样式 */
-	.main-title {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		color: white;
-	}
-
-	.subtitle {
-		font-size: 1.2rem;
-		opacity: 0.9;
-		margin-bottom: 2rem;
-		color: rgba(255, 255, 255, 0.8);
-	}
-
-	/* 诗歌卡片 */
-	.poem-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-		gap: 2rem;
-		margin-top: 3rem;
-	}
-
-	.poem-card {
-		background: white;
-		border-radius: 8px;
-		overflow: hidden;
-		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-		transition: transform 0.3s ease, box-shadow 0.3s ease;
-	}
-
-	.poem-card:hover {
-		transform: translateY(-5px);
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-	}
-
-	.poem-header {
-		background: var(--primary);
-		color: white;
-		padding: 1.5rem;
-	}
-
-	.poem-title {
-		font-size: 1.5rem;
-		margin-bottom: 0.5rem;
-	}
-
-	.poem-author {
-		font-size: 1rem;
-		opacity: 0.8;
-	}
-
-	.poem-content {
-		padding: 1.5rem;
-	}
-
-	.poem-text {
-		margin-bottom: 1rem;
-		white-space: pre-line;
-	}
-
-	.poem-analysis {
-		background: var(--light);
-		padding: 1rem;
-		border-radius: 4px;
-		font-size: 0.9rem;
-		margin-top: 1rem;
-	}
-
-	/* 按钮样式 */
-	.btn {
-		display: inline-block;
-		padding: 0.8rem 1.8rem;
-		background: var(--accent);
-		color: white;
-		border-radius: 4px;
-		font-weight: 600;
-		text-transform: uppercase;
-		letter-spacing: 1px;
-		font-size: 0.9rem;
-		transition: all 0.3s ease;
-	}
-
-	.btn:hover {
-		background: #c0392b;
-		transform: translateY(-2px);
-	}
-
-	/* 响应式设计 */
-	@media (max-width: 768px) {
-		.split-layout {
-			flex-direction: column;
-		}
-
-		.left-panel, .right-panel {
-			padding: 2rem;
-		}
-
-		.main-title {
-			font-size: 2rem;
-		}
-	}
-		</style>
-		<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body>
-		<div class="split-layout">
-			<!-- 左侧面板 -->
-			<div class="left-panel">
-				<div class="left-content">
-					<h1 class="main-title">唐诗精选</h1>
-					<p class="subtitle">穿越千年的诗意，感受盛唐气象</p>
-					<p>精选李白、杜甫、王维等唐代著名诗人的代表作品，配以现代英文翻译和深度解析。</p>
-					<a href="#poems" class="btn">探索诗歌</a>
-				</div>
+<div class="container">
+	<div class="poem-grid">
+		{% for tangpoem in site.data.tangpoems %}	
+		<div class="poem-card">
+			<div class="poem-header">
+				<h3 class="poem-title">{{ tangpoem.title }}</h3>
+				<p class="poem-author">{{ tangpoem.author }}</p>
 			</div>
-
-			<!-- 右侧面板 -->
-			<div class="right-panel" id="poems">
-				<div class="poem-grid">
-					<!-- 春晓 -->
-					<div class="poem-card">
-						<div class="poem-header">
-							<h3 class="poem-title">春晓</h3>
-							<p class="poem-author">孟浩然</p>
-						</div>
-						<div class="poem-content">
-							<div class="poem-text">
-								春眠不觉晓，
-								处处闻啼鸟。
-								夜来风雨声，
-								花落知多少。
-							</div>
-							<div class="poem-text" style="font-style: italic; color: var(--primary);">
-								This spring morning in bed I'm lying,
-								Not to awake till birds are crying.
-								After one night of wind and showers,
-								How many are the fallen flowers!
-							</div>
-							<div class="poem-analysis">
-								<strong>赏析：</strong>以春眠、鸟鸣、风雨、落花构建春日慵懒与生机并存的意境，暗含对美好易逝的淡淡惆怅，体现山水田园诗的自然之美。
-							</div>
-						</div>
+			<div class="poem-content">
+				<div class="analysis">
+					{{ tangpoem.analyze }}
+				</div>
+				<div class="poem-text">
+					<div class="zh">
+						<pre>
+{{ tangpoem.zh }}
+						</pre>
 					</div>
-
-					<!-- 登鹳雀楼 -->
-					<div class="poem-card">
-						<div class="poem-header">
-							<h3 class="poem-title">登鹳雀楼</h3>
-							<p class="poem-author">王之涣</p>
-						</div>
-						<div class="poem-content">
-							<div class="poem-text">
-								白日依山尽，
-								黄河入海流。
-								欲穷千里目，
-								更上一层楼。
-							</div>
-							<div class="poem-text" style="font-style: italic; color: var(--primary);">
-								The sun along the mountain bows,
-								The Yellow River seawards flows.
-								To command a thousand-mile view,
-								To a higher level you must go.
-							</div>
-							<div class="poem-analysis">
-								<strong>赏析：</strong>通过登高望远的空间延展展现盛唐气象与人生境界，末二句"更上一层楼"成为千古励志箴言。
-							</div>
-						</div>
+					<div class="en">
+						<pre>
+{{ tangpoem.en }}
+						</pre>
 					</div>
-
-					<!-- 其他诗歌卡片... -->
 				</div>
 			</div>
 		</div>
-	</body>
-</html>
+		{% endfor %}
+	</div>
+</div>
