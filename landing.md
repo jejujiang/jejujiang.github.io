@@ -15,9 +15,9 @@ nav-menu: true
 		<header class="major">
 			<h2>Sed amet aliquam</h2>
 		</header>
-		<p><只有那些有耐心做好简单事情的人，才能获得轻松完成困难事情的技能。<br>
+		<p>只有那些有耐心做好简单事情的人，才能获得轻松完成困难事情的技能。<br>
 
----- 席勒，德国诗人/p>
+---- 席勒，德国诗人</p>
 	</div>
 </section>
 
