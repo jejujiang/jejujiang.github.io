@@ -6,7 +6,8 @@ image: assets/images/pic11.jpg
 nav-menu: true
 ---
 
-{% for phrase in site.data.phrases %}
+{% for phrase in site.data.english %}
 <p>{{ phrase.content | markdownify }}</p>
 <p>{{ phrase.sentence | markdownify }}</p>
+<hr>
 {% endfor %}
