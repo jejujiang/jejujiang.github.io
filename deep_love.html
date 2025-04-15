@@ -1,152 +1,47 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		<!-- 基础元数据 -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-		<!-- 页面标题和描述 -->
-		<title>网站标题 - 简短描述</title>
-		<meta name="description" content="网页的详细描述，150-160字符左右，用于SEO">
-
-		<!-- 网站图标 -->
-		<link rel="icon" href="/favicon.ico" sizes="any">
-		<link rel="icon" href="/icon.svg" type="image/svg+xml">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="manifest" href="/site.webmanifest">
-
-		<!-- 核心CSS -->
-		<link rel="stylesheet" href="/css/main.css">
-
-		<!-- 预加载关键资源 -->
-		<link rel="preload" href="/fonts/primary.woff2" as="font" type="font/woff2" crossorigin>
-		<link rel="preload" href="/js/main.js" as="script">
-
-		<!-- 社交媒体元数据 -->
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="网站标题">
-		<meta property="og:description" content="网页的社交媒体描述">
-		<meta property="og:image" content="https://example.com/images/social-share.jpg">
-		<meta property="og:url" content="https://example.com/">
-		<meta name="twitter:card" content="summary_large_image">
-
-		<!-- 可选：主题颜色 -->
-		<meta name="theme-color" content="#ffffff">
-
-		<!-- 可选：规范URL -->
-		<link rel="canonical" href="https://example.com/">
+		<title>页面标题</title>
+		<meta name="description" content="页面描述">
+		<link rel="icon" href="favicon.ico">
+		<style>
+body {
+	font-family: Arial, sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	padding: 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+		</style>
 	</head>
 	<body>
-		<!-- 跳过导航链接（无障碍） -->
-		<a href="#main-content" class="skip-link">跳至主要内容</a>
-
-		<!-- 页面头部 -->
-		<header class="header" role="banner">
-			<div class="container">
-				<a href="/" class="logo">
-					<img src="/images/logo.svg" alt="网站Logo" width="120" height="40">
-				</a>
-
-				<!-- 主导航 -->
-				<nav class="nav" aria-label="主导航">
-					<button class="nav-toggle" aria-expanded="false" aria-label="菜单">
-						<span class="hamburger"></span>
-					</button>
-
-					<ul class="nav-list">
-						<li><a href="/" class="nav-link current">首页</a></li>
-						<li><a href="/about" class="nav-link">关于我们</a></li>
-						<li><a href="/services" class="nav-link">服务</a></li>
-						<li><a href="/contact" class="nav-link">联系我们</a></li>
-					</ul>
-				</nav>
-			</div>
+		<header>
+			<h1>网站标题</h1>
+			<nav>
+				<a href="/">首页</a>
+				<a href="/about">关于</a>
+			</nav>
 		</header>
 
-		<!-- 主要内容区 -->
-		<main id="main-content" class="main" role="main">
-			<div class="container">
-				<!-- 页面标题区 -->
-				<section class="hero">
-					<h1 class="hero-title">欢迎来到我们的网站</h1>
-					<p class="hero-text">这里是网站的简短介绍文本</p>
-					<a href="#features" class="button">了解更多</a>
-				</section>
-
-				<!-- 特色内容区 -->
-				<section id="features" class="features" aria-labelledby="features-heading">
-					<h2 id="features-heading" class="section-title">我们的特色</h2>
-
-					<div class="feature-grid">
-						<article class="feature-card">
-							<h3 class="feature-title">响应式设计</h3>
-							<p class="feature-text">适配所有设备屏幕尺寸</p>
-						</article>
-
-						<article class="feature-card">
-							<h3 class="feature-title">高性能</h3>
-							<p class="feature-text">优化的加载速度和性能</p>
-						</article>
-
-						<article class="feature-card">
-							<h3 class="feature-title">无障碍</h3>
-							<p class="feature-text">符合WCAG标准的可访问性</p>
-						</article>
-					</div>
-				</section>
-			</div>
+		<main>
+			<article>
+				<h2>文章标题</h2>
+				<p>这里是文章内容...</p>
+			</article>
 		</main>
 
-		<!-- 页脚 -->
-		<footer class="footer" role="contentinfo">
-			<div class="container">
-				<div class="footer-grid">
-					<section class="footer-section" aria-labelledby="footer-nav-heading">
-						<h3 id="footer-nav-heading" class="footer-title">导航</h3>
-						<nav aria-label="页脚导航">
-							<ul class="footer-nav">
-								<li><a href="/">首页</a></li>
-								<li><a href="/about">关于</a></li>
-								<li><a href="/services">服务</a></li>
-								<li><a href="/contact">联系</a></li>
-							</ul>
-						</nav>
-					</section>
-
-					<section class="footer-section" aria-labelledby="footer-contact-heading">
-						<h3 id="footer-contact-heading" class="footer-title">联系我们</h3>
-						<address>
-							<p>电子邮件: <a href="mailto:info@example.com">info@example.com</a></p>
-							<p>电话: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-						</address>
-					</section>
-				</div>
-
-				<div class="footer-bottom">
-					<p class="copyright">&copy; <span id="year">2023</span> 公司名称. 保留所有权利.</p>
-					<ul class="legal-links">
-						<li><a href="/privacy">隐私政策</a></li>
-						<li><a href="/terms">服务条款</a></li>
-					</ul>
-				</div>
-			</div>
+		<footer>
+			<p>&copy; 2023 公司名称</p>
 		</footer>
 
-		<!-- 核心JavaScript -->
-		<script src="/js/main.js" defer></script>
-
-		<!-- 内联脚本示例 -->
 		<script>
-			// 自动更新版权年份
-			document.getElementById('year').textContent = new Date().getFullYear();
-
-// 简单的导航切换功能
-document.querySelector('.nav-toggle').addEventListener('click', function() {
-	const expanded = this.getAttribute('aria-expanded') === 'true';
-	this.setAttribute('aria-expanded', !expanded);
-	document.querySelector('.nav-list').classList.toggle('active');
-});
+			// 基本交互功能
+			document.addEventListener('DOMContentLoaded', function() {
+				console.log('文档加载完成');
+			});
 		</script>
 	</body>
 </html>
