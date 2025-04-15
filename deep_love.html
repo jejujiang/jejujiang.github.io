@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Deep Love</title>
+		<meta name="description" content="网页描述">
+
+		<!-- 引入CSS文件 -->
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- 网站图标 -->
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+		<!-- 预加载重要资源 -->
+		<link rel="preload" href="critical-font.woff2" as="font" type="font/woff2" crossorigin>
+
+		<!-- 社交媒体元数据 -->
+		<meta property="og:title" content="网页标题">
+		<meta property="og:description" content="网页描述">
+		<meta property="og:image" content="social-image.jpg">
+		<meta property="og:url" content="https://example.com">
+		<meta name="twitter:card" content="summary_large_image">
 	</head>
 	<body>
-		<h1>Deep Love</h1>
-		<p>希望通过学习，自己编写一个属于自己的专属Blog！</p>
+		<!-- 页面头部 -->
+		<header class="site-header">
+			<nav class="main-nav">
+				<a href="/" class="logo">网站Logo</a>
+				<ul class="nav-links">
+					<li><a href="/">首页</a></li>
+					<li><a href="/about">关于</a></li>
+					<li><a href="/contact">联系</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- 主要内容区 -->
+		<main class="main-content">
+			<article class="content-article">
+				<h1>主标题</h1>
+				<p>这是一个段落文本。HTML5 提供了许多语义化元素来构建现代网页。</p>
+
+				<section class="article-section">
+					<h2>次级标题</h2>
+					<p>更多内容...</p>
+
+					<!-- 示例列表 -->
+					<ul class="feature-list">
+						<li>响应式设计</li>
+						<li>语义化HTML</li>
+						<li>无障碍访问</li>
+					</ul>
+				</section>
+			</article>
+
+			<!-- 侧边栏 -->
+			<aside class="sidebar">
+				<h3>相关链接</h3>
+				<nav class="sidebar-nav">
+					<a href="#">链接1</a>
+					<a href="#">链接2</a>
+				</nav>
+			</aside>
+		</main>
+
+		<!-- 页脚 -->
+		<footer class="site-footer">
+			<p>&copy; 2023 公司名称. 保留所有权利.</p>
+			<address>
+				联系方式: <a href="mailto:contact@example.com">contact@example.com</a>
+			</address>
+		</footer>
+
+		<!-- 引入JavaScript文件 -->
+		<script src="main.js" defer></script>
 	</body>
 </html>
