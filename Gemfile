@@ -1,7 +1,5 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'jekyll', '~> 4.2'
+source "https://rubygems.org"
 
-group :jekyll_plugins do
-  gem 'jekyll-timeago', '~> 0.13.1'
-end
+gem "jekyll"

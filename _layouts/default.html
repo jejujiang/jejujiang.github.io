@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  </head>
+  <body>
+    {% include nav.html %}
+
+    {{ content }}
+
+    <br id="tangpoems">
+    <h2>tangpoems</h2>
+    {% include poems.html %}
+
+    <br id="english">
+    <h2>english</h2>
+    {% include english.html %}
+  </body>
+</html>

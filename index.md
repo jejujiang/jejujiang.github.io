@@ -1,11 +1,8 @@
 ---
-layout: home
-title: Home
-landing-title: 'Hi, my name is Jiang'
-description: null
-image: null
-author: null
-show_tile: false
+layout: default
+title: "Happy Jekylling!"
 ---
 
-Some study notes of Linux🐧 and Ruby🍓.
+## You're ready to go!
+
+Start developing your Jekyll website.
