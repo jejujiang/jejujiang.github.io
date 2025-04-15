@@ -8,15 +8,23 @@
 		<link rel="icon" href="favicon.ico">
 		<style>
 body {
-	background-color: #FF8800;
-	background-attachment: fixed;
-	font-family: Arial, sans-serif;
-	line-height: 1.6;
-	margin: 0;
-	padding: 20px;
-	max-width: 800px;
-	margin: 0 auto;
+	background: 
+		radial-gradient(circle at 20% 30%, #d1b3ffaa 0%, transparent 40%),
+	radial-gradient(circle at 80% 70%, #a3b1ffaa 0%, transparent 40%),
+	#0f0e15;
+background-attachment: fixed;
+animation: moveBackground 20s infinite alternate;
+font-family: Arial, sans-serif;
+line-height: 1.6;
+margin: 0;
+padding: 20px;
+max-width: 800px;
+margin: 0 auto;
 }
+
+	  @keyframes moveBackground {
+		  100% { background-position: 30% 30%, 70% 70%; }
+	  }
 		</style>
 	</head>
 	<body>
