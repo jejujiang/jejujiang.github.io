@@ -9,14 +9,18 @@
   <body>
     {% include nav.html %}
 
+    <main>
     {{ content }}
 
-    <br id="tangpoems">
-    <h2>tangpoems</h2>
-    {% include tangpoems.html %}
+    <br id="tangPoetry">
+    <h2>tangPoetry</h2>
+    {% include tangPoetry.html %}
 
     <br id="english">
     <h2>english</h2>
     {% include english.html %}
+    </main>
+
+    <script src="{{ "/assets/js/nav.js" | relative_url }}" defer></script>
   </body>
 </html>
