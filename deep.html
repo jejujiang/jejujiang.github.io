@@ -3,242 +3,99 @@
 	<head>
 		    <meta charset="UTF-8">
 		        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			    <title>悬浮导航栏</title>
+			    <title>极简悬浮导航</title>
 			        <style>
-        /* Forty主题风格变量 */
-        :root {
-		            --primary: #2c3e50;
-			                --secondary: #3498db;
-					            --accent: #e74c3c;
-						                --light: #ecf0f1;
-								            --dark: #2c3e50;
-									                --overlay: rgba(44, 62, 80, 0.9);
-											            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-												            }
-
-	        /* 基础重置 */
-	        * {
-			            margin: 0;
-				                padding: 0;
-						            box-sizing: border-box;
-							            }
-
-		        body {
-				            font-family: 'Ubuntu', sans-serif;
-					                padding-top: 70px; /* 为固定导航留出空间 */
-							            background: var(--light);
-								            }
-
-			        /* 悬浮导航容器 */
-			        .floating-nav {
-					            position: fixed;
-						                top: 0;
-								            left: 0;
-									                width: 100%;
-											            background: var(--overlay);
-												                backdrop-filter: blur(10px);
-														            box-shadow: var(--shadow);
-															                z-index: 1000;
-																	            transition: all 0.3s ease;
-																		                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-																				        }
-
-				        /* 导航内容布局 */
-				        .nav-container {
-						            max-width: 1200px;
-							                margin: 0 auto;
-									            display: flex;
-										                justify-content: space-between;
-												            align-items: center;
-													                padding: 0 2rem;
-															            height: 70px;
-																            }
-
-					        /* 品牌标识 */
-					        .nav-brand {
-							            color: white;
-								                font-size: 1.5rem;
-										            font-weight: 700;
-											                text-decoration: none;
-													            display: flex;
-														                align-items: center;
-																        }
-
-						        .nav-brand img {
-								            height: 40px;
-									                margin-right: 10px;
-											        }
-
-							        /* 导航菜单 */
-							        .nav-menu {
-									            display: flex;
-										                list-style: none;
+        /* 基础样式 */
+        body {
+		            margin: 0;
+			                font-family: Arial, sans-serif;
+					            padding-top: 60px; /* 为导航栏留出空间 */
+						            }
+	        
+	        /* 悬浮导航 */
+	        .navbar {
+			            position: fixed;
+				                top: 0;
+						            width: 100%;
+							                background: rgba(0,0,0,0.9);
+									            padding: 15px 0;
+										                z-index: 1000;
 												        }
-
-								        .nav-item {
-										            margin-left: 2rem;
-											                position: relative;
+		        
+		        .nav-container {
+				            max-width: 1200px;
+					                margin: 0 auto;
+							            display: flex;
+								                justify-content: space-between;
+										            align-items: center;
+											                padding: 0 20px;
 													        }
-
-									        .nav-link {
-											            color: white;
-												                text-decoration: none;
-														            font-weight: 500;
-															                padding: 0.5rem 0;
-																	            position: relative;
-																		                transition: color 0.3s;
-																				        }
-
-										        /* 悬浮下划线动画 */
-										        .nav-link::after {
-												            content: '';
-													                position: absolute;
-															            bottom: 0;
-																                left: 0;
-																		            width: 0;
-																			                height: 2px;
-																					            background: var(--accent);
-																						                transition: width 0.3s ease;
-																								        }
-
-											        .nav-link:hover::after {
-													            width: 100%;
-														            }
-
-												        /* 激活状态 */
-												        .nav-link.active {
-														            color: var(--accent);
-															            }
-
-													        .nav-link.active::after {
-															            width: 100%;
-																            }
-
-														        /* 移动端菜单按钮 */
-														        .mobile-menu-btn {
-																            display: none;
-																	                background: none;
-																			            border: none;
-																				                color: white;
-																						            font-size: 1.5rem;
-																							                cursor: pointer;
-																									        }
-
-															        /* 响应式设计 */
-															        @media (max-width: 768px) {
-																	            .nav-container {
-																			                    padding: 0 1rem;
-																					                }
-
-																		                .nav-menu {
-																					                position: fixed;
-																							                top: 70px;
-																									                left: -100%;
-																											                width: 100%;
-																													                height: calc(100vh - 70px);
-																															                background: var(--dark);
-																																	                flex-direction: column;
-																																			                align-items: center;
-																																					                padding: 2rem 0;
-																																							                transition: left 0.3s ease;
-																																									            }
-
-																				            .nav-menu.active {
-																						                    left: 0;
-																								                }
-
-																					                .nav-item {
-																								                margin: 1rem 0;
-																										            }
-
-																							            .mobile-menu-btn {
-																									                    display: block;
-																											                }
+			        
+			        .logo {
+					            color: white;
+						                font-weight: bold;
+								            text-decoration: none;
+									                font-size: 1.2rem;
+											        }
+				        
+				        .nav-links {
+						            display: flex;
+							                gap: 20px;
+									        }
+					        
+					        .nav-links a {
+							            color: white;
+								                text-decoration: none;
+										        }
+						        
+						        /* 移动端适配 */
+						        @media (max-width: 768px) {
+								            .nav-links {
+										                    display: none;
+												                }
+									                
+									                .menu-btn {
+												                display: block;
+														                background: none;
+																                border: none;
+																		                color: white;
+																				                font-size: 1.5rem;
+																						                cursor: pointer;
 																								            }
-
-																        /* 滚动时导航栏变化 */
-																        .floating-nav.scrolled {
-																		            background: var(--primary);
-																			                height: 60px;
-																					        }
-
-																	        .floating-nav.scrolled .nav-container {
-																			            height: 60px;
-																				            }
-																		    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
-																		    </head>
-																		    <body>
-																		        <!-- 悬浮导航栏 -->
-																			    <nav class="floating-nav" id="mainNav">
-																			            <div class="nav-container">
-																				                <a href="#" class="nav-brand">
-																						                <img src="https://assets.ubuntu.com/v1/29985a98-ubuntu-logo32.png" alt="Logo">
-																								                FortyNav
-																											            </a>
-																										            
-																										            <button class="mobile-menu-btn" id="menuBtn">☰</button>
-																											                
-																											                <ul class="nav-menu" id="navMenu">
-																													                <li class="nav-item">
-																															                    <a href="#home" class="nav-link active">首页</a>
-																																	                    </li>
-																																			                    <li class="nav-item">
-																																					                        <a href="#features" class="nav-link">特性</a>
-																																								                </li>
-																																										                <li class="nav-item">
-																																												                    <a href="#gallery" class="nav-link">图库</a>
-																																														                    </li>
-																																																                    <li class="nav-item">
-																																																		                        <a href="#contact" class="nav-link">联系</a>
-																																																					                </li>
-																																																							            </ul>
-																																																								            </div>
-																																																									        </nav>
-
-																																																										    <!-- 页面内容示例 -->
-																																																										        <main style="height: 2000px; padding: 2rem;">
-																																																											        <h1 style="margin-top: 2rem;">页面内容区域</h1>
-																																																												        <p>滚动页面可以看到导航栏悬浮效果</p>
-																																																													    </main>
-
-																																																													        <script>
-																																																															        // 移动端菜单切换
-																																																															        const menuBtn = document.getElementById('menuBtn');
-        const navMenu = document.getElementById('navMenu');
+											        }
+							    </style>
+	</head>
+	<body>
+		    <!-- 导航栏 -->
+		        <nav class="navbar">
+				        <div class="nav-container">
+						            <a href="#" class="logo">LOGO</a>
+							                
+							                <div class="nav-links" id="navLinks">
+										                <a href="#home">首页</a>
+												                <a href="#about">关于</a>
+														                <a href="#services">服务</a>
+																                <a href="#contact">联系</a>
+																		            </div>
+																			                
+																			                <button class="menu-btn" id="menuBtn">☰</button>
+																					        </div>
+																						    </nav>
+																						        
+																						        <!-- 页面内容 -->
+																							    <div style="height: 2000px; padding: 20px;">
+																								            <h1>页面内容</h1>
+																									            <p>滚动测试导航栏悬浮效果</p>
+																										        </div>
+																											    
+																											    <script>
+																												            // 移动端菜单切换
+																												            const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
         
         menuBtn.addEventListener('click', () => {
-		            navMenu.classList.toggle('active');
-		        });
-
-        // 滚动效果
-        const navbar = document.getElementById('mainNav');
-        window.addEventListener('scroll', () => {
-		            if (window.scrollY > 50) {
-				                    navbar.classList.add('scrolled');
-				                } else {
-							                navbar.classList.remove('scrolled');
-							            }
-		        });
-
-        // 平滑滚动
-        document.querySelectorAll('.nav-link').forEach(link => {
-		            link.addEventListener('click', (e) => {
-				                    e.preventDefault();
-				                    const targetId = link.getAttribute('href');
-				                    document.querySelector(targetId).scrollIntoView({
-							                        behavior: 'smooth'
-							                    });
-				                    
-				                    // 更新激活状态
-				                    document.querySelectorAll('.nav-link').forEach(item => {
-							                        item.classList.remove('active');
-							                    });
-				                    link.classList.add('active');
-				                    
-				                    // 移动端点击后关闭菜单
-				                    navMenu.classList.remove('active');
-				                });
+		            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
 		        });
     </script>
-																		    </body>
+	</body>
 </html>
