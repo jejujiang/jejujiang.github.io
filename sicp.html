@@ -1,0 +1,73 @@
+---
+layout: home
+author_profile: false
+---
+
+1.1.7 Example: Square Roots by Newton's Method
+1.1.7 示例：牛顿法求平方根
+
+Procedures, as introduced above, are much like ordinary mathematical functions. They specify a value that is determined by one or more parameters. But there is an important difference between mathematical functions and computer procedures. Procedures must be effective.
+如上所述，过程（procedures）与普通数学函数非常相似。它们通过一个或多个参数来确定一个值。但数学函数与计算机过程之间存在一个重要区别：过程必须是有效的。  
+
+（说明：  
+1. 将 "Procedures" 译为“过程”并保留英文原词，因在编程语境中该术语常见  
+2. "mathematical functions" 统一译为“数学函数”保持术语一致性  
+3. "effective" 译为“有效的”，对应计算机科学中“可计算/能行”的概念  
+4. 调整原文的长句为中文更习惯的短句结构，通过冒号强化对比关系  
+5. 保留技术文本的简洁性，避免过度修饰）
+
+As a case in point, consider the problem of computing square roots. We can define the square-root functions as  x .
+以计算平方根的问题为例，我们可以将平方根函数定义为√x（即y² = x时，y的值）。  
+
+（翻译说明：  
+1. 补充了数学表达式y² = x的解释，使定义更完整  
+2. 使用中文数学符号√x保持专业性的同时符合中文阅读习惯  
+3. 采用"以...为例"的经典中文论述句式  
+4. 通过括号注释保持数学严谨性  
+5. 调整英文原文的简略表述为中文更完整的逻辑表达）
+
+This describes a perfectly legitimate mathematical function. We could use it to recognize whether one number is the square root of another, or to derive facts about square roots in general. On the other hand, the definition does not describe a procedure. Indeed, it tells us almost nothing about how to actually find the square root of a given number. It will not help matters to rephrase this definition in pseudo-Lisp: 
+
+```lisp
+(define (sqrt x)
+  (the y (and (>= y 0)
+    (= (square y) x))))
+```
+
+这段描述定义了一个完全合法的数学函数。我们可以用它来判断一个数是否是另一个数的平方根，或者推导出关于平方根的普遍性质。然而，这样的定义并未描述出一个可执行的计算过程。事实上，它几乎没有告诉我们如何实际求出一个给定数字的平方根。即使用伪Lisp语言重写这个定义也无济于事：
+
+```lisp
+(define (sqrt x)
+  (the y (and (>= y 0) 
+    (= (square y) x))))
+```
+
+（翻译说明：
+1. "perfectly legitimate"译为"完全合法的"，准确传达数学上的严谨性
+2. "recognize"译为"判断"，更符合中文在数学语境下的表达习惯
+3. "derive facts"译为"推导出...性质"，比直译"事实"更专业
+4. 保留"pseudo-Lisp"的原文形式，专业术语不做翻译
+5. 代码部分完全保留原文格式，维持程序代码的规范性
+6. 使用中文标点符号规范，同时保持与英文原文意思的严格对应）
+
+This only begs the questions.
+这样的定义只是循环论证，并未真正解决问题。
+
+（翻译说明：
+1. 采用"循环论证"这一哲学术语准确对应"beg the question"的本意
+2. 补充"并未真正解决问题"来完整传达原文的批评语气
+3. 保持中文简洁的表述风格
+4. 避免直译造成的歧义（如"这只是提出问题"）
+5. 符合中文技术文档的批评性表述习惯
+6. 通过四字格"循环论证"提升文本的专业性）
+
+The contrast between function and procedure is a reflection of the general distinction between describing properties of things and describing how to do things, or, as it is sometimes referred to, the distinction between declarative knowledge and imperative knowledge. In mathematics we are usually concerned with declarative (what is) descriptions, whereas in computer science we are usually concerned with imperative (how to) descriptions.
+函数与过程的区别，实质上反映了"描述事物属性"与"描述操作方法"之间的根本差异，这种差异有时也被称为"陈述性知识"与"指令性知识"的区分。在数学领域，我们通常关注的是陈述性（是什么）的描述；而在计算机科学领域，我们则主要关注指令性（如何做）的描述。
+
+（翻译说明：
+1. 将"contrast"译为"区别"而非简单直译"对比"，更符合中文技术术语
+2. 使用"实质上反映了"来准确传达"reflection"的深层含义
+3. 保留"declarative/imperative knowledge"的专业术语翻译
+4. 通过括号补充说明（是什么/如何做）增强概念清晰度
+5. 采用中文技术文本常用的分号结构来呈现对比关系
+6. 保持原文严谨的学术风格，同时确保中文表达流畅自然）
