@@ -1,131 +1,214 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 	<head>
-		    <title>SICP译文 - 计算机程序的构造和解释</title>
-		        <meta charset="UTF-8">
-			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-			        <style>
-        body {
-		            font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
-			                line-height: 1.8;
-					            max-width: 900px;
-						                margin: 0 auto;
-								            padding: 20px;
-									                color: #333;
-											        }
-	        
-	        nav {
-			            background: #f8f9fa;
-				                padding: 15px;
-						            margin-bottom: 30px;
-							                border-radius: 5px;
-									            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-										            }
-		        
-		        nav ul {
-				            list-style: none;
-					                padding: 0;
-							            margin: 0;
-								                display: flex;
-										            justify-content: center;
-											                flex-wrap: wrap;
-													        }
-			        
-			        nav ul li {
-					            margin: 0 15px;
-						            }
-				        
-				        nav ul li a {
-						            text-decoration: none;
-							                color: #0066cc;
-									            font-weight: 500;
-										            }
-					        
-					        h1 {
-							            color: #2c3e50;
-								                text-align: center;
-										            margin-bottom: 10px;
-											                border-bottom: 2px solid #eee;
-													            padding-bottom: 15px;
-														            }
-						        
-						        h2 {
-								            color: #555;
-									                text-align: center;
-											            font-weight: normal;
-												                margin-top: 0;
-														            margin-bottom: 30px;
-															            }
-							        
-							        h3 {
-									            color: #2980b9;
-										                margin-top: 40px;
-												            padding-bottom: 5px;
-													                border-bottom: 1px dashed #ddd;
-															        }
-								        
-								        h4 {
-										            color: #16a085;
-											                margin-top: 25px;
-													        }
-									        
-									        p {
-											            margin: 15px 0;
-												                text-align: justify;
-														        }
-										        
-										        pre {
-												            background: #f5f5f5;
-													                padding: 15px;
-															            border-radius: 5px;
-																                overflow-x: auto;
-																		            font-family: "Consolas", "Monaco", monospace;
-																			            }
-											        
-											        footer {
-													            margin-top: 50px;
-														                border-top: 1px solid #eee;
-																            padding-top: 20px;
-																	                font-size: 0.9em;
-																			            color: #777;
-																				                text-align: center;
-																						        }
-												        
-												        .translation-note {
-														            background: #f0f7ff;
-															                padding: 10px 15px;
-																	            border-left: 4px solid #3498db;
-																		                margin: 15px 0;
-																				            font-size: 0.9em;
-																					                color: #555;
-																							        }
-													    </style>
+		<title>SICP译文 - 计算机程序的构造和解释</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+body {
+	font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+	line-height: 1.8;
+	max-width: 900px;
+	margin: 0 auto;
+	padding: 20px;
+	color: #333;
+}
+
+		nav {
+			background: #f8f9fa;
+			padding: 15px;
+			margin-bottom: 30px;
+			border-radius: 5px;
+			box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+		}
+
+		nav ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		nav ul li {
+			margin: 0 15px;
+		}
+
+		nav ul li a {
+			text-decoration: none;
+			color: #0066cc;
+			font-weight: 500;
+		}
+
+		h1 {
+			color: #2c3e50;
+			text-align: center;
+			margin-bottom: 10px;
+			border-bottom: 2px solid #eee;
+			padding-bottom: 15px;
+		}
+
+		h2 {
+			color: #555;
+			text-align: center;
+			font-weight: normal;
+			margin-top: 0;
+			margin-bottom: 30px;
+		}
+
+		h3 {
+			color: #2980b9;
+			margin-top: 40px;
+			padding-bottom: 5px;
+			border-bottom: 1px dashed #ddd;
+		}
+
+		h4 {
+			color: #16a085;
+			margin-top: 25px;
+		}
+
+		p {
+			margin: 15px 0;
+			text-align: justify;
+		}
+
+		pre {
+			background: #f5f5f5;
+			padding: 15px;
+			border-radius: 5px;
+			overflow-x: auto;
+			font-family: "Consolas", "Monaco", monospace;
+		}
+
+		footer {
+			margin-top: 50px;
+			border-top: 1px solid #eee;
+			padding-top: 20px;
+			font-size: 0.9em;
+			color: #777;
+			text-align: center;
+		}
+
+		.translation-note {
+			background: #f0f7ff;
+			padding: 10px 15px;
+			border-left: 4px solid #3498db;
+			margin: 15px 0;
+			font-size: 0.9em;
+			color: #555;
+		}
+		</style>
 	</head>
 	<body>
-		    <nav>
-			            <ul>
-					                <li><a href="#chapter1">第一章</a></li>
-							            <li><a href="#chapter2">第二章</a></li>
-								                <li><a href="#chapter3">第三章</a></li>
-										            <li><a href="#chapter4">第四章</a></li>
-											                <li><a href="#chapter5">第五章</a></li>
-													        </ul>
-														    </nav>
+		<nav>
+			<ul>
+				<li><a href="#chapter1">第一章</a></li>
+				<li><a href="#chapter2">第二章</a></li>
+				<li><a href="#chapter3">第三章</a></li>
+				<li><a href="#chapter4">第四章</a></li>
+				<li><a href="#chapter5">第五章</a></li>
+			</ul>
+		</nav>
 
-														        <h1>计算机程序的构造和解释</h1>
-															    <h2>作者：Harold Abelson, Gerald Jay Sussman</h2>
+		<h1>计算机程序的构造和解释</h1>
+		<h2>作者：Harold Abelson, Gerald Jay Sussman</h2>
 
-															        <div id="chapter1">
-																	        <h3>第一章 构造过程抽象</h3>
-																		        <p>我们此时是在学习有关计算过程（computational process）的知识。计算过程是存在于计算机里的一类抽象事物...</p>
-																			        <p>在展开程序设计技术的主要思想之前，我们需要先对计算过程涉及的各种要素建立相应的认识...</p>
-																				        
-																				        <h4>1.1.7 示例：牛顿法求平方根</h4>
-																					        <p>如上所述，过程（procedures）与普通数学函数非常相似。它们通过一个或多个参数来确定一个值。但数学函数与计算机过程之间存在一个重要区别：过程必须是有效的。</p>
-																						        
-																						        <div class="translation-note">
-																								            <strong>翻译说明：</strong><br>
-																									                1. 将 "Procedures" 译为"过程"并保留英文原词，因在编程语境中该术语常见<br>
-																											            2. "mathematical functions" 统一译为"数学函数"保持术语一致性<br>
-																												                3. "effective" 译为"有效的"，对应计算机科学中"可计算/能行"的概念<br>
-																														            4. 调整原文的长句为中文更习惯的短句结构，通过�
+		<div id="chapter1">
+			<h3>第一章 构造过程抽象</h3>
+			<p>我们此时是在学习有关计算过程（computational process）的知识。计算过程是存在于计算机里的一类抽象事物...</p>
+			<p>在展开程序设计技术的主要思想之前，我们需要先对计算过程涉及的各种要素建立相应的认识...</p>
+
+			<h4>1.1.7 示例：牛顿法求平方根</h4>
+			<p>如上所述，过程（procedures）与普通数学函数非常相似。它们通过一个或多个参数来确定一个值。但数学函数与计算机过程之间存在一个重要区别：过程必须是有效的。</p>
+
+			<div class="translation-note">
+				<strong>翻译说明：</strong><br>
+				1. 将 "Procedures" 译为"过程"并保留英文原词，因在编程语境中该术语常见<br>
+				2. "mathematical functions" 统一译为"数学函数"保持术语一致性<br>
+				3. "effective" 译为"有效的"，对应计算机科学中"可计算/能行"的概念<br>
+				4. 调整原文的长句为中文更习惯的短句结构，通过冒号强化对比关系<br>
+				5. 保留技术文本的简洁性，避免过度修饰
+			</div>
+
+			<p>以计算平方根的问题为例，我们可以将平方根函数定义为√x（即y² = x时，y的值）。</p>
+
+			<div class="translation-note">
+				<strong>翻译说明：</strong><br>
+				1. 补充了数学表达式y² = x的解释，使定义更完整<br>
+				2. 使用中文数学符号√x保持专业性的同时符合中文阅读习惯<br>
+				3. 采用"以...为例"的经典中文论述句式<br>
+				4. 通过括号注释保持数学严谨性<br>
+				5. 调整英文原文的简略表述为中文更完整的逻辑表达
+			</div>
+
+			<p>这段描述定义了一个完全合法的数学函数。我们可以用它来判断一个数是否是另一个数的平方根，或者推导出关于平方根的普遍性质。然而，这样的定义并未描述出一个可执行的计算过程。事实上，它几乎没有告诉我们如何实际求出一个给定数字的平方根。即使用伪Lisp语言重写这个定义也无济于事：</p>
+
+			<pre><code>(define (sqrt x)
+																																															      (the y (and (>= y 0)
+																																																  (= (square y) x)))</code></pre>
+
+			<div class="translation-note">
+				<strong>翻译说明：</strong><br>
+				1. "perfectly legitimate"译为"完全合法的"，准确传达数学上的严谨性<br>
+				2. "recognize"译为"判断"，更符合中文在数学语境下的表达习惯<br>
+				3. "derive facts"译为"推导出...性质"，比直译"事实"更专业<br>
+				4. 保留"pseudo-Lisp"的原文形式，专业术语不做翻译<br>
+				5. 代码部分完全保留原文格式，维持程序代码的规范性<br>
+				6. 使用中文标点符号规范，同时保持与英文原文意思的严格对应
+			</div>
+
+			<p>这样的定义只是循环论证，并未真正解决问题。</p>
+
+			<div class="translation-note">
+				<strong>翻译说明：</strong><br>
+				1. 采用"循环论证"这一哲学术语准确对应"beg the question"的本意<br>
+				2. 补充"并未真正解决问题"来完整传达原文的批评语气<br>
+				3. 保持中文简洁的表述风格<br>
+				4. 避免直译造成的歧义（如"这只是提出问题"）<br>
+				5. 符合中文技术文档的批评性表述习惯<br>
+				6. 通过四字格"循环论证"提升文本的专业性
+			</div>
+
+
+			<p>函数与过程的区别，实质上反映了"描述事物属性"与"描述操作方法"之间的根本差异，这种差异有时也被称为"陈述性知识"与"指令性知识"的区分。在数学领域，我们通常关注的是陈述性（是什么）的描述；而在计算机科学领域，我们则主要关注指令性（如何做）的描述。</p>
+
+			<div class="translation-note">
+				<strong>翻译说明：</strong><br>
+				1. 将"contrast"译为"区别"而非简单直译"对比"，更符合中文技术术语<br>
+				2. 使用"实质上反映了"来准确传达"reflection"的深层含义<br>
+				3. 保留"declarative/imperative knowledge"的专业术语翻译<br>
+				4. 通过括号补充说明（是什么/如何做）增强概念清晰度<br>
+				5. 采用中文技术文本常用的分号结构来呈现对比关系<br>
+				6. 保持原文严谨的学术风格，同时确保中文表达流畅自然
+			</div>
+		</div>
+
+		<div id="chapter2">
+			<h3>第二章 构造数据抽象</h3>
+			<p>在第一章里，我们集中关注了计算过程，以及在程序设计中设计过程抽象的使用...</p>
+			<p>现在我们来看看更复杂的数据，研究如何构造以数据作为操作对象的计算过程...</p>
+		</div>
+
+		<div id="chapter3">
+			<h3>第三章 模块化、对象和状态</h3>
+			<p>前面两章介绍了程序设计的基本元素，以及组合和抽象这些元素的两种主要技术...</p>
+		</div>
+
+		<div id="chapter4">
+			<h3>第四章 元语言抽象</h3>
+			<p>在工程设计中，我们常常需要采用一种语言来描述另一种语言...</p>
+		</div>
+
+		<div id="chapter5">
+			<h3>第五章 寄存器机器里的计算</h3>
+			<p>本章我们将从一种更接近于传统计算机结构的视角来研究计算过程...</p>
+		</div>
+
+		<footer>
+			<p>译文来源：<a href="https://github.com/DeathKing/Learning-SICP" target="_blank">SICP中文翻译版</a></p>
+			<p>本页面仅供学习参考，原书版权归原作者所有</p>
+		</footer>
+	</body>
+</html>
