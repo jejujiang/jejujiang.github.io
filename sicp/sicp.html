@@ -145,9 +145,9 @@ body {
 
 			<p>这段描述定义了一个完全合法的数学函数。我们可以用它来判断一个数是否是另一个数的平方根，或者推导出关于平方根的普遍性质。然而，这样的定义并未描述出一个可执行的计算过程。事实上，它几乎没有告诉我们如何实际求出一个给定数字的平方根。即使用伪Lisp语言重写这个定义也无济于事：</p>
 
-			<pre><code>(define (sqrt x)
-																																															      (the y (and (>= y 0)
-																																																  (= (square y) x)))</code></pre>
+<pre><code>(define (sqrt x)
+  (the y (and (>= y 0)
+    (= (square y) x)))</code></pre>
 
 			<div class="translation-note">
 				<strong>翻译说明：</strong><br>
