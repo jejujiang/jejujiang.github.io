@@ -1,26 +1,45 @@
 require 'fileutils'
+require './app'
 
 desc "Generate static files"
 task :generate do
-  require './app'
-  
-  # Create output directory
+  # 确保 public 目录存在
   FileUtils.mkdir_p 'public'
   
-  # Generate index.html
+  # 获取 Sinatra 应用实例
+  app = Sinatra::Application
+  
+  # 生成首页
+  puts "Generating index.html..."
   File.open('public/index.html', 'w') do |f|
-    f.write Sinatra::Application.get('/').last.body
+    status, headers, body = app.call('REQUEST_METHOD' => 'GET', 'PATH_INFO' => '/')
+    f.write(body.join)
   end
   
-  # Generate post pages
+  # 生成文章页
   Dir.glob("posts/*.md").each do |post|
     post_name = File.basename(post, ".md")
+    puts "Generating post: #{post_name}"
+    
     FileUtils.mkdir_p "public/#{post_name}"
+    
     File.open("public/#{post_name}/index.html", 'w') do |f|
-      f.write Sinatra::Application.get("/#{post_name}").last.body
+      status, headers, body = app.call('REQUEST_METHOD' => 'GET', 'PATH_INFO' => "/#{post_name}")
+      f.write(body.join)
     end
   end
   
-  # Copy assets
-  FileUtils.cp_r 'public/css', 'public/css'
+  # 复制静态资源
+  puts "Copying assets..."
+  if File.directory?('assets')
+    FileUtils.cp_r 'assets/.', 'public/'
+  end
+  
+  puts "Static site generation complete!"
+end
+
+desc "Clean generated files"
+task :clean do
+  FileUtils.rm_rf 'public'
+  puts "Cleaned public directory"
 end
