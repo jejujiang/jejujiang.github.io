@@ -1,11 +1,2 @@
 # Hello World!
-
-这是我的第一篇博客文章。
-
-## 二级标题
-
-- 列表项1
-- 列表项2
-- 列表项3
-
-`代码片段`
+I built a personal blog using Sinatra to learn the Ruby programming language, the Sinatra framework, and English. Keep going! ⛽
