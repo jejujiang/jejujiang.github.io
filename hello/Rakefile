@@ -1,0 +1,26 @@
+require 'fileutils'
+
+desc "Generate static files"
+task :generate do
+  require './app'
+  
+  # Create output directory
+  FileUtils.mkdir_p 'public'
+  
+  # Generate index.html
+  File.open('public/index.html', 'w') do |f|
+    f.write Sinatra::Application.get('/').last.body
+  end
+  
+  # Generate post pages
+  Dir.glob("posts/*.md").each do |post|
+    post_name = File.basename(post, ".md")
+    FileUtils.mkdir_p "public/#{post_name}"
+    File.open("public/#{post_name}/index.html", 'w') do |f|
+      f.write Sinatra::Application.get("/#{post_name}").last.body
+    end
+  end
+  
+  # Copy assets
+  FileUtils.cp_r 'public/css', 'public/css'
+end
