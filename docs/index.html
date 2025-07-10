@@ -13,7 +13,7 @@
     <main>
         <article>
     <h2><a href="/hello-world">Hello world</a></h2>
-    <time>July 09, 2025</time>
+    <time>July 10, 2025</time>
     <div class="excerpt">
       <h1 id="hello-world">Hello World!</h1>
 <p>I built a personal blog using Sinatra to learn the Ruby programming language, the Sinatra framework, and English. Keep going! ⛽</p>
@@ -121,12 +121,43 @@ URI = URL ∪ URN
 <hr />
 
 <h3 id="section">5. <strong>关键区别</strong></h3>
-<p>| 特性          | URI                      | URL                          | URN                      |<br />
-|—————|————————–|——————————|————————–|<br />
-| <strong>标识资源</strong>  | ✔️                       | ✔️                           | ✔️                       |<br />
-| <strong>定位资源</strong>  | ❌（可能不提供访问方式） | ✔️（提供协议和路径）          | ❌（仅名称，无访问方式） |<br />
-| <strong>永久性</strong>    | 不要求                   | 资源位置变化则URL失效         | ✔️（永久唯一）           |<br />
-| <strong>示例</strong>      | <code>mailto:user@example.com</code>| <code>https://example.com</code>        | <code>urn:isbn:123456789</code>     |</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>特性</th>
+      <th>URI</th>
+      <th>URL</th>
+      <th>URN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>标识资源</strong></td>
+      <td>✔️</td>
+      <td>✔️</td>
+      <td>✔️</td>
+    </tr>
+    <tr>
+      <td><strong>定位资源</strong></td>
+      <td>❌（可能不提供访问方式）</td>
+      <td>✔️（提供协议和路径）</td>
+      <td>❌（仅名称，无访问方式）</td>
+    </tr>
+    <tr>
+      <td><strong>永久性</strong></td>
+      <td>不要求</td>
+      <td>资源位置变化则URL失效</td>
+      <td>✔️（永久唯一）</td>
+    </tr>
+    <tr>
+      <td><strong>示例</strong></td>
+      <td><code>mailto:user@example.com</code></td>
+      <td><code>https://example.com</code></td>
+      <td><code>urn:isbn:123456789</code></td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
