@@ -1,0 +1,1 @@
+import m from"./comments.js";customElements.define("mastodon-comments",m);

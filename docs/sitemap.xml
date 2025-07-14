@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:3000/</loc>
+    <lastmod>2025-07-14T06:44:27.062Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/archive/</loc>
+    <lastmod>2025-07-14T06:44:27.061Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/archive/instructions/</loc>
+    <lastmod>2025-07-14T06:44:27.057Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/author/oscar-otero/</loc>
+    <lastmod>2025-07-14T06:44:27.057Z</lastmod>
+  </url>
+  <url>
+    <loc>http://localhost:3000/posts/instructions/</loc>
+    <lastmod>2022-06-12T00:00:00.000Z</lastmod>
+  </url>
+</urlset>
