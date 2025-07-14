@@ -2,49 +2,32 @@
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:webfeeds="http://webfeeds.org/rss/1.0" version="2.0">
   <channel>
     <title>Blog name</title>
-    <link>http://localhost:3000/</link>
-    <atom:link href="http://localhost:3000/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>http://localhost/</link>
+    <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"/>
     <description>General description of the blog</description>
-    <lastBuildDate>Mon, 14 Jul 2025 06:44:26 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 14 Jul 2025 09:44:19 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v3.0.4</generator>
     <item>
-      <title>How to install this theme</title>
-      <link>http://localhost:3000/posts/instructions/</link>
-      <guid isPermaLink="false">http://localhost:3000/posts/instructions/</guid>
+      <title>hello world</title>
+      <link>http://localhost/posts/instructions/</link>
+      <guid isPermaLink="false">http://localhost/posts/instructions/</guid>
       <content:encoded>
-        <![CDATA[<p><strong>Simple blog</strong> is a clean and minimal blog theme for Lume, with support for
-tags and authors. It allows you to build your own blog <strong>in seconds</strong>, and
-provides Atom and JSON feeds for your subscribers.</p>
+        <![CDATA[<p><strong>hello world</strong></p>
 <!--more-->
-<p>The <strong>fastest and easiest</strong> way to configure this theme is the
-<a href="https://deno.land/x/lume_init">Lume init command</a>, which you can also copy
-easily from the <a href="https://lume.land/theme/simple-blog/">Simple Blog theme page</a>.
-Running:</p>
-<pre><code class="language-bash">deno run -A https://lume.land/init.ts --theme=simple-blog
+<pre><code class="language-ts">function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+console.log(greet(&quot;world&quot;));
+
 </code></pre>
-<p>will create a new project with Simple Blog configured. Edit the <code>_data.yml</code> file
-in your blog root folder with your data to customize the site title,
-description, and metadata.</p>
-<p>Posts must be saved in the <code>posts</code> folder. For example,
-<code>posts/my-first-posts.md</code>.</p>
-<h2 id="install-as-a-remote-theme" tabindex="-1"><a href="http://localhost:3000/posts/instructions/#install-as-a-remote-theme" class="header-anchor">Install as a remote theme</a></h2>
-<p>To add the theme to an existing Lume project, import it in your <code>_config.ts</code>
-file as a remote module. Update it by changing the version number in the import
-URL:</p>
-<pre><code class="language-ts">import lume from &quot;lume/mod.ts&quot;;
-import blog from &quot;https://deno.land/x/lume_theme_simple_blog@v0.15.6/mod.ts&quot;;
+<pre><code class="language-ruby">def greet(name)
+  puts &quot;hello #{name}!&quot;
+end
 
-const site = lume();
-
-site.use(blog());
-
-export default site;
+greet(&quot;world&quot;)
 </code></pre>
-<p>Copy the
-<a href="https://github.com/lumeland/theme-simple-blog/blob/main/src/_data.yml"><code>_data.yml</code></a>
-file to your blog root folder and edit it with your data.</p>
-<h2 id="customization" tabindex="-1"><a href="http://localhost:3000/posts/instructions/#customization" class="header-anchor">Customization</a></h2>
 <div class="markdown-alert markdown-alert-tip">
 <p class="markdown-alert-title">Tip</p>
 <p>You can use <a href="https://lume.land/cms">lumeCMS</a> to customize the blog and add
@@ -52,7 +35,7 @@ content easily</p>
 </div>
 ]]>
       </content:encoded>
-      <pubDate>Sun, 12 Jun 2022 00:00:00 GMT</pubDate>
+      <pubDate>Fri, 06 Jun 2025 00:00:00 GMT</pubDate>
     </item>
   </channel>
 </rss>
