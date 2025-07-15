@@ -5,17 +5,16 @@
     <link>http://localhost/</link>
     <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"/>
     <description>General description of the blog</description>
-    <lastBuildDate>Tue, 15 Jul 2025 08:15:03 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jul 2025 11:48:48 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v3.0.4</generator>
     <item>
-      <title>hello world</title>
-      <link>http://localhost/posts/hello/</link>
-      <guid isPermaLink="false">http://localhost/posts/hello/</guid>
+      <title>Dayily English Quote</title>
+      <link>http://localhost/posts/dailyenglishquote/</link>
+      <guid isPermaLink="false">http://localhost/posts/dailyenglishquote/</guid>
       <content:encoded>
-        <![CDATA[<p><strong>hello world</strong></p>
+        <![CDATA[<p><strong>Daily English Quote</strong></p>
 <!--more-->
-<h1>Hello world</h1>
 <p>Here’s your daily English quote to inspire you:</p>
 <p><strong>&quot;Success is not final, failure is not fatal: It is the courage to continue that counts.&quot;</strong><br>
 — <em>Winston Churchill</em></p>

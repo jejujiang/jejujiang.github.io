@@ -1,16 +1,14 @@
 ---
-title: hello world
+title: Dayily English Quote
 date: 2025-06-06
-author: Jeju Jiang
+author: DeepSeek
 tags:
-  - hello world
+  - Daily English Quote
 ---
 
-**hello world**
+**Daily English Quote**
 
 <!--more-->
-
-# Hello world
 
 Here’s your daily English quote to inspire you:  
 

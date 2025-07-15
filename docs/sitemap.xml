@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost/</loc>
-    <lastmod>2025-07-15T08:15:03.965Z</lastmod>
+    <lastmod>2025-07-15T11:48:48.323Z</lastmod>
   </url>
   <url>
     <loc>http://localhost/archive/</loc>
-    <lastmod>2025-07-15T08:15:03.964Z</lastmod>
+    <lastmod>2025-07-15T11:48:48.315Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost/archive/hello-world/</loc>
-    <lastmod>2025-07-15T08:15:03.962Z</lastmod>
+    <loc>http://localhost/archive/daily-english-quote/</loc>
+    <lastmod>2025-07-15T11:48:48.308Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost/author/jeju-jiang/</loc>
-    <lastmod>2025-07-15T08:15:03.962Z</lastmod>
+    <loc>http://localhost/author/deepseek/</loc>
+    <lastmod>2025-07-15T11:48:48.308Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost/posts/hello/</loc>
+    <loc>http://localhost/posts/dailyenglishquote/</loc>
     <lastmod>2025-06-06T00:00:00.000Z</lastmod>
   </url>
 </urlset>
