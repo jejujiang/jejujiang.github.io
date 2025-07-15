@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:webfeeds="http://webfeeds.org/rss/1.0" version="2.0">
   <channel>
-    <title>Blog name</title>
+    <title>Hello world</title>
     <link>http://localhost/</link>
     <atom:link href="http://localhost/feed.xml" rel="self" type="application/rss+xml"/>
     <description>General description of the blog</description>
-    <lastBuildDate>Mon, 14 Jul 2025 09:44:19 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jul 2025 06:12:36 GMT</lastBuildDate>
     <language>en</language>
     <generator>Lume v3.0.4</generator>
     <item>
       <title>hello world</title>
-      <link>http://localhost/posts/instructions/</link>
-      <guid isPermaLink="false">http://localhost/posts/instructions/</guid>
+      <link>http://localhost/posts/hello/</link>
+      <guid isPermaLink="false">http://localhost/posts/hello/</guid>
       <content:encoded>
         <![CDATA[<p><strong>hello world</strong></p>
 <!--more-->

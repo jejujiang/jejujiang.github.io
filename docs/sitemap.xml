@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost/</loc>
-    <lastmod>2025-07-14T09:44:19.456Z</lastmod>
+    <lastmod>2025-07-15T06:12:36.951Z</lastmod>
   </url>
   <url>
     <loc>http://localhost/archive/</loc>
-    <lastmod>2025-07-14T09:44:19.453Z</lastmod>
+    <lastmod>2025-07-15T06:12:36.948Z</lastmod>
   </url>
   <url>
     <loc>http://localhost/archive/hello-world/</loc>
-    <lastmod>2025-07-14T09:44:19.450Z</lastmod>
+    <lastmod>2025-07-15T06:12:36.945Z</lastmod>
   </url>
   <url>
     <loc>http://localhost/author/jeju-jiang/</loc>
-    <lastmod>2025-07-14T09:44:19.450Z</lastmod>
+    <lastmod>2025-07-15T06:12:36.945Z</lastmod>
   </url>
   <url>
-    <loc>http://localhost/posts/instructions/</loc>
+    <loc>http://localhost/posts/hello/</loc>
     <lastmod>2025-06-06T00:00:00.000Z</lastmod>
   </url>
 </urlset>

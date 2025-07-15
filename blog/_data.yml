@@ -8,7 +8,7 @@ extra_head: []
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
-  site: Blog name
+  site: Hello world
   description: General description of the blog
   title: "=title"
   image: "=image"
