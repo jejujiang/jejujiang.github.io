@@ -10,23 +10,7 @@ tags:
 
 <!--more-->
 
-
-```ts
-function greet(name) {
-  return `Hello, ${name}!`;
-}
-
-console.log(greet("world"));
-
-```
-
-```ruby
-def greet(name)
-  puts "hello #{name}!"
-end
-
-greet("world")
-```
+# Hello world
 
 > [!tip]
 >
