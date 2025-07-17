@@ -26,3 +26,12 @@ Wishing you a day filled with passion and purpose! ✨
 — *C.S. Lewis*  
 
 May it remind you that growth and reinvention have no expiration date. 🌱  
+
+"Do not watch the clock; do what it does. Keep going."
+— Sam Levenson
+
+A reminder that persistence, not perfection, paves the way. ⏳✨
+
+Would you like tomorrow’s quote to focus on a certain theme? (e.g., hope, leadership, simplicity) Let me know—I’d love to tailor it for you! 🌟
+
+Keep shining!
