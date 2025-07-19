@@ -23,9 +23,16 @@ Wishing you a day filled with passion and purpose! ✨
 **"You are never too old to set another goal or to dream a new dream."**  
 — *C.S. Lewis*  
 
+
 May it remind you that growth and reinvention have no expiration date. 🌱  
 
-**"Do not watch the clock; do what it does. Keep going."**
-— Sam Levenson
+**"Do not watch the clock; do what it does. Keep going."**  
+— Sam Levenson  
 
 A reminder that persistence, not perfection, paves the way. ⏳✨
+
+
+**"The harder you work for something, the greater you’ll feel when you achieve it."**  
+— Unknown  
+
+🔥 Translation: Sweat today, smile tomorrow. Now go crush your goals!
