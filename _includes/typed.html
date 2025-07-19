@@ -1,0 +1,51 @@
+<div class="container">
+  <div id="typed-js"></div>
+</div>
+
+<!-- 加载 Typed.js 库
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+-->
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Typed('#typed-js', {
+        strings: [
+            "Hello World",
+            "Welcome to my site",
+            "你好，世界！"
+        ],
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000,
+        loop: true,  // 启用循环
+        showCursor: true,
+        cursorChar: '|'
+    });
+});
+</script>
+
+<style>
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+#typed-js {
+  font-size: 2rem;
+}
+
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    font-size: 2rem;
+    vertical-align: middle;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+</style>
