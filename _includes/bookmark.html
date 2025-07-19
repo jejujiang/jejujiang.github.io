@@ -1,0 +1,74 @@
+<style>
+  /* Flexbox Container */
+  .bookmarks-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Flex Items */
+  .bookmark-card {
+    flex: 1 1 300px; /* Grow, shrink, base width */
+    min-height: 100px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Link Styles */
+  .bookmark-link {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #333;
+    height: 100%;
+  }
+
+  /* Hover Effects */
+  .bookmark-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* Title Style */
+  .bookmark-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+  }
+
+  /* URL Style */
+  .bookmark-url {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: auto; /* Pushes to bottom */
+    word-break: break-all;
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .bookmark-card {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+
+<div class="bookmarks-container">
+  {% for bookmark in site.data.bookmarks %}
+    <div class="bookmark-card">
+      <a href="{{ bookmark.link }}" class="bookmark-link">
+        <div class="bookmark-title">{{ bookmark.name }}</div>
+        <div class="bookmark-url">{{ bookmark.link }}</div>
+      </a>
+    </div>
+  {% endfor %}
+</div>
