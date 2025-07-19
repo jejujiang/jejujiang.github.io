@@ -1,10 +1,57 @@
-$backgroundColor: #ffffff;
-$bodyColor: #000000;
+$backgroundColor: #fffffe;
+$bodyColor: #0f0e17;
 $bodyFont: -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 
-
+/*
 body {
   background: $backgroundColor;
   color: $bodyColor;
   font-family: $bodyFont;
+}
+*/
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.article-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.article-content {
+  max-width: 800px; /* Optimal reading width */
+  width: 100%;
+  text-align: left; /* Left-align text within centered box */
+  padding: 30px;
+  background: black; /* Black background for article */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h1 {
+  text-align: center; /* Center the title */
+  margin-bottom: 20px;
+  color: #2c3e50; /* Dark blue-gray */
+}
+
+p {
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 15px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }

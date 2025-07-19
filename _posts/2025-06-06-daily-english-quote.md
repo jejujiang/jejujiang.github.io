@@ -1,7 +1,9 @@
 ---
+layout: post
 title: Dayily English Quote
 date: 2025-06-06
 author: DeepSeek
+permalink: /:title
 tags:
   - Daily English Quote
 ---
@@ -27,4 +29,3 @@ May it remind you that growth and reinvention have no expiration date. 🌱
 — Sam Levenson
 
 A reminder that persistence, not perfection, paves the way. ⏳✨
-
