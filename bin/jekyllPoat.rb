@@ -3,21 +3,20 @@
 require 'optparse'
 require 'date'
 
-# 默认选项
 options = {
-  title: "新文章",
+  title: nil,
   layout: "post",
   date: DateTime.now.strftime("%Y-%m-%d %H:%M:%S %z"),
   categories: [],
   tags: [],
-  output_dir: "_posts"
+  output_dir: "_posts",
+  editor: ENV['EDITOR'] || 'vi'  # 使用环境变量中的编辑器或默认vi
 }
 
-# 解析命令行参数
 OptionParser.new do |opts|
   opts.banner = "用法: jekyll-post [选项]"
 
-  opts.on("-t", "--title TITLE", "文章标题") do |t|
+  opts.on("-t", "--title TITLE", "文章标题（必填）") do |t|
     options[:title] = t
   end
 
@@ -41,11 +40,30 @@ OptionParser.new do |opts|
     options[:output_dir] = o
   end
 
+  opts.on("-e", "--editor EDITOR", "指定编辑器（默认: vi）") do |e|
+    options[:editor] = e
+  end
+
+  opts.on("--no-edit", "不自动打开编辑器") do
+    options[:editor] = nil
+  end
+
   opts.on("-h", "--help", "显示帮助") do
     puts opts
     exit
   end
 end.parse!
+
+# 验证必填参数
+unless options[:title]
+  puts "错误：必须指定文章标题"
+  puts "示例: jekyll-post -t \"我的文章标题\""
+  puts "使用 -h 查看完整帮助"
+  exit 1
+end
+
+# 创建输出目录（如果不存在）
+Dir.mkdir(options[:output_dir]) unless Dir.exist?(options[:output_dir])
 
 # 生成文件名
 filename = "#{options[:output_dir]}/#{DateTime.now.strftime("%Y-%m-%d")}-#{options[:title].downcase.gsub(/\s+/, '-').gsub(/[^\w-]/, '')}.md"
@@ -74,3 +92,14 @@ File.open(filename, 'w') do |file|
 end
 
 puts "已创建新文章: #{filename}"
+
+# 使用编辑器打开文件
+if options[:editor]
+  system("#{options[:editor]} #{filename}")
+  if $?.success?
+    puts "已在 #{options[:editor]} 中打开文件"
+  else
+    puts "警告：无法打开编辑器 #{options[:editor]}"
+    puts "请尝试设置 EDITOR 环境变量或使用 -e 选项指定编辑器"
+  end
+end
