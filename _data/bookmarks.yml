@@ -1,8 +1,12 @@
 - name: ruanyifeng
   link: https://www.ruanyifeng.com/blog/
-- name: freecodecamp
+- name: freeCodeCamp
   link: https://www.freecodecamp.org/
-- name: opencut
+- name: OpenCut
   link: https://opencut.app/
-- name: hello algo
+- name: Hello Algo
   link: https://www.hello-algo.com/
+- name: Happy Hues
+  link: https://www.happyhues.co/
+- name: Structure and Interpretation of Computer Programs
+  link: https://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html
