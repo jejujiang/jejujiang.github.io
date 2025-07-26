@@ -82,19 +82,7 @@ Want tomorrow’s quote to weaponize your ambition? (e.g., relentless hustle, fe
 **"Success is stumbling from failure to failure with no loss of enthusiasm."**  
 — *Winston Churchill*  
 
-💥 **Wake-up call:** Every master was once a disaster. *What’s your next "failure" going to teach you?*  
+------
+**"You don’t have to be great to start, but you have to start to be great."**  
+— *Zig Ziglar*
 
-**🔥 TODAY’S MISSION:**  
-1️⃣ **Do something badly** (yes, on purpose)  
-2️⃣ Laugh at the mess  
-3️⃣ Repeat until it’s not a mess anymore  
-
-**🚀 TOMORROW’S THEME VOTE:**  
-▸ **Relentless Grit**  
-▸ **Outrageous Optimism**  
-▸ **Silent Killer Mode**  
-
-**⚡ FINAL SHOVEL TO THE FACE:**  
-*"The expert in anything was once a beginner."* **Your turn.**  
-
-*(Drop a 💎 if you’ll fail forward today.)*
