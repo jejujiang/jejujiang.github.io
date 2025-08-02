@@ -6,8 +6,8 @@
 name:               "Jeju"
 description:
   - "Hello world!"
-  - "Keep going!"
-  - "Never give up!"
+  - "The C Programming Language"
+  - "The Ruby Programming Language"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 url:                ""
@@ -22,13 +22,13 @@ permalink:          /:year/:month/:day/:title/
 markdown:           kramdown
 
 # Navigation
-nav:
-  - name:           "About"
-    remote:         false
-    localpath:      "about"
-  - name:           "Download"
-    remote:         true
-    href:           "//github.com/gfjaru/Kiko/releases"
+#nav:
+#  - name:           "About"
+#    remote:         false
+#    localpath:      "about"
+#  - name:           "Download"
+#    remote:         true
+#    href:           "//github.com/gfjaru/Kiko/releases"
 
 # Sass
 sass:
