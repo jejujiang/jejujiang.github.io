@@ -1,4 +1,4 @@
-i{% assign day_of_year = site.time | date: "%j" | plus: 0 %}
+{% assign day_of_year = site.time | date: "%j" | plus: 0 %}
 {% assign quote_index = day_of_year | modulo: site.data.quotes.size %}
 {% assign daily_quote = site.data.quotes[quote_index] %}
 
