@@ -9,21 +9,17 @@ Form [the project's readme:](https://github.com/ruby/ruby/blob/30a20bc166bc37acd
 
 It’s a programmer's best friend. Find out more by [visiting the project on GitHub](https://github.com/ruby/ruby).
 
-```ruby
-# The Greeter class
-class Greeter
-  def initialize(name)
-    @name = name.capitalize
-  end
+---
 
-  def salute
-    puts "Hello #{@name}!"
-  end
-end
+```shell
+# ubuntuSway
+echo -e "input * { \n xkb_options caps:swapescape \n}" >> .config/sway/config
 
-# Create a new object
-g = Greeter.new("world")
+sed -i '$i\fish_vi_key_bindings' .config/fish/config.fish
 
-# Output "Hello World!"
-g.salute
+sudo apt install build-essential zlib1g-dev libffi-dev libyaml-dev libreadline-dev
+
+curl -fsSL https://rbenv.org/install.sh | bash
+
+rbenv install <version>
 ```

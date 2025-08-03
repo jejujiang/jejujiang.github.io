@@ -5,8 +5,8 @@
 # Basic
 name:               "Jeju"
 description:
-  -  你好，世界！          # 中文
-  -  Hello, world!         # 英语
+  -  你好，世界！
+  -  Hello, world!
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 url:                ""
