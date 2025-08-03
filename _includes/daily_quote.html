@@ -1,8 +1,7 @@
-{% assign day_of_year = site.time | date: "%j" | plus: 0 %}
-{% assign quote_index = day_of_year | modulo: site.data.quotes.size %}
-{% assign daily_quote = site.data.quotes[quote_index] %}
+{% assign daily_index = site.time | date: "%j" | modulo: site.data.quotes.size %}
+{% assign daily_quote = site.data.quotes[daily_index] %}
 
-<blockquote>
-  {{ daily_quote.quote }}
-  <footer>— {{ daily_quote.author }}</footer>
-</blockquote>
+<div class="quote">
+  <blockquote>{{ daily_quote.quote }}</blockquote>
+  <p class="author">— {{ daily_quote.author }}</p>
+</div>
