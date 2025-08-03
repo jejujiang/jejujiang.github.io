@@ -6,9 +6,9 @@ layout: default
     <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s blog</span></a>
   </h1>
 
-  {% include typed.html %}
-
   <nav class="masthead-nav">
+    {% include typed.html %}
+
     {% for nav in site.nav %}
       {% if nav.remote %}
       <a href="{{ nav.href }}">{{ nav.name }}</a>
@@ -33,4 +33,6 @@ layout: default
   </div>
 {% endfor %}
 {% endif %}
+
+  {% include quote.html %}
 </div>

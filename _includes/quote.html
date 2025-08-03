@@ -1,0 +1,31 @@
+<blockquote id="daily-quote">正在加载今日名言...</blockquote>
+
+<script>
+  // 名言库
+  const quotes = [
+"Success is not final, failure is not fatal: It is the courage to continue that counts. — Winston Churchill ",
+"The only way to do great work is to love what you do. — Steve Jobs",
+"You are never too old to set another goal or to dream a new dream. — C.S. Lewis",
+"Do not watch the clock; do what it does. Keep going. — Sam Levenson",
+"Do not watch the clock; do what it does. Keep going. — Sam Levenson",
+"Life is either a daring adventure or nothing at all. — Helen Keller",
+"Success is stumbling from failure to failure with no loss of enthusiasm. — Winston Churchill",
+"You don’t have to be great to start, but you have to start to be great. — Zig Ziglar",
+  ];
+
+  // 获取基于日期的索引
+  function getDailyIndex() {
+    const today = new Date();
+    const dateStr = today.getFullYear() + '' + today.getMonth() + '' + today.getDate();
+    return parseInt(dateStr, 10) % quotes.length;
+  }
+
+  // 显示每日名言
+  function showDailyQuote() {
+    const index = getDailyIndex();
+    document.getElementById('daily-quote').textContent = quotes[index];
+  }
+
+  // 页面加载时显示名言
+  showDailyQuote();
+</script>
