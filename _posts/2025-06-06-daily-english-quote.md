@@ -1,14 +1,10 @@
 ---
-layout: post
 title: Dayily English Quote
-date: 2025-06-06
 author: DeepSeek
 permalink: /:title
-tags:
-  - Daily English Quote
 ---
 
-Here’s your daily English quote to inspire you:  
+Here’s daily English quote to inspire me:  
 
 **"Success is not final, failure is not fatal: It is the courage to continue that counts."**  
 — *Winston Churchill*  

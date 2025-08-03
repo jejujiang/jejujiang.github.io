@@ -5,9 +5,28 @@
 # Basic
 name:               "Jeju"
 description:
-  - "Hello world!"
-  - "The C Programming Language"
-  - "The Ruby Programming Language"
+  -  你好，世界！          # 中文
+  -  こんにちは、世界！    # 日语
+  -  안녕, 세계!           # 韩语
+  -  नमस्ते, दुनिया!          # 印地语
+  -  مرحبا بالعالم!        # 阿拉伯语
+  -  สวัสดีชาวโลก!           # 泰语
+  -  Xin chào, thế giới!   # 越南语
+  -  Merhaba, dünya!       # 土耳其语
+  -  Hello, world!         # 英语
+  -  ¡Hola, mundo!         # 西班牙语
+  -  Bonjour, le monde !   # 法语
+  -  Hallo, Welt!          # 德语
+  -  Ciao, mondo!          # 意大利语
+  -  Привет, мир!          # 俄语
+  -  Olá, mundo!           # 葡萄牙语
+  -  Hallo, wereld!        # 荷兰语
+  -  Hej, världen!         # 瑞典语
+  -  Witaj, świecie!       # 波兰语
+  -  Hujambo, dunia!       # 斯瓦希里语（东非）
+  -  Sannu, duniya!        # 豪萨语（西非）
+  -  שלום עולם!            # 希伯来语
+  -  Γειά σου, κόσμε!      # 希腊语
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 url:                ""
