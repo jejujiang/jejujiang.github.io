@@ -34,5 +34,7 @@ layout: default
 {% endfor %}
 {% endif %}
 
-{% include daily_quote.html %}
+{% for quote in site.data.quotes %}
+<blockquote>{{ quote.quote }}<br>—{{ quote.author }}</blockquote>
+{% endfor %}
 </div>
