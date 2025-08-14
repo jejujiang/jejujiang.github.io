@@ -1,0 +1,9 @@
+---
+layout: default
+---
+
+{% for quote in site.data.quotes %}
+{% if quote.week == 02 %}
+<blockquote>{{ quote.quote }}&nbsp;&nbsp;---&nbsp;{{ quote.author }}</blockquote>
+{% endif %}
+{% endfor %}

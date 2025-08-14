@@ -15,20 +15,23 @@ author:             ""
 # URL
 baseurl:            ""
 #baseurl:            "" #For Root Domain
-permalink:          /:year/:month/:day/:title/
+permalink:          /:title/
 
 # Markdown
 markdown:           kramdown
 
 # Navigation
-#nav:
-#  - name:           "About"
-#    remote:         false
-#    localpath:      "about"
-#  - name:           "Download"
-#    remote:         true
-#    href:           "//github.com/gfjaru/Kiko/releases"
-#
+nav:
+# - name:           "About"
+#   remote:         false
+#   localpath:      "about"
+# - name:           "Download"
+#   remote:         true
+#   href:           "//github.com/gfjaru/Kiko/releases"
+ - name:           "Posts"
+   remote:         false
+   localpath:     "posts" 
+
 #  - name:           "C"
 #    remote:         false
 #    localpath:      "books/c/c.html"
