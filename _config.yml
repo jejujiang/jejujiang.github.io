@@ -28,9 +28,6 @@ nav:
 # - name:           "Download"
 #   remote:         true
 #   href:           "//github.com/gfjaru/Kiko/releases"
- - name:           "Posts"
-   remote:         false
-   localpath:     "posts" 
 
 #  - name:           "C"
 #    remote:         false
