@@ -15,7 +15,7 @@ author:             ""
 # URL
 baseurl:            ""
 #baseurl:            "" #For Root Domain
-permalink:          /:title/
+permalink:          /:title
 
 # Markdown
 markdown:           kramdown
