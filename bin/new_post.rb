@@ -43,14 +43,7 @@ def create_post_file(filename, title)
     f.write(<<~YAML
             ---
             title: #{title}
-            date: #{DateTime.now.iso8601}
-            categories: []
-            tags: []
             ---
-
-            ## Introduction
-
-            Your content here...
             YAML
            )
   end

@@ -1,23 +1,10 @@
 ---
 layout: default
 ---
-
-{% comment %} 计算当前周数（1-53）{% endcomment %}
-{% assign current_date = 'now' | date: '%j' | plus: 0 %}
-{% assign current_week = current_date | divided_by: 7 | plus: 1 %}
-{% if current_week > 53 %}
-  {% assign current_week = 53 %}
-{% endif %}
-
-{% comment %} 从 quotes.yml 中匹配对应周数的名言 {% endcomment %}
-{% assign quote_data = site.data.quotes | where: "week", current_week | first %}
-
-{% if quote_data %}
   <blockquote>
-    <p>{{ quote_data.quote }}</p>
-    <footer>— {{ quote_data.author }}</footer>
+    <p>Success is not final, failure is not fatal; It is the courage to continue that the counts.</p>
+    <footer>— Winston Churchill</footer>
   </blockquote>
-{% endif %}
 
 <div class="content list">
 {% if site.posts.size == 0 %}

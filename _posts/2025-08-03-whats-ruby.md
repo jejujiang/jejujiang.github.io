@@ -25,3 +25,22 @@ rbenv install <version>
 ```
 
 ---
+
+![Large example image](http://placehold.it/800x400 "Large example image")
+![Medium example image](http://placehold.it/400x200 "Medium example image")
+![Small example image](http://placehold.it/200x200 "Small example image")
+
+|-----------------+------------+-----------------+----------------|
+| Default aligned |Left aligned| Center aligned  | Right aligned  |
+|-----------------|:-----------|:---------------:|---------------:|
+| First body part |Second cell | Third cell      | fourth cell    |
+| Second line     |foo         | **strong**      | baz            |
+| Third line      |quux        | baz             | bar            |
+|-----------------+------------+-----------------+----------------|
+| Second body     |[Liquid](http://shopify.github.io/liquid/)|[Jekyll](https://jekyllrb.com)                 |                |
+| 2 line          |            |                 |                |
+|=================+============+=================+================|
+| Footer row      |            |                 |                |
+|-----------------+------------+-----------------+----------------|
+
+[top](#)
