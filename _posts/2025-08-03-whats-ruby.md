@@ -43,4 +43,30 @@ rbenv install <version>
 | Footer row      |            |                 |                |
 |-----------------+------------+-----------------+----------------|
 
-[top](#)
+---
+
+```ruby
+# counts digits, white space, others
+def main
+  nwhite = 0
+  nother = 0
+  ndigit = Array.new(10, 0) # Initialize array with 10 zeros
+
+  $stdin.each_char do |c|
+    case c
+    when '0'..'9'
+      ndigit[c.to_i] += 1
+    when ' ', '\n', '\t'
+      nwhite += 1
+    else
+      nother += 1
+    end
+  end
+
+  puts "digits = #{ndigit.join(' ')}, white space = #{nwhite}, other = #{nother}"
+end
+
+main
+```
+
+[TOP](#)
