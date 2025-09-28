@@ -44,12 +44,6 @@ def create_post_file(filename, title)
             ---
             title: #{title}
             ---
-
-            ### 唐诗
-            ### 成语
-            ### The C Programming Language
-            ### The Ruby Programming Language
-            ### English
             YAML
            )
   end

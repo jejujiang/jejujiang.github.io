@@ -26,9 +26,9 @@ rbenv install <version>
 
 ---
 
-![Large example image](http://placehold.it/800x400 "Large example image")
-![Medium example image](http://placehold.it/400x200 "Medium example image")
-![Small example image](http://placehold.it/200x200 "Small example image")
+![Large example image](https://cdn.pixabay.com/photo/2025/09/18/10/41/tram-9840971_1280.jpg "Large example image")
+![Medium example image](https://cdn.pixabay.com/photo/2021/12/28/16/11/cathedral-6899648_1280.jpg "Medium example image")
+![Small example image](https://cdn.pixabay.com/photo/2022/05/26/22/14/lake-7223904_1280.jpg "Small example image")
 
 |-----------------+------------+-----------------+----------------|
 | Default aligned |Left aligned| Center aligned  | Right aligned  |
@@ -37,36 +37,13 @@ rbenv install <version>
 | Second line     |foo         | **strong**      | baz            |
 | Third line      |quux        | baz             | bar            |
 |-----------------+------------+-----------------+----------------|
-| Second body     |[Liquid](http://shopify.github.io/liquid/)|[Jekyll](https://jekyllrb.com)                 |                |
+| Second body     |            |                 |                |
 | 2 line          |            |                 |                |
 |=================+============+=================+================|
 | Footer row      |            |                 |                |
 |-----------------+------------+-----------------+----------------|
 
----
-
-```ruby
-# counts digits, white space, others
-def main
-  nwhite = 0
-  nother = 0
-  ndigit = Array.new(10, 0) # Initialize array with 10 zeros
-
-  $stdin.each_char do |c|
-    case c
-    when '0'..'9'
-      ndigit[c.to_i] += 1
-    when ' ', '\n', '\t'
-      nwhite += 1
-    else
-      nother += 1
-    end
-  end
-
-  puts "digits = #{ndigit.join(' ')}, white space = #{nwhite}, other = #{nother}"
-end
-
-main
-```
+[Ruby](/books/ruby/Ruby.html)
+[C](/books/c/c.html)
 
 [TOP](#)
