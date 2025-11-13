@@ -15,14 +15,14 @@ permalink:          /:title
 # Markdown
 markdown:           kramdown
 
-# Navigation
-nav:
- - name:           "About"
-   remote:         false
-   localpath:      "about"
- - name:           "Download"
-   remote:         true
-   href:           "//github.com/gfjaru/Kiko/releases"
+  ## Navigation
+  #nav:
+  # - name:           "About"
+  #   remote:         false
+  #   localpath:      "about"
+  # - name:           "Download"
+  #   remote:         true
+  #   href:           "//github.com/gfjaru/Kiko/releases"
 
 # Sass
 sass:
