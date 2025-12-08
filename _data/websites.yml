@@ -1,5 +1,11 @@
 - name: Blog
   url:  http://jejujiang.github.io/blog
+  bio:  Hey there! I'm Jiang.
+        This is where I document fragments
+        of my [interests/life/explorations].
+        Updates may be irregular,
+        but always genuine. ☕️  
+        Enjoy your stay!
 
 - name: C
   url:  http://jejujiang.github.io/C

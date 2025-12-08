@@ -1,16 +1,14 @@
-<div class="row">
-  {% for website in site.data.websites %}
-  <div class="row">
-    <div class="col-4 offset-4">
-      <div class="card" style="width: 20rem;">
-        <div class="card-body">
-          <h4 class="card-title">{{ website.name }}</h4>
-          <h5 class="card-subtitle">Nice looking subtitle.</h5>
-          <p class="card-text">This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.</p>
-          <a class="card-link" href="{{ website.url }}">welcome</a>
+      {% for website in site.data.websites %}
+      <div class="row">
+        <div class="col-4 offset-4">
+          <div class="card" style="width: 20rem;">
+            <div class="card-body">
+              <h4 class="card-title">{{ website.name }}</h4>
+              <h5 class="card-subtitle">Nice looking subtitle.</h5>
+              <p class="card-text">{{ website.bio }}</p>
+              <a class="card-link" href="{{ website.url }}">welcome</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  {% endfor %}
-</div>
+      {% endfor %}
