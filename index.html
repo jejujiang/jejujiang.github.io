@@ -1,32 +1,17 @@
+---
+---
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>hello world</title>
-		<link rel="stylesheet" href="paper.css">
-		<body>
-      <header>
-        <h1 class="text-center"><strong>hello world</strong></h1>
-      </header>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/assets/css/paper.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <body>
+      <h1 class="text-center"><strong>{{ site.title }}</strong></h1>
 
-      <nav>
-			<ul class="breadcrumb border">
-						<li><a href="http://jejujiang.github.io/blog">Blog</a></li>
-						<li><a href="http://jejujiang.github.io/C">C</a></li>
-						<li><a href="http://www.fennel-lang.org">Fennel</a></li>
-						<li><a href="http://www.lua.org">Lua</a></li>
-						<li><a href="http://jejujiang.github.io/Ruby">Ruby</a></li>
-						<li><a href="http://mitp-content-server.mit.edu/books/content/sectbyfn/books_pres_0/6515/sicp.zip/index.html">SICP</a></li>
-						<li><a href="http://htdp.org/2024-11-6/Book/index.html">How to Design Programs, Second Edition</a></li>
-						<li><a href="http://asciimoon.com">ASCIIMoon</a></li>
-						<li><a href="http://hello-algo.com">Hello 算法</a></li>
-						<li><a href="http://ruanyifeng.com">阮一峰的个人网站</a></li>
-						<li><a href="http://www.yysuni.com">YYsuni</a></li>
-						<li><a href="https://terminalcss.xyz/">Terminal CSS</a></li>
-						<li><a href="http://www.getpapercss.com/">PaperCSS</a></li>
-					</ul>
-      </nav>
-      <footer class="text-center">>@2025</footer>
-		</body>
+      {% include card.html %}
+
+    </body>
 </html>
