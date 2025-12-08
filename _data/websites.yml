@@ -1,0 +1,38 @@
+- name: Blog
+  url:  http://jejujiang.github.io/blog
+
+- name: C
+  url:  http://jejujiang.github.io/C
+
+- name: Fennel
+  url:  http://www.fennel-lang.org
+
+- name: Lua
+  url:  http://www.lua.org
+
+- name: Ruby
+  url:  http://jejujiang.github.io/Ruby
+
+- name: SICP
+  url:  http://mitp-content-server.mit.edu/bont/sectbyfn/books_pres_0/6515/sicp.zip/index.html
+
+- name: How to Design Programs, Second Edition
+  url:  http://htdp.org/2024-11-6/Book/index.html
+
+- name: ASCIIMoon
+  url:  http://asciimoon.com
+
+- name: Hello 算法
+  url:  http://hello-algo.com
+
+- name: 阮一峰的个人网站
+  url:  http://ruanyifeng.com
+
+- name: YYsuni
+  url:  http://www.yysuni.com
+
+- name: Terminal CSS
+  url:  https://terminalcss.xyz
+
+- name: PaperCSS
+  url:  http://www.getpapercss.com
