@@ -9,9 +9,31 @@
     <link rel="stylesheet" href="/assets/css/paper.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <body>
-      <h1 class="text-center"><strong>{{ site.title }}</strong></h1>
-      <div class="row">
-      {% include card.html %}
+      <div class="row site">
+      <div class="sm-12 md-8 col">
+      <div class="paper">
+      <div class="title">
+      <div class="row flex-center">
+      <div class="text-center">
+      <h1><strong>{{ site.title }}</strong></h1>
+      </div>
+      </div>
+      </div>
+      <div class="row flex-center">
+        <article class="article">
+          <h1 class="article-title"><a href="">Article Title</a></h1>
+          <p class="article-meta">Written by <a href="#">Super User</a></p>
+          <p class="text-lead"> Lorem... </p>
+          <p>Lorem...</p>
+        
+          <div class="row">
+            <button>Read More</button>
+            <button>5 Comments</button>
+          </div>
+        </article>
+      </div>
+      </div>
+      </div>
       </div>
     </body>
 </html>
