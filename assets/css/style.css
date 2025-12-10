@@ -1,3 +1,15 @@
 body {
   background-image: url("/assets/images/geometry2.png")
 }
+
+.center-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  height: 80vh;           /* 视口高度 */
+}
+
+.content {
+  /* 内容样式 */
+  padding: 20px;
+}
