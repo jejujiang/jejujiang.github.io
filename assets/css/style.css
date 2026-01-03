@@ -1,5 +1,5 @@
 body {
-  background-image: url("/assets/images/geometry2.png")
+  background-image: url("/assets/images/geometry2.png"); /* 背景图片 */
 }
 
 .center-container {
@@ -10,11 +10,7 @@ body {
 }
 
 .content {
-  /* 内容样式 */
-  padding: 20px;
-}
-body {
-  background-image: url("/assets/images/geometry2.png"); /* 背景图片 */
+  padding: 20px;  /* 内容样式 */
 }
 
 a {
