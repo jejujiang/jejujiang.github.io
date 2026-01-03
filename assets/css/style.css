@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("/assets/images/geometry2.png"); /* 背景图片 */
 }
@@ -23,12 +27,10 @@ a::after {
   content: '';           /* 必须有，创建伪元素 */
   position: absolute;    /* 绝对定位，脱离文档流 */
   width: 0;             /* 初始宽度为0（不可见） */
-  height: 2px;          /* 下划线高度为2像素 */
-  bottom: -3px;         /* 定位在链接文字下方3px处 */
+  height: 5px;          /* 下划线高度为2像素 */
+  bottom: -5px;         /* 定位在链接文字下方3px处 */
   left: 50%;            /* 初始位置在链接水平中心 */
   background: #ff6b6b;  /* 下划线颜色为珊瑚红色 */
-  --webkit-transition: all 0.3s ease;
-  --moz-transition: all 0.3s ease;
   transition: all 0.3s ease; /* 添加0.3秒的过渡动画 */
 }
 
