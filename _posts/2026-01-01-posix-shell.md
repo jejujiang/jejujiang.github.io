@@ -1,6 +1,6 @@
 ---
 layout: default
-title: pure bash bible (📖 A collection of pure bash alternatives to external processes)
+title: pure bash bible
 ---
 
 <p align="center"><b>Also see: <a href="https://github.com/dylanaraps/pure-bash-bible">pure bash bible (📖 A collection of pure bash alternatives to external processes).</a></b></p>
