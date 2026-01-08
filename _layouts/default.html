@@ -8,7 +8,9 @@
   </head>
 
   <body>
-    <h1><a href="/">🫧{{ site.title }}🌼</a></h1>
+    <div class="title">
+    <h1>🫧 <a href="/">{{ site.title | upcase}}</a> 🌼</h1>
+    </div>
     {{ content }}
   </body>
 </html>

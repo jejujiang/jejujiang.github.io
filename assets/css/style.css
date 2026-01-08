@@ -1,74 +1,125 @@
+/* ==================== 字体变量定义 ==================== */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 
+               'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+/* ==================== 通用样式 ==================== */
 * {
   box-sizing: border-box;
 }
 
+/* ==================== 基础排版样式 ==================== */
 body {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d3748;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   background-image: url("/assets/images/geometry2.png"); /* 背景图片 */
 }
 
-.center-container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
-  height: 80vh;           /* 视口高度 */
+/* 标题样式 */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1a202c;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
-.content {
-  padding: 20px;  /* 内容样式 */
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+/* 文章正文样式 */
+article, .post-content {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.8;
+  color: #2d3748;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
+/* 引用样式 */
+blockquote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1em;
+  line-height: 1.6;
+  border-left: 4px solid #4299e1;
+  padding-left: 1.5em;
+  margin-left: 0;
+  color: #4a5568;
+}
+
+/* ==================== 链接样式 ==================== */
 a {
-  text-decoration: none;   /* 删除默认下划线 */
-  color: #333;            /* 设置链接文字颜色为深灰色 */
-  position: relative;     /* 关键：为伪元素建立定位上下文 */
+  color: #ff6b6b;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s ease;
 }
 
+/* 下划线动画效果 */
 a::after {
-  content: '';           /* 必须有，创建伪元素 */
-  position: absolute;    /* 绝对定位，脱离文档流 */
-  width: 0;             /* 初始宽度为0（不可见） */
-  height: 5px;          /* 下划线高度为2像素 */
-  bottom: -5px;         /* 定位在链接文字下方3px处 */
-  left: 50%;            /* 初始位置在链接水平中心 */
-  background: #ff6b6b;  /* 下划线颜色为珊瑚红色 */
-  transition: all 0.3s ease; /* 添加0.3秒的过渡动画 */
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 20%;
+  background: #ff6b6b;
+  transition: all 0.3s ease;
 }
 
 a:hover:after {
-  width: 80%;    /* 宽度变为链接的80% */
-  left: 10%;        /* 左右边距各留20%，从中间向两边展开 */
+  width: 100%;
+  left: 0%;
 }
 
-/* 
- * Rouge代码高亮主题：简约焦点主题（极简版）
- * 白色背景 + 极简边框 + 最多4种颜色
- */
+/* ==================== 代码样式 ==================== */
+/* 行内代码 */
+code, .highlighter-rouge {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background-color: #f7fafc;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
 
-/* 基础代码容器样式 - 极简白色 */
+/* 代码块基础样式 */
+pre {
+  font-family: var(--font-mono);
+  padding: 1em;
+  overflow-x: auto;
+  line-height: 1.5;
+  background-color: #f7fafc;
+  border-radius: 4px;
+}
+
+/* ==================== Rouge代码高亮主题 ==================== */
+/* 基础代码容器样式 */
 .highlight {
-    font-family: 'SF Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    background-color: #ffffff;
-    color: #333;
-    padding: 1em;
-    margin: 1.5em 0;
-    overflow: auto;
-    /* 极简边框 */
-    border: 0.5px solid #e8e8e8;
-    border-radius: 2px;
+  font-family: 'SF Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: #ffffff;
+  color: #333;
+  padding: 1em;
+  margin: 1.5em 0;
+  overflow: auto;
+  border: 0.5px solid #e8e8e8;
+  border-radius: 2px;
 }
 
-/* 行内代码样式 - 极简 */
-code.highlighter-rouge {
-    background-color: #fafafa;
-    padding: 0.1em 0.3em;
-    font-size: 0.9em;
-    color: #333;
-    border-radius: 1px;
-}
-
-/* 原则(2)：变量、函数和类的定义 - 最重要 */
+/* 代码高亮颜色分类 */
 .highlight .nc, /* 类名 */
 .highlight .nf, /* 函数名 */
 .highlight .nx, /* 其他变量名 */
@@ -77,23 +128,20 @@ code.highlighter-rouge {
 .highlight .vg, /* 全局变量 */
 .highlight .nn, /* 命名空间 */
 .highlight .bp { /* 内置伪类 */
-    color: #d35400; /* 橙色 */
-    font-weight: 500;
+  color: #d35400; /* 橙色 */
+  font-weight: 500;
 }
 
-/* 原则(3)：注释 - 重要信息 */
 .highlight .c,  /* 注释 */
 .highlight .cm, /* 多行注释 */
 .highlight .c1, /* 单行注释 */
 .highlight .cs, /* 文档注释 */
 .highlight .ch, /* 哈希注释 */
 .highlight .cd { /* 文档块注释 */
-    color: #27ae60; /* 绿色 */
-    font-style: normal;
+  color: #27ae60; /* 绿色 */
+  font-style: normal;
 }
 
-/* 原则(4)：常量和括号 - 重要信息 */
-/* 常量 */
 .highlight .mi, /* 整数 */
 .highlight .mf, /* 浮点数 */
 .highlight .mh, /* 十六进制数 */
@@ -103,17 +151,14 @@ code.highlighter-rouge {
 .highlight .sh, /* 文档字符串 */
 .highlight .sc, /* 字符 */
 .highlight .il { /* 整数文字 */
-    color: #2980b9; /* 蓝色 */
+  color: #2980b9; /* 蓝色 */
 }
 
-/* 括号和标点 */
 .highlight .p,  /* 标点 */
 .highlight .o { /* 操作符 */
-    color: #8e44ad; /* 紫色 */
+  color: #8e44ad; /* 紫色 */
 }
 
-/* 原则(5)：其他代码不必高亮 */
-/* 关键字 - 灰色 */
 .highlight .k,  /* 关键字 */
 .highlight .kd, /* 声明关键字 */
 .highlight .kn, /* 命名空间关键字 */
@@ -121,196 +166,216 @@ code.highlighter-rouge {
 .highlight .kt, /* 类型关键字 */
 .highlight .ow, /* 其他关键字 */
 .highlight .nt { /* 标签名 */
-    color: #666;
-    font-weight: normal;
+  color: #666;
+  font-weight: normal;
 }
 
-/* 其他元素 - 更浅的灰色 */
 .highlight .na, /* 属性名 */
 .highlight .nb, /* 内置函数 */
 .highlight .nl, /* 链接名 */
 .highlight .py, /* Python内置 */
 .highlight .go { /* 通用输出 */
-    color: #777;
+  color: #777;
 }
 
-/* 预处理指令 - 使用紫色 */
-.highlight .cp, /* 预处理指令 */
-.highlight .c1 { /* 单行注释（已在上面处理） */
-    color: #8e44ad;
+.highlight .cp { /* 预处理指令 */
+  color: #8e44ad;
 }
 
-/* 行号样式 - 极简 */
+/* 行号样式 */
 .highlight .lineno {
-    color: #aaa;
-    padding-right: 0.75em;
-    margin-right: 0.75em;
-    user-select: none;
-    min-width: 2em;
-    text-align: right;
-    display: inline-block;
+  color: #aaa;
+  padding-right: 0.75em;
+  margin-right: 0.75em;
+  user-select: none;
+  min-width: 2em;
+  text-align: right;
+  display: inline-block;
 }
 
-/* 表格布局 - 无边框 */
+/* 代码块表格布局 */
 .highlight table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 0;
-    border: none;
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0;
+  border: none;
 }
 
 .highlight table td {
-    padding: 0;
-    border: none;
-    vertical-align: top;
+  padding: 0;
+  border: none;
+  vertical-align: top;
 }
 
 .highlight table td:first-child {
-    /* 行号列 */
-    background-color: transparent;
-    text-align: right;
-    width: 1%;
-    padding-right: 0.75em;
+  background-color: transparent;
+  text-align: right;
+  width: 1%;
+  padding-right: 0.75em;
 }
 
 .highlight .rouge-gutter {
-    padding: 0;
-    background: transparent;
+  padding: 0;
+  background: transparent;
 }
 
 .highlight .rouge-code {
-    padding-left: 0;
+  padding-left: 0;
 }
 
-/* 移除所有不必要的装饰 */
 .highlight pre {
-    margin: 0;
-    padding: 0;
-    overflow-x: auto;
-    white-space: pre;
-    word-wrap: normal;
-    background-color: transparent;
-    border: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+  background-color: transparent;
+  border: none;
 }
 
 .highlight pre code {
-    background-color: transparent;
-    border: none;
-    padding: 0;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
-/* 响应式调整 */
-@media (max-width: 768px) {
-    .highlight {
-        font-size: 13px;
-        padding: 0.75em;
-        margin: 1em 0;
-        border-width: 0.5px;
-    }
-    
-    .highlight table td:first-child {
-        padding-right: 0.5em;
-    }
-    
-    .highlight .lineno {
-        min-width: 1.5em;
-        font-size: 0.9em;
-    }
-}
-
-/* 打印样式 - 极简 */
-@media print {
-    .highlight {
-        background-color: #ffffff !important;
-        color: #000000 !important;
-        border: 0.5px solid #ddd !important;
-        box-shadow: none !important;
-        page-break-inside: avoid;
-    }
-    
-    code.highlighter-rouge {
-        background-color: #fafafa !important;
-        color: #000000 !important;
-        border: none !important;
-    }
-    
-    /* 打印时颜色保持不变 */
-    .highlight .nc,
-    .highlight .nf,
-    .highlight .nx,
-    .highlight .nv {
-        color: #d35400 !important;
-    }
-    
-    .highlight .c,
-    .highlight .cm,
-    .highlight .c1 {
-        color: #27ae60 !important;
-    }
-    
-    .highlight .mi,
-    .highlight .mf,
-    .highlight .s,
-    .highlight .s1,
-    .highlight .s2 {
-        color: #2980b9 !important;
-    }
-    
-    .highlight .p,
-    .highlight .o {
-        color: #8e44ad !important;
-    }
-    
-    .highlight .lineno {
-        color: #999 !important;
-    }
-}
-
-/* 暗色模式支持 - 保持极简 */
-@media (prefers-color-scheme: dark) {
-    .highlight {
-        background-color: #ffffff; /* 保持白色背景 */
-        color: #333; /* 保持深色文字 */
-        border-color: #e0e0e0;
-    }
-    
-    /* 在暗色模式下使用更细的边框 */
-    .highlight {
-        border-width: 0.5px;
-    }
-}
-
-/* 焦点状态 - 几乎不可见 */
-.highlight:focus-within {
-    outline: none;
-    border-color: #3498db;
-}
-
-/* 代码块内的链接 - 保持简洁 */
+/* 代码块内的链接 */
 .highlight a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 .highlight a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* 极简滚动条 */
 .highlight::-webkit-scrollbar {
-    height: 6px;
-    width: 6px;
+  height: 6px;
+  width: 6px;
 }
 
 .highlight::-webkit-scrollbar-track {
-    background: #f8f8f8;
+  background: #f8f8f8;
 }
 
 .highlight::-webkit-scrollbar-thumb {
-    background: #ddd;
-    border-radius: 3px;
+  background: #ddd;
+  border-radius: 3px;
 }
 
 .highlight::-webkit-scrollbar-thumb:hover {
-    background: #ccc;
+  background: #ccc;
+}
+
+/* 焦点状态 */
+.highlight:focus-within {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* ==================== 布局类 ==================== */
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.posts {
+  justify-content: center;
+  align-items: center;
+  margin-left: 15%;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* ==================== 响应式设计 ==================== */
+@media (max-width: 768px) {
+  body { font-size: 15px; }
+  article { font-size: 17px; }
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .highlight {
+    font-size: 13px;
+    padding: 0.75em;
+    margin: 1em 0;
+    border-width: 0.5px;
+  }
+  
+  .highlight table td:first-child {
+    padding-right: 0.5em;
+  }
+  
+  .highlight .lineno {
+    min-width: 1.5em;
+    font-size: 0.9em;
+  }
+}
+
+/* ==================== 打印样式 ==================== */
+@media print {
+  .highlight {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    border: 0.5px solid #ddd !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  
+  code.highlighter-rouge {
+    background-color: #fafafa !important;
+    color: #000000 !important;
+    border: none !important;
+  }
+  
+  .highlight .nc,
+  .highlight .nf,
+  .highlight .nx,
+  .highlight .nv {
+    color: #d35400 !important;
+  }
+  
+  .highlight .c,
+  .highlight .cm,
+  .highlight .c1 {
+    color: #27ae60 !important;
+  }
+  
+  .highlight .mi,
+  .highlight .mf,
+  .highlight .s,
+  .highlight .s1,
+  .highlight .s2 {
+    color: #2980b9 !important;
+  }
+  
+  .highlight .p,
+  .highlight .o {
+    color: #8e44ad !important;
+  }
+  
+  .highlight .lineno {
+    color: #999 !important;
+  }
+}
+
+/* ==================== 暗色模式支持 ==================== */
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    background-color: #ffffff;
+    color: #333;
+    border-color: #e0e0e0;
+    border-width: 0.5px;
+  }
 }
