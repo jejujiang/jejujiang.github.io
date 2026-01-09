@@ -1700,8 +1700,8 @@ button.disabled, button[disabled],
 
 a {
   color: #41403e;
-  color: #ff6b6b;
-  background-image: linear-gradient(5deg, transparent 65%, #ff6b6b 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #ff6b6b 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #ff6b6b 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #ff6b6b 35%, transparent 50%);
+  color: var(--secondary);
+  background-image: linear-gradient(5deg, transparent 65%, #0b74d5 80%, transparent 90%), linear-gradient(165deg, transparent 5%, #0b74d5 15%, transparent 25%), linear-gradient(165deg, transparent 45%, #0b74d5 55%, transparent 65%), linear-gradient(15deg, transparent 25%, #0b74d5 35%, transparent 50%);
   background-position: 0 90%;
   background-repeat: repeat-x;
   background-size: 4px 3px;
