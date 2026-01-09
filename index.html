@@ -3,11 +3,9 @@ layout: default
 title: "hello world"
 ---
 
-<div class="posts">
 <ul>
   {% for post in site.posts %}
-  <li><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3></li>
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-</div>
 

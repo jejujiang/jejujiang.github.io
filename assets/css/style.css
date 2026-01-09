@@ -1,172 +1,99 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("/assets/images/geometry2.png"); /* 背景图片 */
-  font-family: 'SF Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
-
-}
-
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-}
-
-/* blog css start */
-.center-container {
-  display: flex;
-  justify-content: center; /* 水平居中 */
-  align-items: center;     /* 垂直居中 */
-  height: 80vh;           /* 视口高度 */
-}
-
-.content {
-  padding: 20px;  /* 内容样式 */
-}
-/* blog css end */
-
-a {
-  text-decoration: none;   /* 删除默认下划线 */
-  color: #ff6b6b;            /* 设置链接文字颜色为珊瑚红色 */
-  position: relative;     /* 关键：为伪元素建立定位上下文 */
-}
-
-a::after {
-  content: '';           /* 必须有，创建伪元素 */
-  position: absolute;    /* 绝对定位，脱离文档流 */
-  width: 0;             /* 初始宽度为0（不可见） */
-  height: 1px;          /* 下划线高度为1像素 */
-  bottom: -2px;         /* 定位在链接文字下方2px处 */
-  left: 20%;            /* 初始位置在链接距离左边距20%的位置 */
-  background: #ff6b6b;  /* 下划线颜色为珊瑚红色 */
-  transition: all 0.3s ease; /* 添加0.3秒的过渡动画 */
-}
-
-a:hover:after {
-  width: 100%;    /* 宽度变为链接的100% */
-  left: 0%;        /* 左右边距各留0%*/
-}
-
 /* 
  * Rouge代码高亮主题：简约焦点主题（极简版）
  * 白色背景 + 极简边框 + 最多4种颜色
  */
 
-/* 基础代码容器样式 - 极简白色 */
+/* 基础代码容器 */
 .highlight {
     font-family: 'SF Mono', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 14px;
     line-height: 1.5;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #333;
     padding: 1em;
     margin: 1.5em 0;
     overflow: auto;
-    /* 极简边框 */
     border: 0.5px solid #e8e8e8;
     border-radius: 2px;
 }
 
-/* 行内代码样式 - 极简 */
+/* 行内代码 */
 code.highlighter-rouge {
-    background-color: #fafafa;
+    background: #fafafa;
     padding: 0.1em 0.3em;
     font-size: 0.9em;
-    color: #333;
     border-radius: 1px;
 }
 
-/* 原则(2)：变量、函数和类的定义 - 最重要 */
+/* 变量、函数、类名 - 橙色 */
 .highlight .nc, /* 类名 */
 .highlight .nf, /* 函数名 */
 .highlight .nx, /* 其他变量名 */
 .highlight .nv, /* 变量定义 */
 .highlight .vc, /* 类变量 */
 .highlight .vg, /* 全局变量 */
-.highlight .nn, /* 命名空间 */
 .highlight .bp { /* 内置伪类 */
-    color: #d35400; /* 橙色 */
+    color: #d35400;
     font-weight: 500;
 }
 
-/* 原则(3)：注释 - 重要信息 */
+/* 注释 - 绿色 */
 .highlight .c,  /* 注释 */
 .highlight .cm, /* 多行注释 */
 .highlight .c1, /* 单行注释 */
-.highlight .cs, /* 文档注释 */
 .highlight .ch, /* 哈希注释 */
 .highlight .cd { /* 文档块注释 */
-    color: #27ae60; /* 绿色 */
-    font-style: normal;
+    color: #27ae60;
 }
 
-/* 原则(4)：常量和括号 - 重要信息 */
-/* 常量 */
+/* 常量和字符串 - 蓝色 */
 .highlight .mi, /* 整数 */
 .highlight .mf, /* 浮点数 */
 .highlight .mh, /* 十六进制数 */
 .highlight .s,  /* 字符串 */
 .highlight .s1, /* 单引号字符串 */
 .highlight .s2, /* 双引号字符串 */
-.highlight .sh, /* 文档字符串 */
-.highlight .sc, /* 字符 */
-.highlight .il { /* 整数文字 */
-    color: #2980b9; /* 蓝色 */
+.highlight .sc { /* 字符 */
+    color: #2980b9;
 }
 
-/* 括号和标点 */
+/* 标点和操作符 - 紫色 */
 .highlight .p,  /* 标点 */
 .highlight .o { /* 操作符 */
-    color: #8e44ad; /* 紫色 */
+    color: #8e44ad;
 }
 
-/* 原则(5)：其他代码不必高亮 */
 /* 关键字 - 灰色 */
 .highlight .k,  /* 关键字 */
 .highlight .kd, /* 声明关键字 */
-.highlight .kn, /* 命名空间关键字 */
 .highlight .kr, /* 保留关键字 */
 .highlight .kt, /* 类型关键字 */
-.highlight .ow, /* 其他关键字 */
 .highlight .nt { /* 标签名 */
     color: #666;
-    font-weight: normal;
 }
 
-/* 其他元素 - 更浅的灰色 */
+/* 其他元素 - 浅灰 */
 .highlight .na, /* 属性名 */
 .highlight .nb, /* 内置函数 */
 .highlight .nl, /* 链接名 */
-.highlight .py, /* Python内置 */
 .highlight .go { /* 通用输出 */
     color: #777;
 }
 
-/* 预处理指令 - 使用紫色 */
-.highlight .cp, /* 预处理指令 */
-.highlight .c1 { /* 单行注释（已在上面处理） */
-    color: #8e44ad;
-}
-
-/* 行号样式 - 极简 */
+/* 行号 */
 .highlight .lineno {
     color: #aaa;
     padding-right: 0.75em;
-    margin-right: 0.75em;
     user-select: none;
     min-width: 2em;
     text-align: right;
     display: inline-block;
 }
 
-/* 表格布局 - 无边框 */
+/* 表格布局 */
 .highlight table {
     width: 100%;
     border-collapse: collapse;
-    margin: 0;
     border: none;
 }
 
@@ -177,9 +104,6 @@ code.highlighter-rouge {
 }
 
 .highlight table td:first-child {
-    /* 行号列 */
-    background-color: transparent;
-    text-align: right;
     width: 1%;
     padding-right: 0.75em;
 }
@@ -193,30 +117,27 @@ code.highlighter-rouge {
     padding-left: 0;
 }
 
-/* 移除所有不必要的装饰 */
+/* 移除装饰 */
 .highlight pre {
     margin: 0;
     padding: 0;
     overflow-x: auto;
     white-space: pre;
-    word-wrap: normal;
-    background-color: transparent;
+    background: transparent;
     border: none;
 }
 
 .highlight pre code {
-    background-color: transparent;
-    border: none;
+    background: transparent;
     padding: 0;
 }
 
-/* 响应式调整 */
+/* 响应式 */
 @media (max-width: 768px) {
     .highlight {
         font-size: 13px;
         padding: 0.75em;
         margin: 1em 0;
-        border-width: 0.5px;
     }
     
     .highlight table td:first-child {
@@ -229,23 +150,20 @@ code.highlighter-rouge {
     }
 }
 
-/* 打印样式 - 极简 */
+/* 打印样式 */
 @media print {
     .highlight {
-        background-color: #ffffff !important;
+        background: #ffffff !important;
         color: #000000 !important;
         border: 0.5px solid #ddd !important;
-        box-shadow: none !important;
         page-break-inside: avoid;
     }
     
     code.highlighter-rouge {
-        background-color: #fafafa !important;
-        color: #000000 !important;
-        border: none !important;
+        background: #fafafa !important;
     }
     
-    /* 打印时颜色保持不变 */
+    /* 保持打印颜色 */
     .highlight .nc,
     .highlight .nf,
     .highlight .nx,
@@ -261,9 +179,7 @@ code.highlighter-rouge {
     
     .highlight .mi,
     .highlight .mf,
-    .highlight .s,
-    .highlight .s1,
-    .highlight .s2 {
+    .highlight .s {
         color: #2980b9 !important;
     }
     
@@ -275,36 +191,6 @@ code.highlighter-rouge {
     .highlight .lineno {
         color: #999 !important;
     }
-}
-
-/* 暗色模式支持 - 保持极简 */
-@media (prefers-color-scheme: dark) {
-    .highlight {
-        background-color: #ffffff; /* 保持白色背景 */
-        color: #333; /* 保持深色文字 */
-        border-color: #e0e0e0;
-    }
-    
-    /* 在暗色模式下使用更细的边框 */
-    .highlight {
-        border-width: 0.5px;
-    }
-}
-
-/* 焦点状态 - 几乎不可见 */
-.highlight:focus-within {
-    outline: none;
-    border-color: #3498db;
-}
-
-/* 代码块内的链接 - 保持简洁 */
-.highlight a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.highlight a:hover {
-    text-decoration: underline;
 }
 
 /* 极简滚动条 */
