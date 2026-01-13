@@ -1,11 +1,18 @@
 ---
-layout: default
 title: "hello world"
 ---
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/paper.css">
+  </head>
 
-<ul>
-  {% for post in site.posts %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
-
+  <body>
+    <div class="container text-center">
+    <h1>🫧 <a href="/">{{ site.title | upcase}}</a> 🌼</h1>
+    </div>
+  </body>
+</html>
