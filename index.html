@@ -12,8 +12,10 @@ title: "hello world"
 
   <body>
     <div class="container text-center">
-    <h1>🫧 {{ site.title | upcase}} 🌼</h1>
-    <h3>🫧 <a href="http://jejujiang.github.io/blog/">Welcome to my Trove.</a> 🌼</h3>
+    <h3>🫧 {{ site.title | upcase}} 🌼</h3>
+    {% for nav in site.navs %}
+    <h4>🫧 <a href="{{ nav.url }}">Welcome to my {{ nav.title }}.</a> 🌼</h4>
+    {% endfor %}
     </div>
   </body>
 </html>

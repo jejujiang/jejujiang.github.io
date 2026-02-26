@@ -1,1 +1,11 @@
 title: 'hello world'
+
+navs:
+  - title: home
+    url: http://43.142.25.171
+  - title: trove
+    url: http://43.142.25.171/trove/index.html
+  - title: love
+    url: http://43.142.25.171/trove/260214/index.html
+  - title: education
+    url: http://43.142.25.171/trove/education.html
