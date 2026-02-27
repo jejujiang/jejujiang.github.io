@@ -1,21 +1,16 @@
-        <nav class="nav-section">
-          <div class="nav-header">📌 导航栏</div>
-          <ul class="nav-menu">
-            {% for nav in site.navs %}
-            <a href="{{ nav.url }}"><li class="nav-item">{{ nav.title }}</li></a>
-            {% endfor %}
-
-            <a href="books.html"><li class="nav-item">books</li></a>
-            <a href="english.html"><li class="nav-item">english</li></a>
-<a href="love.html"><li class="nav-item">love</li></a>
-
-            
-            <li class="nav-item" style="margin-top: 1rem; background: #eef2ff; border-color: #a5b4fc;">
-              <span style="opacity: 0.9;">✨ 正在浏览：{{ page.title | default: site.title }}</span>
-            </li>
-          </ul>
-          <!-- 附加一点辅助文字，充实右侧 -->
-          <p style="font-size: 0.9rem; color: #62748c; margin-top: auto; padding-top: 2rem; border-top: 1px solid #edf2f7;">
-          导航简洁明了，<br>与左侧描述区形成呼应。
-          </p>
-        </nav>
+<nav class="nav-section">
+  <div class="nav-header">📌 导航栏</div>
+  <ul class="nav-menu">
+    <a href="/"><li class="nav-item">Home</li></a>
+    <a href="books.html"><li class="nav-item">Books</li></a>
+    <a href="english.html"><li class="nav-item">English</li></a>
+    <a href="love.html"><li class="nav-item">Love</li></a>
+    <li class="nav-item" style="margin-top: 1rem; background: #eef2ff; border-color: #a5b4fc;">
+      <span style="opacity: 0.9;">✨ 正在浏览：{{ page.title | default: site.title | capitalize }}</span>
+    </li>
+  </ul>
+  <!-- 附加一点辅助文字，充实右侧 -->
+  <p style="font-size: 0.9rem; color: #62748c; margin-top: auto; padding-top: 2rem; border-top: 1px solid #edf2f7;">
+  © {{ "now" | date: "%Y" }} Powered by <a href="https://www.deepseek.com/">deepseek</a> and <a href="https://jekyllrb.com/">Jekyll</a>. 
+  </p>
+</nav>
