@@ -1,0 +1,80 @@
+/* 新增照片部分CSS (只影响左侧.cake-box内的照片网格) */
+.description-section .polaroid-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 2.5rem 0;
+}
+
+.description-section .polaroid-slice {
+  background-color: #ffffff;
+  padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25),
+              0 4px 8px -2px rgba(79, 70, 229, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(2px);
+  transform: rotate(0.2deg);
+}
+
+.description-section .polaroid-slice:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+.description-section .polaroid-slice:nth-child(odd) {
+  transform: rotate(-0.5deg);
+}
+.description-section .polaroid-slice:hover {
+  transform: rotate(0deg) scale(1.02);
+  box-shadow: 0 20px 28px -12px #4f46e5;
+  border-color: #c7d2fe;
+}
+
+.description-section .polaroid-slice img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px 12px 6px 6px;
+  background-color: #f1f5f9;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.02);
+  border: 1px solid #f8fafc;
+}
+
+.description-section .polaroid-caption {
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #334155;
+  margin-top: 0.7rem;
+  padding: 0.2rem 0.3rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  font-family: 'Georgia', serif;
+  border: 1px dashed #e2e8f0;
+  transition: background 0.2s;
+}
+
+.description-section .polaroid-slice:hover .polaroid-caption {
+  background: #f8f4ff;
+  color: #4f46e5;
+  border-color: #a5b4fc;
+}
+
+@media (max-width: 640px) {
+  .description-section .polaroid-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .description-section .polaroid-slice img {
+    height: 150px;
+  }
+}
+@media (max-width: 420px) {
+  .description-section .polaroid-grid {
+    grid-template-columns: 1fr;
+  }
+}
