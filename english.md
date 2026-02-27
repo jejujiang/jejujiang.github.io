@@ -1,6 +1,7 @@
 ---
 layout: default
 title: english
+permalink: /english/
 ---
 
 {{ page.title | upcase }}

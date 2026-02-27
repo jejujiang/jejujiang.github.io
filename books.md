@@ -1,6 +1,7 @@
 ---
 layout: default
 title: books
+permalink: /books/
 ---
 
 # notes of reading
