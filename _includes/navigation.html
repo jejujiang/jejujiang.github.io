@@ -1,0 +1,19 @@
+        <nav class="nav-section">
+          <div class="nav-header">📌 导航栏 · 右侧</div>
+          <ul class="nav-menu">
+            {% for nav in site.navs %}
+            <a href="{{ nav.url }}"><li class="nav-item">{{ nav.title }}</li></a>
+            {% endfor %}
+
+            <a href="books.html"><li class="nav-item">books</li></a>
+            <a href="english.html"><li class="nav-item">english</li></a>
+            
+            <li class="nav-item" style="margin-top: 1rem; background: #eef2ff; border-color: #a5b4fc;">
+              <span style="opacity: 0.9;">✨ 正在浏览：{{ page.title | default: site.title }}</span>
+            </li>
+          </ul>
+          <!-- 附加一点辅助文字，充实右侧 -->
+          <p style="font-size: 0.9rem; color: #62748c; margin-top: auto; padding-top: 2rem; border-top: 1px solid #edf2f7;">
+          导航简洁明了，<br>与左侧描述区形成呼应。
+          </p>
+        </nav>
