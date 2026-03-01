@@ -1,8 +1,11 @@
 ---
 layout: default
-title: english
+litle: English
 permalink: /english/
 ---
+
+# English Learn
+# I like English.
 
 {{ page.title | upcase }}
 
