@@ -104,7 +104,7 @@ body {
 如果想实现导航在左侧，则交换 .description-section 和 .nav-section 的 order，
 并调整边框位置即可，下方备选注释提供了方案。 */
 .nav-section {
-  flex: 1.2;                 /* 导航栏宽度比例，比描述区窄一些 */
+  flex: 0.5;                 /* 导航栏宽度比例，比描述区窄一些 */
   background-color: #ffffff;
   padding: 2.5rem 1.5rem;
   border-left: none;         /* 不用左边框，因为中间已有竖线分隔 */
@@ -141,7 +141,7 @@ body {
   color: #1e293b;
   font-weight: 500;
   transition: all 0.2s ease;
-  cursor: default;         /* 演示用，非交互 */
+  cursor: pointer;
   border: 1px solid transparent;
 }
 
@@ -164,27 +164,6 @@ body {
 .tripartite-panel > * {
   margin: 0;                /* 移除可能干扰 */
 }
-
-/* 为了更贴合“左边描述+竖线+左边导航”的原文，如果导航确实要放左边，
-启用下面这段替代布局 (只需交换flex order并调整圆角/视觉顺序) 
-但原文“第三部分是左边的导航栏”可能与第一部分同在左边？显然矛盾。
-所以按逻辑导航在右。若导航在左，则左:导航 中:竖线 右:描述。
-但原文描述第一部分是左边文字描述，第三部分又是左边导航？ 
-故此处采用最合理的方式：左描述，右导航。竖线居中。
- */
-
-/* ========== 备选方案说明 (注释掉) ========== 
-如果坚持“左边导航栏 + 中间竖线 + 右边文字描述” 
-只需将下面的类交换，并确保 .vertical-divider 依然在中间。
-HTML结构不动，通过flex-order调整：
-.tripartite-panel {
-flex-direction: row;
-}
-.description-section { order: 3; }   // 放到右侧
-.vertical-divider    { order: 2; }   // 保持中间
-.nav-section         { order: 1; }   // 放到左侧
-同时移除 .nav-section 暗含的右边距感，适当调整内边距。
- */
 
 /* 为了演示完美，我们也将响应式考虑在内 */
 @media (max-width: 780px) {
