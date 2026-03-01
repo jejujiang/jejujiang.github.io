@@ -149,6 +149,10 @@ body {
   transform: translateX(4px);
 }
 
+.nav-item:visited {
+  text-decoration: none;
+}
+
 /* 简单图标模拟 (占位) */
 .nav-item::before {
   content: "▹";
