@@ -22,8 +22,8 @@ body {
   background: #f5f7fb;
   min-height: 100vh;
   display: flex;
-  align-items: center;      /* 垂直居中演示，可移除 */
-  justify-content: center;  /* 水平居中演示，可移除 */
+  //align-items: center;      /* 垂直居中演示，可移除 */
+  //justify-content: center;  /* 水平居中演示，可移除 */
   padding: 1.5rem;
 }
 
@@ -99,10 +99,7 @@ body {
   box-shadow: 0 4px 8px -4px rgba(0,0,0,0.05);
 }
 
-/* 第三部分：右侧导航栏 (根据文字描述“第三部分是左边的导航栏”
-可能有歧义，但结合第一部分左侧文字，导航最符合习惯放在右侧)
-如果想实现导航在左侧，则交换 .description-section 和 .nav-section 的 order，
-并调整边框位置即可，下方备选注释提供了方案。 */
+/* 第三部分：右侧导航栏 */
 .nav-section {
   flex: 0.5;                 /* 导航栏宽度比例，比描述区窄一些 */
   background-color: #ffffff;
