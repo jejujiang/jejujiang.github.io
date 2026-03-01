@@ -7,6 +7,18 @@ permalink: /english/
 # English Learn
 # I like English.
 
-{{ page.title | upcase }}
+# Hello World
+## I like Linux.
 
-{{ "now" | date: "%a, %b %d, %y" }}
+Those English words in Linux.
+
+ls list
+
+cd change directory
+
+pwd print working directory
+
+etc "et cetera"
+
+motd "message of the day"
+
