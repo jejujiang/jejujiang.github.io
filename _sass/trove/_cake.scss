@@ -8,7 +8,6 @@
 
 .description-section .polaroid-slice {
   background-color: #ffffff;
-  padding: 0.8rem 0.8rem 1.2rem 0.8rem;
   border-radius: 18px;
   box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25),
               0 4px 8px -2px rgba(79, 70, 229, 0.1);
@@ -26,11 +25,6 @@
 .description-section .polaroid-slice:nth-child(odd) {
   transform: rotate(-0.5deg);
 }
-.description-section .polaroid-slice:hover {
-  transform: rotate(0deg) scale(1.02);
-  box-shadow: 0 20px 28px -12px #4f46e5;
-  border-color: #c7d2fe;
-}
 
 .description-section .polaroid-slice img {
   display: block;
@@ -43,7 +37,7 @@
   border: 1px solid #f8fafc;
 }
 
-.description-section .polaroid-caption {
+.description-section {
   text-align: center;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
@@ -54,14 +48,7 @@
   background: rgba(255, 255, 255, 0.7);
   border-radius: 30px;
   font-family: 'Georgia', serif;
-  border: 1px dashed #e2e8f0;
   transition: background 0.2s;
-}
-
-.description-section .polaroid-slice:hover .polaroid-caption {
-  background: #f8f4ff;
-  color: #4f46e5;
-  border-color: #a5b4fc;
 }
 
 @media (max-width: 640px) {
@@ -70,7 +57,7 @@
     gap: 1rem;
   }
   .description-section .polaroid-slice img {
-    height: 150px;
+    height: 520px;
   }
 }
 @media (max-width: 420px) {
