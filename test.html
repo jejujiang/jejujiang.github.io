@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三部分 · 左描述 · 竖线 · 右导航(名字左对齐)</title>
+    <style>
+        /* 基础重置 + 全屏演示 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f5f7fb;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        /* 主容器：三部分面板 */
+        .tripartite-panel {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 1280px;
+            min-height: 650px;
+            background-color: #ffffff;
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -10px rgba(0, 10, 30, 0.2);
+            overflow: hidden;
+        }
+
+        /* 第一部分：左边文字描述区 */
+        .description-section {
+            flex: 3;
+            padding: 2.5rem 2rem 2.5rem 2.5rem;
+            background-color: #f8faff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .description-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .description-section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #334155;
+            max-width: 90%;
+        }
+
+        .description-section .highlight {
+            color: #4f46e5;
+            font-weight: 500;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 2px;
+        }
+
+        .description-section .quote {
+            margin-top: 2rem;
+            font-style: italic;
+            border-left: 4px solid #a5b4fc;
+            padding-left: 1.5rem;
+            color: #475569;
+        }
+
+        /* 第二部分：中间竖线 */
+        .vertical-divider {
+            width: 2px;
+            background: linear-gradient(180deg, 
+                transparent 0%, 
+                #cbd5e1 15%, 
+                #94a3b8 50%,
+                #cbd5e1 85%,
+                transparent 100%);
+            margin: 1.5rem 0;
+            align-self: stretch;
+            border-radius: 1px;
+            box-shadow: 0 4px 8px -4px rgba(0,0,0,0.05);
+        }
+
+        /* ===== 第三部分：右侧导航栏 (所有名字左对齐) ===== */
+        .nav-section {
+            flex: 1.2;
+            background-color: #ffffff;
+            padding: 2.5rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        /* 导航标题 */
+        .nav-header {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin-bottom: 0.25rem;
+            border-bottom: 1px dashed #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+
+        /* 手风琴主容器 */
+        .accordion-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            width: 100%;
+        }
+
+        /* 顶级导航项 */
+        .accordion-item {
+            border-radius: 1rem;
+            background-color: #f8fafc;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .accordion-item:hover {
+            background-color: #eef2ff;
+            border-color: #c7d2fe;
+        }
+
+        /* 父项按钮 - 文本左对齐 */
+        .accordion-toggle {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;  /* 确保内容左对齐 */
+            padding: 0.8rem 1rem;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #1e293b;
+            cursor: pointer;
+            text-align: left;              /* 文本左对齐 */
+            transition: background 0.15s;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        .accordion-toggle:hover {
+            background-color: #e0e7ff;
+        }
+
+        /* 按钮内的文本容器也左对齐 */
+        .accordion-toggle span {
+            text-align: left;
+            display: inline-block;
+        }
+
+        /* 左侧伪图标 — 仅当有子菜单时显示 */
+        .accordion-toggle.has-submenu::before {
+            content: "▹";
+            margin-right: 0.75rem;
+            color: #818cf8;
+            font-size: 1.2rem;
+            transition: transform 0.2s;
+            display: inline-block;
+            flex-shrink: 0;                /* 防止箭头被压缩 */
+        }
+
+        /* 手风琴展开时三角旋转 */
+        .accordion-item.expanded .accordion-toggle.has-submenu::before {
+            transform: rotate(90deg);
+            color: #4f46e5;
+        }
+
+        /* 无子菜单的按钮样式 */
+        .accordion-toggle.no-submenu {
+            cursor: default;
+        }
+
+        .accordion-toggle.no-submenu:hover {
+            background-color: transparent;
+        }
+
+        /* 子菜单 */
+        .sub-menu {
+            list-style: none;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.25s ease, padding 0.2s;
+            padding: 0 1rem 0 2.8rem;      /* 缩进与箭头对齐 */
+            background-color: #ffffff;
+            border-top: 0 solid transparent;
+            pointer-events: none;
+            width: 100%;
+        }
+
+        .accordion-item.expanded .sub-menu {
+            max-height: 300px;
+            opacity: 1;
+            padding: 0.6rem 1rem 1rem 2.8rem;
+            border-top: 1px solid #e2e8f0;
+            pointer-events: auto;
+        }
+
+        .sub-item {
+            padding: 0.6rem 0.8rem;
+            margin: 0.2rem 0;
+            border-radius: 0.8rem;
+            color: #334155;
+            font-weight: 450;
+            transition: all 0.1s;
+            cursor: default;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-align: left;               /* 子项文本左对齐 */
+        }
+
+        .sub-item:hover {
+            background-color: #eef2ff;
+            color: #4f46e5;
+            transform: translateX(4px);
+        }
+
+        .sub-item::before {
+            content: "•";
+            margin-right: 0.75rem;
+            color: #a5b4fc;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        /* 普通独立导航项 (无子菜单) - 文本左对齐 */
+        .plain-nav-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1rem;
+            border-radius: 1rem;
+            background-color: #f8fafc;
+            color: #1e293b;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: default;
+            border: 1px solid transparent;
+            width: 100%;
+            text-align: left;               /* 左对齐 */
+        }
+
+        .plain-nav-item:hover {
+            background-color: #eef2ff;
+            border-color: #c7d2fe;
+            color: #4f46e5;
+            transform: translateX(4px);
+        }
+
+        /* 普通项不加箭头 */
+        .plain-nav-item::before {
+            content: none;
+        }
+
+        /* 底部装饰文本 */
+        .nav-footer {
+            font-size: 0.9rem;
+            color: #62748c;
+            margin-top: auto;
+            padding-top: 2rem;
+            border-top: 1px solid #edf2f7;
+            text-align: left;               /* 左对齐 */
+        }
+
+        /* 响应式小屏 */
+        @media (max-width: 780px) {
+            .tripartite-panel {
+                flex-direction: column;
+                min-height: auto;
+            }
+            .vertical-divider {
+                width: 100%;
+                height: 2px;
+                background: linear-gradient(90deg, transparent, #94a3b8, transparent);
+                margin: 0 1.5rem;
+                align-self: stretch;
+                flex-shrink: 0;
+            }
+            .description-section, .nav-section {
+                flex: auto;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tripartite-panel">
+        <!-- 第一部分：左边文字描述 -->
+        <section class="description-section">
+            <h2>从心定义<br>布局的韵律</h2>
+            <p>
+                这是一个典型的<span class="highlight">三部分版式</span>：左侧放置大段描述文字，
+                可以用来介绍产品理念、品牌故事或功能亮点。
+                文字与视觉呼吸感并存，营造沉浸式的阅读体验。
+            </p>
+            <p style="margin-top: 1rem;">
+                中间的垂直线条不仅是装饰，更是在左右内容之间建立了清晰的节奏分隔，
+                让界面层次分明，又不失整体感。
+            </p>
+            <div class="quote">
+                “左边描述 · 中间竖线 · 右侧导航栏 —— 所有名字左对齐，整齐划一”
+            </div>
+        </section>
+
+        <!-- 第二部分：中间竖线 -->
+        <div class="vertical-divider" aria-hidden="true"></div>
+
+        <!-- 第三部分：右侧导航栏 —— 所有名字左对齐 -->
+        <nav class="nav-section">
+            <div class="nav-header">📌 导航栏 · 名字左对齐</div>
+
+            <!-- 手风琴导航列表 -->
+            <ul class="accordion-nav">
+                <!-- 产品特色：有子菜单，显示箭头 -->
+                <li class="accordion-item" id="product-item">
+                    <button class="accordion-toggle has-submenu" onclick="toggleAccordion(this)" type="button">
+                        <span>产品特色</span>  <!-- 移除多余的flex样式，纯文本左对齐 -->
+                    </button>
+                    <ul class="sub-menu">
+                        <li class="sub-item">界面设计</li>
+                        <li class="sub-item">交互动效</li>
+                        <li class="sub-item">响应式布局</li>
+                        <li class="sub-item">深色模式</li>
+                    </ul>
+                </li>
+
+                <!-- 设计语言：有子菜单，显示箭头 -->
+                <li class="accordion-item" id="design-item">
+                    <button class="accordion-toggle has-submenu" onclick="toggleAccordion(this)" type="button">
+                        <span>设计语言</span>
+                    </button>
+                    <ul class="sub-menu">
+                        <li class="sub-item">色彩系统</li>
+                        <li class="sub-item">字体排印</li>
+                        <li class="sub-item">间距 & 比例</li>
+                        <li class="sub-item">图标风格</li>
+                    </ul>
+                </li>
+
+                <!-- 首页：无子菜单，不加箭头 -->
+                <li class="plain-nav-item" style="list-style: none;">首页</li>
+
+                <!-- 关于我们：有子菜单，显示箭头 -->
+                <li class="accordion-item" id="about-item">
+                    <button class="accordion-toggle has-submenu" onclick="toggleAccordion(this)" type="button">
+                        <span>关于我们</span>
+                    </button>
+                    <ul class="sub-menu">
+                        <li class="sub-item">团队介绍</li>
+                        <li class="sub-item">发展历程</li>
+                        <li class="sub-item">加入我们</li>
+                    </ul>
+                </li>
+
+                <!-- 联系方式：无子菜单，不加箭头 -->
+                <li class="plain-nav-item" style="list-style: none;">联系方式</li>
+                
+                <!-- 博客：无子菜单，不加箭头 -->
+                <li class="plain-nav-item" style="list-style: none;">博客</li>
+            </ul>
+
+            <!-- 底部提示文字 -->
+            <div class="nav-footer">
+                所有导航名字严格左对齐 · 有子菜单才显示箭头<br>点击父项展开子菜单，视觉整齐统一
+            </div>
+        </nav>
+    </div>
+
+    <!-- 右下角小标记 -->
+    <div style="position: fixed; bottom: 12px; right: 20px; background: #1e1e2f; color: #b3c7ff; padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2); z-index: 10;">
+        ⚡ 左:描述 · 中:竖线 · 右:导航(名字左对齐)
+    </div>
+
+    <!-- JavaScript 实现手风琴互斥 -->
+    <script>
+        function toggleAccordion(button) {
+            // 获取当前父项
+            const currentItem = button.closest('.accordion-item');
+            if (!currentItem) return;
+
+            // 检查是否有子菜单
+            const subMenu = currentItem.querySelector('.sub-menu');
+            if (!subMenu || subMenu.children.length === 0) {
+                return;
+            }
+
+            // 是否已经展开
+            const isExpanded = currentItem.classList.contains('expanded');
+
+            // 获取所有手风琴项
+            const allAccordionItems = document.querySelectorAll('.accordion-nav .accordion-item');
+
+            // 全部收起
+            allAccordionItems.forEach(item => {
+                item.classList.remove('expanded');
+            });
+
+            // 如果当前项原来没展开，则展开它
+            if (!isExpanded) {
+                currentItem.classList.add('expanded');
+            }
+        }
+
+        // 页面加载完成后，处理没有子菜单的按钮
+        document.addEventListener('DOMContentLoaded', function() {
+            const allToggles = document.querySelectorAll('.accordion-toggle');
+            allToggles.forEach(toggle => {
+                const parentItem = toggle.closest('.accordion-item');
+                if (parentItem) {
+                    const subMenu = parentItem.querySelector('.sub-menu');
+                    if (!subMenu || subMenu.children.length === 0) {
+                        toggle.classList.remove('has-submenu');
+                        toggle.classList.add('no-submenu');
+                        toggle.removeAttribute('onclick');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
