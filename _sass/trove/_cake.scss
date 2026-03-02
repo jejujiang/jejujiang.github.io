@@ -1,4 +1,18 @@
 /* 新增照片部分CSS (只影响左侧.cake-box内的照片网格) */
+.cake-box {
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  color: #334155;
+  margin-top: 0.7rem;
+  padding: 0.2rem 0.3rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  font-family: 'Georgia', serif;
+  transition: background 0.2s;
+}
+
 .cake-box .polaroid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -35,20 +49,6 @@
   background-color: #f1f5f9;
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.02);
   border: 1px solid #f8fafc;
-}
-
-.cake-box {
-  text-align: center;
-  font-size: 0.85rem;
-  letter-spacing: 0.5px;
-  font-weight: 500;
-  color: #334155;
-  margin-top: 0.7rem;
-  padding: 0.2rem 0.3rem;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 30px;
-  font-family: 'Georgia', serif;
-  transition: background 0.2s;
 }
 
 @media (max-width: 640px) {

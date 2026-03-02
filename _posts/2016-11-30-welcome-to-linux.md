@@ -1,14 +1,8 @@
 ---
 layout: default
-litle: English
-permalink: /english/
+title:  "Welcome to Linux!"
+tags: Linux
 ---
-
-# English Learn
-# I like English.
-
-# Hello World
-## I like Linux.
 
 Those English words in Linux.
 
