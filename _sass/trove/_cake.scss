@@ -1,12 +1,12 @@
 /* 新增照片部分CSS (只影响左侧.cake-box内的照片网格) */
-.description-section .polaroid-grid {
+.cake-box .polaroid-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin: 2rem 0 2.5rem 0;
 }
 
-.description-section .polaroid-slice {
+.cake-box .polaroid-slice {
   background-color: #ffffff;
   border-radius: 18px;
   box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25),
@@ -19,14 +19,14 @@
   transform: rotate(0.2deg);
 }
 
-.description-section .polaroid-slice:nth-child(even) {
+.cake-box .polaroid-slice:nth-child(even) {
   transform: rotate(0.8deg);
 }
-.description-section .polaroid-slice:nth-child(odd) {
+.cake-box .polaroid-slice:nth-child(odd) {
   transform: rotate(-0.5deg);
 }
 
-.description-section .polaroid-slice img {
+.cake-box .polaroid-slice img {
   display: block;
   width: 100%;
   height: 180px;
@@ -37,7 +37,7 @@
   border: 1px solid #f8fafc;
 }
 
-.description-section {
+.cake-box {
   text-align: center;
   font-size: 0.85rem;
   letter-spacing: 0.5px;
@@ -52,16 +52,16 @@
 }
 
 @media (max-width: 640px) {
-  .description-section .polaroid-grid {
+  .cake-box .polaroid-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-  .description-section .polaroid-slice img {
+  .cake-box .polaroid-slice img {
     height: 520px;
   }
 }
 @media (max-width: 420px) {
-  .description-section .polaroid-grid {
+  .cake-box .polaroid-grid {
     grid-template-columns: 1fr;
   }
 }
