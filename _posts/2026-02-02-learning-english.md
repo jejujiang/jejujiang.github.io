@@ -1,11 +1,11 @@
 ---
 layout: default
-title:  "Welcome to Linux!"
-tags: Linux
-permalink: /:title:output_ext
+title: "Learning English"
+author: "Chester"
+permalink: /:title/
 ---
 
-Those English words in Linux.
+English words in Linux.
 
 ls list
 
