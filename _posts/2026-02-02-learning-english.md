@@ -21,4 +21,3 @@ pwd print working directory
 etc "et cetera"
 
 motd "message of the day"
-
