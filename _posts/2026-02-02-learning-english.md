@@ -5,7 +5,12 @@ author: "Chester"
 permalink: /:title/
 ---
 
-English words in Linux.
+### Daily English
+#### March 1
+
+---
+
+### English words in Linux.
 
 ls list
 
