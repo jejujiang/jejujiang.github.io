@@ -4,17 +4,13 @@ title: Posts
 permalink: /posts/
 ---
 
-<<<<<<< HEAD
-<div>
-=======
 <div class="post">
->>>>>>> 5a6789f328cb4a708bf6848f7feb8f420011cdd2
-{% for post in site.posts %}
-<a href="{{ post.url }}">
-  <div>
-    <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
-    <h1>{{ post.title }}</h1>
-  </div>
-</a>
-{% endfor %}
+  {% for post in site.posts %}
+  <a href="{{ post.url }}">
+    <div style="display: flex; align-items: center; justify-content: space-between;">
+      <h3>{{ post.title }}</h3>
+      <time datetime="{{ post.date }}">{{ post.date | date: "%B %d, %Y" }}</time>
+    </div>
+  </a>
+  {% endfor %}
 </div>

@@ -2,6 +2,7 @@
 layout: default
 title:  "Welcome to Linux!"
 tags: Linux
+permalink: /:title:output_ext
 ---
 
 Those English words in Linux.

@@ -2,8 +2,8 @@
 layout: default
 title: "The Mystery of the Filler Post"
 author: "Chester"
-excerpt_separator: <!--more-->
 tags: Tale
+permalink: /:title/
 ---
 
 查理·芒格: 当走到人生的某一个阶段时，我决心成为一个富有之人。这并不是因为我爱钱，而是为了追求那种独立自主的感觉。我喜欢能够自由地说出自己的想法，而不是受他人意志左右。<!--more-->
