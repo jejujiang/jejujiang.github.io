@@ -1,1 +1,6 @@
 title: "Trove"
+
+collections:
+  loves:
+    output: true
+    permalink: /loves/:path/

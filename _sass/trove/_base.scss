@@ -22,11 +22,20 @@ body {
   background: #f5f7fb;
   min-height: 100vh;
   display: flex;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 
 a {
   text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, hr {
+  margin-bottom: 2rem;
+}
+
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 /* 主容器：三部分面板 */
@@ -45,20 +54,19 @@ a {
 /* 第一部分：左边文字描述区 */
 .description-section {
   flex: 3;                   /* 相对于导航区更宽，突出描述 */
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #f8faff; /* 柔和底色，与右侧稍作区分 */
 
 }
 
-/* 描述文字样式 (仅用来展示效果) */
-.description-section .highlight {
+.highlight {
   color: #4f46e5;
   font-weight: 500;
   border-bottom: 2px solid #cbd5e1;
   padding-bottom: 2px;
 }
 
-.description-section .quote {
+.quote {
   margin-top: 2rem;
   font-style: italic;
   border-left: 4px solid #a5b4fc;
