@@ -34,6 +34,10 @@ p {
   margin-bottom: 1rem;
 }
 
+.nav-item li {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* 主容器：三部分面板 */
 .tripartite-panel {
   display: flex;
