@@ -35,7 +35,6 @@ p {
 }
 
 .nav-item li {
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* 主容器：三部分面板 */
@@ -147,6 +146,7 @@ p {
   transition: all 0.2s ease;
   cursor: pointer;
   border: 1px solid transparent;
+  --webkit-tap-highlight-color: transparent;
 }
 
 .nav-item:hover {
