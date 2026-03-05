@@ -34,9 +34,6 @@ p {
   margin-bottom: 1rem;
 }
 
-.nav-item li {
-}
-
 /* 主容器：三部分面板 */
 .tripartite-panel {
   display: flex;
@@ -146,7 +143,6 @@ p {
   transition: all 0.2s ease;
   cursor: pointer;
   border: 1px solid transparent;
-  --webkit-tap-highlight-color: transparent;
 }
 
 .nav-item:hover {
