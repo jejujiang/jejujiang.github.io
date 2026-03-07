@@ -1,6 +1,6 @@
 title: "Trove"
+permalink: /:title
 
 collections:
   loves:
     output: true
-    permalink: /loves/:path/

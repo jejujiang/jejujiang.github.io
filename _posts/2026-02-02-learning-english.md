@@ -2,7 +2,6 @@
 layout: default
 title: "Learning English"
 author: "Chester"
-permalink: /:title/
 ---
 
 ### Daily English

@@ -2,7 +2,6 @@
 layout: default
 title: "Reading Notes"
 author: "Chester"
-permalink: /:title/
 ---
 
 # Reading Notes

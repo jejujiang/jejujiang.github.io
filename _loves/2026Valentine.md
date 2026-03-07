@@ -1,7 +1,6 @@
 ---
 layout: default
 title: "Valentine's Day, 2026"
-permalink: /love/
 ---
 <div class="cake-box">
 
