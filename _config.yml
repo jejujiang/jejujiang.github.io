@@ -1,5 +1,5 @@
 title: "Trove"
-permalink: /:title
+permalink: /:title/
 
 collections:
   loves:
