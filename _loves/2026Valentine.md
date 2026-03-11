@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Valentine's Day, 2026"
 ---
 <div class="cake-box">

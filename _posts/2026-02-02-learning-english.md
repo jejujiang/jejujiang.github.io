@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Learning English"
 author: "Chester"
 ---
