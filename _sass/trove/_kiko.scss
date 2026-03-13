@@ -160,31 +160,6 @@ pre code {
   margin-bottom: 0;
 }
 
-.gist .gist-file {
-  font-family: Menlo, Monaco, "Courier New", monospace !important;
-}
-
-.gist .markdown-body {
-  padding: 15px;
-}
-
-.gist pre {
-  padding: 0;
-  background-color: transparent;
-}
-
-.gist .gist-file .gist-data {
-  font-size: .8rem !important;
-  line-height: 1.4;
-}
-
-.gist code {
-  padding: 0;
-  color: inherit;
-  background-color: transparent;
-  border-radius: 0;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -208,39 +183,6 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
-}
-
-
-
-.post {
-  &-title {
-    margin-bottom: .25rem;
-  }
-  &-date {
-    margin-bottom: 2rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
-}
-
-.list {
-  &-post-title {
-    margin-bottom: .25rem;
-
-    a {
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
-  &-post-date {
-    margin-bottom: 1rem;
-    font-size: .75rem;
-    text-transform: uppercase;
-  }
 }
 
 .highlight .hll { background-color: #ffffcc }
