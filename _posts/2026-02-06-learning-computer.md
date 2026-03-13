@@ -12,8 +12,6 @@ Do a find and replace to change all instances of "hello" to "Hello" in `hello.rb
 - The `i.bak` option modifies the file in-place and creates a backup named `hello.rb.bak`.
 - The `-e` option executes the following code.
 
-[hello]("http://43.142.25.171")
-
 ```ruby
 # Searches through a list for a value in O(log(n)) time.
 # The list must be sorted.
