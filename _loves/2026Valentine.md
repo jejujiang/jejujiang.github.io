@@ -5,7 +5,7 @@ title: "Valentine's Day, 2026"
 
   <!-- 蛋糕标签：旅途的小事 -->
   <div class="cake-label">
-    <h1>🫧 Valentine's Day, 2026 🫧 </h1>
+    <h1 class="highlight">🫧 Valentine's Day, 2026 🫧 </h1>
   </div>
 
   <!-- 六格拍立得 —— 六件小事，六格只有你记得的 -->
