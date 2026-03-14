@@ -3,7 +3,7 @@ title: "Learning English"
 author: "Chester"
 ---
 
-<h1 class="highlight">Daily English</h1>
+<h1 class="highlight">Famous Quotes</h1>
 <div class="quote">
 "I had a considerable passion to get rich. Not because I wanted Ferraris – I wanted the independence. I desperately wanted it. I thought it was undignified to have to send invoices to other people. I don‘t where I got that notion from, but I had it."
 
