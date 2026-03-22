@@ -12,4 +12,7 @@ Do a find and replace to change all instances of "hello" to "Hello" in `hello.rb
 - The `i.bak` option modifies the file in-place and creates a backup named `hello.rb.bak`.
 - The `-e` option executes the following code.
 
+`File`
 
+`File.absoulte_path`: If the given pathnam start with "`~`" it is NOT expaneded,
+it is treated as a normal directory name.
