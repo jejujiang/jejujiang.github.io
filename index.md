@@ -1,7 +1,8 @@
 ---
 title: "Hello World"
 ---
-<h1 class="highlight">🌈 Hello World &nbsp; <span style="font-size: 1.1rem;">How you live this day is how you live this life.</span></h1>
+<h1 class="highlight">🌈 Hello World</h1>
+<div class="highlight" style="font-size: 1.1rem;">How you live this day is how you live this life.</div>
 <div class="quote" style="margin: 50px 0 50px 0;text-align: center;">
 "I had a considerable passion to get rich. Not because I wanted Ferraris – I wanted the independence. I desperately wanted it. I thought it was undignified to have to send invoices to other people. I don‘t where I got that notion from, but I had it."
 <br>
