@@ -11,22 +11,22 @@ title: "Valentine's Day, 2026"
   <!-- 六格拍立得 —— 六件小事，六格只有你记得的 -->
   <div class="polaroid-grid">
     <div class="polaroid-slice">
-      <img src="/assets/images/1.jpeg" alt="牵手">
+      <img src="/images/2026Valentine/1.jpeg">
     </div>
     <div class="polaroid-slice">
-      <img src="/assets/images/2.jpeg" alt="看海">
+      <img src="/images/2026Valentine/2.jpeg">
     </div>
     <div class="polaroid-slice">
-      <img src="/assets/images/3.jpeg" alt="旋转木马">
+      <img src="/images/2026Valentine/3.jpeg">
     </div>
     <div class="polaroid-slice">
-      <img src="/assets/images/4.jpeg" alt="凝视">
+      <img src="/images/2026Valentine/4.jpeg">
     </div>
     <div class="polaroid-slice">
-      <img src="/assets/images/5.jpeg" alt="烟花">
+      <img src="/images/2026Valentine/5.jpeg">
     </div>
     <div class="polaroid-slice">
-      <img src="/assets/images/6.jpeg" alt="笑容">
+      <img src="/images/2026Valentine/6.jpeg">
     </div>
   </div>
 

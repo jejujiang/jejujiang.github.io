@@ -1,8 +1,6 @@
 ---
-title: Learning  Algorithm
+title: algorithm
 ---
-
-<h1 class="highlight">{{ page.title }}</h1>
 
 ```lua
 function binarySearch(array, target)
