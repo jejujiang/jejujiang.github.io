@@ -24,19 +24,17 @@
         如果坚持导航在左，参考上方备选方案调整 order。） -->
         <nav class="nav-section" id="nav">
           <div class="nav-header">📌 <span class="highlight">{{ site.title }}</span> Navigation Bar</div>
-          <ul class="nav-menu"">
-            <a href="/"><li class="nav-item">Home</li></a>
-            <a href="/reading"><li class="nav-item">Reading</li></a>
-            <a href="/learning"><li class="nav-item">Learning</li></a>
-            <a href="/algorithm"><li class="nav-item">Algorithm</li></a>
-            <a href="/loves"><li class="nav-item">Loves</li></a>
+          <ul class="nav-menu">
+            {% for item in site.data.nav %}
+            <a href="{{ item.link }}"><li class="nav-item">{{ item.name }}</li></a>
+            {% endfor %}
             <li class="nav-item" style="font-size: 12px; margin-top: 1rem; background: #eef2ff; border-color: #a5b4fc;">
               <span style="opacity: 0.9;">✨ You are here: {{ page.title | default: site.title | capitalize }}</span>
             </li>
           </ul>
           <!-- 附加一点辅助文字，充实右侧 -->
           <p style="font-size: 0.9rem; color: #62748c; margin-top: auto; padding-top: 2rem; border-top: 1px solid #edf2f7;">
-                    © {{ "now" | date: "%Y" }} Powered by <a href="https://www.deepseek.com/">Deepseek</a> and <a href="https://jekyllrb.com/">Jekyll</a>. 
+          © {{ "now" | date: "%Y" }} Powered by <a href="https://www.deepseek.com/">Deepseek</a> and <a href="https://jekyllrb.com/">Jekyll</a>. 
           </p>
         </nav>
 
@@ -44,8 +42,8 @@
 
     <!-- 下方小提示：布局完全使用CSS flex，实现了“左描述-中竖线-右导航”三个独立部分 -->
     <div style="position: fixed; bottom: 12px; right: 20px; background: #1e1e2f; color: #b3c7ff; padding: 0.4rem 1rem; border-radius: 60px; font-size: 0.8rem; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
-                ⚡ <a href="#" style="color: white;">Top</a> | 
-                <a href="#nav" style="color: white;">Nav</a>
+      ⚡ <a href="#" style="color: white;">Top</a> | 
+      <a href="#nav" style="color: white;">Nav</a>
     </div>
   </body>
 </html>

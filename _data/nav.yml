@@ -1,0 +1,10 @@
+- name: Home
+  link: /
+- name: Reading
+  link: /reading
+- name: Learning
+  link: /learning
+- name: Algorithm
+  link: /algorithm
+- name: Love
+  link: /loves
