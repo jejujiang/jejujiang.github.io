@@ -9,6 +9,8 @@ sticky: true
 hidden: true
 ---
 
+![page](https://picsum.photos/800/400)
+
 Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.<!--more-->
 
 ## Tale features
