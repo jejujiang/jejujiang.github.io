@@ -1,4 +1,4 @@
-<a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+<a href="{{ post.url | prepend: site.baseurl | append: ".html"}}" class="catalogue-item">
   <div>
     {% if include.sticky == 'true' %}
     <span class="catalogue-pinned">Pinned &middot;</span>
