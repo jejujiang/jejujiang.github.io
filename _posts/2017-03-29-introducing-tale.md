@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Introducing Tale"
-author: "Chester"
-tags: Tale
+title:  "New Concept English"
+author: "New Concept English"
+tags: "New Concept English"
 excerpt_separator: <!--more-->
 sticky: true
 hidden: true
@@ -10,25 +10,48 @@ hidden: true
 
 ![page](https://picsum.photos/800/400)
 
-Tale is a minimal [Jekyll](https://jekyllrb.com/) theme curated for storytellers. It is designed and developed by [myself](https://github.com/chesterhow/) for a friend who writes short stories.<!--more-->
+## [Excuse me !](https://newconceptenglish.com/index.php?id=1-001)
 
-## Tale features
-- Compatible with GitHub Pages
-- Responsive design (looks just as good on mobile)
-- Syntax highlighting, with the help of Pygments
-- Markdown and HTML text formatting
-- Pagination of posts
-- Sticky posts
-- Tags
-- Excerpt management
-- Disqus comments
+Man: Excuese me!
 
-Head over to the [Example Content]({{ site.baseurl }}/2017-03-16/example-content) post for a showcase of Tale's text formatting features.
+Woman: Yes?
 
-## Browser Support
-Tale works on most if not all modern browsers, including Chrome, Safari and Firefox 👍🏼
+Man: Is this your handbag?
 
-## Download or Contribute
-Tale is publicly hosted on GitHub, so go ahead and download or fork it at the [GitHub repository](https://github.com/chesterhow/tale). If you spot any bugs or have any suggestions, feel free to create an issue or make a pull request.
+Woman: Pardon?
 
-Thanks for checking out Tale!
+Man: Is this your handbag?
+
+Woman: Yes, it is.
+
+Woman: Thank you very much.
+
+
+## [Sorry, sir.](https://newconceptenglish.com/index.php?id=1-003)
+
+Customer: My coat and umbrella please.
+
+Customer: Here is my ticket.
+
+Attendant: Thank you, sir.
+
+Attendant: Number five.
+
+Attendant: Here's your umbrella and your coat.
+
+Customer: This is not my umbrella.
+
+Attendant: sorry, sir.
+
+Attendant: Is this your umbrella?
+
+Customer: No, it isn't.
+
+Attendant: Is this it?
+
+Customer: Yes, it is.
+
+Customer: Thank you very much.
+
+
+

@@ -1,4 +1,5 @@
 *.gem
+_site
 .bundle
 .DS_Store
 .sass-cache
