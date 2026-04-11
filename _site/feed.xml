@@ -1,29 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-08T07:47:16+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tale Café</title><subtitle>Sip, share, and let the tale unfold.</subtitle><author><name>Chester How</name><email>chesterhow@gmail.com</email></author><entry><title type="html">Introducing Tale</title><link href="http://localhost:4000/2017-03-29/introducing-tale" rel="alternate" type="text/html" title="Introducing Tale" /><published>2017-03-29T00:00:00+08:00</published><updated>2017-03-29T00:00:00+08:00</updated><id>http://localhost:4000/2017-03-29/introducing-tale</id><content type="html" xml:base="http://localhost:4000/2017-03-29/introducing-tale"><![CDATA[<p><img src="https://picsum.photos/800/400" alt="page" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-11T23:05:08+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Tale Café</title><subtitle>Sip, share, and let the tale unfold.</subtitle><author><name>Chester How</name><email>chesterhow@gmail.com</email></author><entry><title type="html">New Concept English</title><link href="http://localhost:4000/2017-03-29/introducing-tale" rel="alternate" type="text/html" title="New Concept English" /><published>2017-03-29T00:00:00+08:00</published><updated>2017-03-29T00:00:00+08:00</updated><id>http://localhost:4000/2017-03-29/introducing-tale</id><content type="html" xml:base="http://localhost:4000/2017-03-29/introducing-tale"><![CDATA[<p><img src="https://picsum.photos/800/400" alt="page" /></p>
 
-<p>Tale is a minimal <a href="https://jekyllrb.com/">Jekyll</a> theme curated for storytellers. It is designed and developed by <a href="https://github.com/chesterhow/">myself</a> for a friend who writes short stories.<!--more--></p>
+<h2 id="excuse-me-"><a href="https://newconceptenglish.com/index.php?id=1-001">Excuse me !</a></h2>
 
-<h2 id="tale-features">Tale features</h2>
-<ul>
-  <li>Compatible with GitHub Pages</li>
-  <li>Responsive design (looks just as good on mobile)</li>
-  <li>Syntax highlighting, with the help of Pygments</li>
-  <li>Markdown and HTML text formatting</li>
-  <li>Pagination of posts</li>
-  <li>Sticky posts</li>
-  <li>Tags</li>
-  <li>Excerpt management</li>
-  <li>Disqus comments</li>
-</ul>
+<p>Man: Excuese me!</p>
 
-<p>Head over to the <a href="/2017-03-16/example-content">Example Content</a> post for a showcase of Tale’s text formatting features.</p>
+<p>Woman: Yes?</p>
 
-<h2 id="browser-support">Browser Support</h2>
-<p>Tale works on most if not all modern browsers, including Chrome, Safari and Firefox 👍🏼</p>
+<p>Man: Is this your handbag?</p>
 
-<h2 id="download-or-contribute">Download or Contribute</h2>
-<p>Tale is publicly hosted on GitHub, so go ahead and download or fork it at the <a href="https://github.com/chesterhow/tale">GitHub repository</a>. If you spot any bugs or have any suggestions, feel free to create an issue or make a pull request.</p>
+<p>Woman: Pardon?</p>
 
-<p>Thanks for checking out Tale!</p>]]></content><author><name>Chester</name></author><category term="Tale" /><summary type="html"><![CDATA[Tale is a minimal Jekyll theme curated for storytellers. It is designed and developed by myself for a friend who writes short stories.]]></summary></entry><entry><title type="html">Example Content</title><link href="http://localhost:4000/2017-03-16/example-content" rel="alternate" type="text/html" title="Example Content" /><published>2017-03-16T00:00:00+08:00</published><updated>2017-03-16T00:00:00+08:00</updated><id>http://localhost:4000/2017-03-16/example-content</id><content type="html" xml:base="http://localhost:4000/2017-03-16/example-content"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis.<!--more--> Nullam interdum ultricies nibh quis sollicitudin. Donec ornare fermentum facilisis. Ut at sem ac sem imperdiet varius a eget tortor. Nam eu augue eget orci semper maximus in eget augue. Mauris ornare, nisl ut suscipit consectetur, mi quam interdum tellus, at rutrum quam eros ultrices mi.</p>
+<p>Man: Is this your handbag?</p>
+
+<p>Woman: Yes, it is.</p>
+
+<p>Woman: Thank you very much.</p>
+
+<h2 id="sorry-sir"><a href="https://newconceptenglish.com/index.php?id=1-003">Sorry, sir.</a></h2>
+
+<p>Customer: My coat and umbrella please.</p>
+
+<p>Customer: Here is my ticket.</p>
+
+<p>Attendant: Thank you, sir.</p>
+
+<p>Attendant: Number five.</p>
+
+<p>Attendant: Here’s your umbrella and your coat.</p>
+
+<p>Customer: This is not my umbrella.</p>
+
+<p>Attendant: sorry, sir.</p>
+
+<p>Attendant: Is this your umbrella?</p>
+
+<p>Customer: No, it isn’t.</p>
+
+<p>Attendant: Is this it?</p>
+
+<p>Customer: Yes, it is.</p>
+
+<p>Customer: Thank you very much.</p>]]></content><author><name>New Concept English</name></author><category term="New" /><category term="Concept" /><category term="English" /><summary type="html"><![CDATA[Excuse me ! Man: Excuese me! Woman: Yes? Man: Is this your handbag? Woman: Pardon? Man: Is this your handbag? Woman: Yes, it is. Woman: Thank you very much. Sorry, sir. Customer: My coat and umbrella please. Customer: Here is my ticket. Attendant: Thank you, sir. Attendant: Number five. Attendant: Here’s your umbrella and your coat. Customer: This is not my umbrella. Attendant: sorry, sir. Attendant: Is this your umbrella? Customer: No, it isn’t. Attendant: Is this it? Customer: Yes, it is. Customer: Thank you very much.]]></summary></entry><entry><title type="html">Example Content</title><link href="http://localhost:4000/2017-03-16/example-content" rel="alternate" type="text/html" title="Example Content" /><published>2017-03-16T00:00:00+08:00</published><updated>2017-03-16T00:00:00+08:00</updated><id>http://localhost:4000/2017-03-16/example-content</id><content type="html" xml:base="http://localhost:4000/2017-03-16/example-content"><![CDATA[<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas tincidunt ornare nibh, non elementum augue tempus eget. Pellentesque tempus scelerisque iaculis.<!--more--> Nullam interdum ultricies nibh quis sollicitudin. Donec ornare fermentum facilisis. Ut at sem ac sem imperdiet varius a eget tortor. Nam eu augue eget orci semper maximus in eget augue. Mauris ornare, nisl ut suscipit consectetur, mi quam interdum tellus, at rutrum quam eros ultrices mi.</p>
 
 <h1 id="headers">Headers</h1>
 
