@@ -8,7 +8,7 @@ sticky: true
 hidden: true
 ---
 
-![page](https://picsum.photos/800/400)
+![page](https://picsum.photos/800/400)<!--more-->
 
 ## [Excuse me !](https://newconceptenglish.com/index.php?id=1-001)
 
