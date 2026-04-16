@@ -1,0 +1,40 @@
+#!/usr/bin/env ruby
+# jekyll_post - 在 _posts 文件夹创建 Jekyll 文件并用 vi 打开
+
+require 'date'
+require 'fileutils'
+
+# 从命令行参数获取标题
+title = ARGV[0]
+
+if title.nil? || title.empty?
+  puts "用法: jekyll_post \"文章标题\""
+  exit 1
+end
+
+# 生成文件名
+slug = title.downcase.gsub(/[^\w\s-]/, '').gsub(/\s+/, '-').gsub(/-+/, '-').gsub(/^-|-$/, '')
+filename = "#{Date.today.strftime('%Y-%m-%d')}-#{slug}.md"
+
+# 创建 _posts 目录（如果不存在）
+posts_dir = File.join(Dir.pwd, '_posts')
+unless Dir.exist?(posts_dir)
+  Dir.mkdir(posts_dir)
+  puts "✓ 创建目录: _posts/"
+end
+
+# 完整文件路径
+filepath = File.join(posts_dir, filename)
+
+# 创建文件（如果文件已存在则提示）
+if File.exist?(filepath)
+  puts "文件已存在: #{filepath}"
+else
+  File.open(filepath, 'w', encoding: 'UTF-8') do |file|
+    file.write("---\ntitle: \"#{title}\"\n---\n")
+  end
+  puts "✓ 创建: _posts/#{filename}"
+end
+
+# 用 vi 打开
+exec("vi #{filepath}")

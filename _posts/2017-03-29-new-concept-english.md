@@ -1,14 +1,8 @@
 ---
-layout: post
 title:  "New Concept English"
-author: "New Concept English"
-tags: "New Concept English"
-excerpt_separator: <!--more-->
-sticky: true
-hidden: true
 ---
 
-![page](https://picsum.photos/800/400)<!--more-->
+![page](https://picsum.photos/800/400)
 
 ## [Excuse me !](https://newconceptenglish.com/index.php?id=1-001)
 

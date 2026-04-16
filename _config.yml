@@ -1,38 +1,63 @@
-# Site settings
-title:          "Tale Café"
-description:    "Sip, share, and let the tale unfold."
-baseurl:        ""
-url:            "https://jejujiang.github.io"
+# Basic
+name:               "Tale Café"
+description:        "Sip, share, and let the tale unfold."
 
-# Google Analytics
-google_analytics: UA—XXXXXXXX-X
+coffees:
+  - name: Espresso
+  - name: Double Espresso
+  - name: Latte
+  - name: Cappuccino
+  - name: Flat white
+  - name: Macchiato
+  - name: Mocha
+  - name: Americano
 
-# Author
-author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+# jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
+author:             "Kiko"
+#twitter:
+#  username:         "gfjaru"
+#facebook:
+#  app_id:           1234
+#    publisher:      1234
 
-# Build settings
-markdown:       kramdown
-include:
-  - _pages
+url:                ""
+baseurl:            "/blog"
+permalink:          /:year/:month/:day/:title/
 
-# Assets
+# Markdown
+markdown:           kramdown
+
+# Navigation
+nav:
+  - name:           "Articles"
+    remote:         false
+    localpath:      "articles"
+  - name:           "About"
+    remote:         false
+    localpath:      "about"
+
+#  - name:           "Download"
+#    remote:         true
+#    href:           "//github.com/gfjaru/Kiko/releases"
+
+# Sass
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  style:            :compressed
 
-# Gems
+# Scopes
+defaults:
+  -
+    scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+  -
+    scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+
 plugins:
-  - jekyll-feed
-  - jekyll-paginate
   - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
-
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
-
-# Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]

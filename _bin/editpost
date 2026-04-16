@@ -1,0 +1,56 @@
+#!/usr/bin/env ruby
+# jekyll-edit - 打开指定文章
+
+require 'fileutils'
+require 'date'
+
+posts_dir = File.join(Dir.pwd, '_posts')
+
+# 从命令行参数获取标题或文件名
+input = ARGV[0]
+
+if input.nil? || input.empty?
+  puts "用法: jekyll-edit \"文章标题或文件名\""
+  puts "示例:"
+  puts "  jekyll-edit \"我的文章\"          # 通过标题查找"
+  puts "  jekyll-edit \"2026-03-31-我的文章.md\"  # 通过文件名"
+  exit 1
+end
+
+# 检查 _posts 目录
+unless Dir.exist?(posts_dir)
+  puts "错误: _posts 目录不存在"
+  exit 1
+end
+
+# 获取所有文件
+files = Dir.glob(File.join(posts_dir, '*.md'))
+
+# 查找匹配的文件
+target_file = nil
+
+# 如果是完整的文件名
+if files.include?(File.join(posts_dir, input))
+  target_file = File.join(posts_dir, input)
+else
+  # 通过标题查找（将输入转换为可能的文件名格式）
+  slug = input.downcase.gsub(/[^\w\s-]/, '').gsub(/\s+/, '-').gsub(/-+/, '-').gsub(/^-|-$/, '')
+  
+  # 查找匹配的文件（支持任意日期前缀）
+  files.each do |file|
+    filename = File.basename(file)
+    if filename.end_with?("#{slug}.md")
+      target_file = file
+      break
+    end
+  end
+end
+
+if target_file && File.exist?(target_file)
+  puts "✓ 打开: #{File.basename(target_file)}"
+  exec("vi #{target_file}")
+else
+  puts "错误: 未找到文章 '#{input}'"
+  puts "提示: 使用 'jekyll-ls' 查看所有文章"
+  exit 1
+end
