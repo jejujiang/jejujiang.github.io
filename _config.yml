@@ -21,7 +21,7 @@ author:             "Kiko"
 #    publisher:      1234
 
 url:                ""
-baseurl:            "/blog"
+baseurl:            ""
 permalink:          /:year/:month/:day/:title/
 
 # Markdown
