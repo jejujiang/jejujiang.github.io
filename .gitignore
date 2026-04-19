@@ -1,7 +1,7 @@
-_site
+_site/
 *.gem
 .bundle
 .DS_Store
-.sass-cache
+.sass-cache/
 Gemfile.lock
-.jekyll-cache
+.jekyll-cache/
