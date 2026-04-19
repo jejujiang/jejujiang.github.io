@@ -439,31 +439,30 @@ tbody tr:nth-child(odd) th {
     width: 100%;
     overflow: hidden;
     background: #f0f0f0;
+    /* 关键1：创建独立合成层 */
+    will-change: transform;
 }
 
 .marquee-content {
     display: flex;
+    /* 关键2：使用 transform 而非 left/margin */
     animation: scroll 20s linear infinite;
-    /* 宽度由内容撑开 */
     width: fit-content;
+    /* 关键3：强制 GPU 加速 */
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
 }
 
-.marquee-content .item {
-    white-space: nowrap;
-    padding-right: 50px;  /* 项目间距 */
-}
-
-/* 关键：两倍内容实现无缝 */
+.marquee-content .item,
 .marquee-content .clone {
     white-space: nowrap;
     padding-right: 50px;
-}
-
-.marquee-content:hover {
-    animation-play-state: paused;
+    /* 关键4：避免文字重绘 */
+    font-smoothing: antialiased;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }  /* 移动一半宽度 */
+    100% { transform: translateX(-50%); }
 }
