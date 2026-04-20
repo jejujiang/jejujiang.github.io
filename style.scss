@@ -466,3 +466,14 @@ tbody tr:nth-child(odd) th {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
 }
+
+
+.menu-list {
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}

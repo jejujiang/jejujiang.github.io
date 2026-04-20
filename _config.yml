@@ -4,13 +4,29 @@ description:        "HE 你一起，ZHOU 游世界!"
 
 coffees:
   - name: Espresso
+    price: ¥32
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Double Espresso
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Latte
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Cappuccino
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Flat white
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Macchiato
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Mocha
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
   - name: Americano
+    price: ¥22
+    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
 
 # jekyll-seo-tag, see: http://www.rubydoc.info/gems/jekyll-seo-tag/1.2.0
 author:             "Kiko"

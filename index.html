@@ -3,7 +3,7 @@ layout: default
 ---
 <header class="masthead">
   <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/">{{ site.name }}<span>&#39;s Café</span></a>
+    <a href="{{ site.baseurl }}/"><span style="font-family: 'Bonheur Royale', cursive; font-size: 1.9rem; color: #520;">{{ site.name }} </span><span>&#39;s Café</span></a>
   </h1>
   <nav class="masthead-nav">
     {% for nav in site.nav %}
@@ -15,13 +15,16 @@ layout: default
     {% endfor %}
   </nav>
 </header>
-<div class="content list">
-{% for coffee in site.coffees %}
-  <div class="list-item">
-    <h2 class="list-post-title">
-      {{ coffee.name }}
-    </h2>
-  </div>
-{% endfor %}
-</div>
 
+<ul class="menu-list">
+  <li>
+    {% for coffee in site.coffees %}
+    <div class="menu-item">
+      <span class="item-name">{{ coffee.name }}</span>
+      <span class="item-price">{{ coffee.price }}</span>
+    </div>
+    <div class="item-desc">{{ coffee.desc }}</div>
+    <hr>
+    {% endfor %}
+  </li>
+</ul>
