@@ -52,12 +52,12 @@ nav:
   #    remote:         false
   #    localpath:      "about"
 
-  - name:           "Blog"
-    remote:         true
-    href:           "//jejujiang.github.io/blog"
-  - name:           "About"
-    remote:         true
-    href:           "//jejujiang.github.io/blog/about"
+  #  - name:           "Blog"
+  #    remote:         true
+  #    href:           "//jejujiang.github.io/blog"
+  #  - name:           "About"
+  #    remote:         true
+  #    href:           "//jejujiang.github.io/blog/about"
 
 # Sass
 sass:
