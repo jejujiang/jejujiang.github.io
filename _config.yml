@@ -45,35 +45,23 @@ markdown:           kramdown
 
 # Navigation
 nav:
-  - name:           "Articles"
-    remote:         false
-    localpath:      "articles"
-  - name:           "About"
-    remote:         false
-    localpath:      "about"
+  #  - name:           "Articles"
+  #    remote:         false
+  #    localpath:      "articles"
+  #  - name:           "About"
+  #    remote:         false
+  #    localpath:      "about"
 
-#  - name:           "Download"
-#    remote:         true
-#    href:           "//github.com/gfjaru/Kiko/releases"
+  - name:           "Blog"
+    remote:         true
+    href:           "//jejujiang.github.io/blog"
+  - name:           "About"
+    remote:         true
+    href:           "//jejujiang.github.io/blog/about"
 
 # Sass
 sass:
   style:            :compressed
-
-# Scopes
-defaults:
-  -
-    scope:
-      path:         ""
-      type:         "pages"
-    values:
-      layout:       "page"
-  -
-    scope:
-      path:         ""
-      type:         "posts"
-    values:
-      layout:       "post"
 
 plugins:
   - jekyll-seo-tag

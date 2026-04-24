@@ -1,30 +1,67 @@
 ---
-layout: default
 ---
-<header class="masthead">
-  <h1 class="masthead-title">
-    <a href="{{ site.baseurl }}/"><span style="font-family: 'Bonheur Royale', cursive; font-size: 1.9rem; color: #520;">{{ site.name }} </span><span>&#39;s Café</span></a>
-  </h1>
-  <nav class="masthead-nav">
-    {% for nav in site.nav %}
-      {% if nav.remote %}
-      <a href="{{ nav.href }}">{{ nav.name }}</a>
-      {% else %}
-      <a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a>
-      {% endif %}
-    {% endfor %}
-  </nav>
-</header>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.name }}{% endif %}</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+    <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.name }}" href="{{ site.baseurl }}/feed.xml" />
+    <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap" rel="stylesheet">
+    {% seo %}
+  </head>
 
-<ul class="menu-list">
-  <li>
-    {% for coffee in site.coffees %}
-    <div class="menu-item">
-      <span class="item-name">{{ coffee.name }}</span>
-      <span class="item-price">{{ coffee.price }}</span>
+  <body>
+
+    <div class="marquee-wrap">
+      <div class="marquee-content">
+        <div class="item">🎉 hello coffee </div>
+        <div class="item">📦 hello <span style="font-family: 'Bonheur Royale', cursive;">HZ</span></div>
+        <div class="item">✨ hello world</div>
+        <div class="item">🎉 hello China</div>
+        <div class="item">📦 hello LiaoNing</div>
+        <div class="item">✨ hello DanDong</div>
+        <!-- 克隆一份 -->
+        <div class="clone">🎉 hello coffee</div>
+        <div class="clone">📦 hello <span style="font-family: 'Bonheur Royale';">HZ</span></div>
+        <div class="clone">✨ hello world</div>
+        <div class="clone">🎉 hello China</div>
+        <div class="clone">📦 hello DanDong</div>
+        <div class="clone">✨ hello cake</div>
+      </div>
     </div>
-    <div class="item-desc">{{ coffee.desc }}</div>
-    <hr>
-    {% endfor %}
-  </li>
-</ul>
+
+    <div class="container">
+
+      <header class="masthead">
+        <h1 class="masthead-title">
+          <a href="{{ site.baseurl }}/" style="font-family: 'Bonheur Royale', cursive; font-size: 2.2rem;"><span style="color: #520;">{{ site.name }} </span><span>&#39;s Café</span></a>
+        </h1>
+        <nav class="masthead-nav">
+          {% for nav in site.nav %}
+          {% if nav.remote %}
+          <a href="{{ nav.href }}">{{ nav.name }}</a>
+          {% else %}
+          <a href="{{ site.baseurl }}/{{ nav.localpath }}">{{ nav.name }}</a>
+          {% endif %}
+          {% endfor %}
+        </nav>
+      </header>
+
+      <ul class="menu-list">
+        <li>
+          {% for coffee in site.coffees %}
+          <div class="menu-item">
+            <span class="item-name">{{ coffee.name }}</span>
+            <span class="item-price">{{ coffee.price }}</span>
+          </div>
+          <div class="item-desc">{{ coffee.desc }}</div>
+          <hr>
+          {% endfor %}
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
