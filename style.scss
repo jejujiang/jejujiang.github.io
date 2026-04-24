@@ -37,7 +37,7 @@ a {
 
   &:hover,
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
@@ -248,7 +248,7 @@ tbody tr:nth-child(odd) th {
       color: #333;
 
       &:hover,
-      &:focus {
+      &:focus, {
         text-decoration: none;
       }
     }
@@ -258,22 +258,7 @@ tbody tr:nth-child(odd) th {
     }
 
   }
-
-  &-title--small {
-    margin-bottom: .75rem;
-    font-size: .75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-
-    a {
-      color: #333;
-
-      &:hover,
-      &:focus {
-        text-decoration: none;
-      }
-    }
-  }
+}
 
   .masthead-nav {
     margin-bottom: 2rem;
@@ -297,7 +282,6 @@ tbody tr:nth-child(odd) th {
       }
     }
   }
-}
 
 
 .marquee-wrap {

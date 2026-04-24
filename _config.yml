@@ -3,28 +3,10 @@ name:               "HZ"
 description:        "HE 你一起，ZHOU 游世界!"
 
 coffees:
-  - name: Espresso
-    price: ¥32
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Double Espresso
+  - name: "拿铁 Latte"
     price: ¥22
     desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Latte
-    price: ¥22
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Cappuccino
-    price: ¥22
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Flat white
-    price: ¥22
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Macchiato
-    price: ¥22
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Mocha
-    price: ¥22
-    desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
-  - name: Americano
+  - name: "美式 Americano"
     price: ¥22
     desc: "经典醇厚，油脂丰富，产地: 巴西/哥伦比亚拼配"
 
