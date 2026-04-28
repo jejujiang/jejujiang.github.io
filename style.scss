@@ -283,27 +283,6 @@ tbody tr:nth-child(odd) th {
     }
   }
 
-
-.marquee-wrap {
-    overflow: hidden;
-}
-
-.marquee-content {
-    display: flex;
-    animation: scroll 20s linear infinite;
-}
-
-.marquee-content .item {
-    padding-right: 50px;
-    flex-shrink: 0;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-
 .menu-list {
   list-style: none;
 }
@@ -312,4 +291,31 @@ tbody tr:nth-child(odd) th {
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.65rem;
+}
+
+
+
+
+
+
+
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;  /* 从右侧开始 */
+    animation: scrollLinear 15s linear infinite;
+}
+
+@keyframes scrollLinear {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
